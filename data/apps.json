@@ -2,5 +2,9 @@
   {
     "name": "foo",
     "description": "bar"
+  },
+  {
+    "name": "baz",
+    "description": "bam"
   }
 ]
