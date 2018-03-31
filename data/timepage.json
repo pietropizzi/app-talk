@@ -1,0 +1,9 @@
+{
+  "app": {
+    "identifier": "timepage",
+    "name": "Timepage",
+    "icon_url": "",
+    "appstore_url": "https://itunes.apple.com/de/app/timepage/id989178902?l=en&mt=8",
+    "documentation_url": "https://moleskine.helpscoutdocs.com/article/92-timepage-url-scheme"
+  }
+}
