@@ -1,10 +1,8 @@
-[
-  {
-    "name": "foo",
-    "description": "bar"
-  },
-  {
-    "name": "baz",
-    "description": "bam"
+{
+  "timepage": {
+    "name": "Timepage",
+    "icon_url": "",
+    "app_url": "https://us.moleskine.com/timepage/p0486",
+    "documentation_url": "https://moleskine.helpscoutdocs.com/article/92-timepage-url-scheme"
   }
-]
+}
