@@ -24,7 +24,7 @@
         },
         {
           "name": "day",
-          "description": "The date of the event"
+          "description": "The date of the event",
           "options": [
             "Date in the format yyyy-mm-dd",
             "Special strings \"today\" or \"tomorrow\"",
