@@ -8,11 +8,6 @@
   },
   "actions": [
     {
-      "name": "Open App",
-      "description": "Open Timepage",
-      "url": "timpage://"
-    },
-    {
       "name": "Add Event",
       "description": "",
       "url": "timpage://add-event?title=[title]&day=[day]",
@@ -26,9 +21,15 @@
           "name": "day",
           "description": "The date of the event",
           "options": [
-            "Date in the format yyyy-mm-dd",
-            "Special strings \"today\" or \"tomorrow\"",
-            "Upcoming weekday name (long or short) such as \"monday\", \"tuesday\", \"wed\", etc.  Is specific to the language set by the device.  Always specifies the next upcoming day with this name."
+            {
+              "description": "Date in the format yyyy-mm-dd"
+            },
+            {
+              "description": "Special strings ”today” or ”tomorrow”"
+            },
+            {
+              "description": "Upcoming weekday name (long or short) such as ”monday”, ”tuesday”, ”wed”, etc.  Is specific to the language set by the device. Always specifies the next upcoming day with this name."
+            }
           ]
         }
       ]
@@ -42,14 +43,17 @@
           "name": "event",
           "description": "The event identifier",
           "options": [
-            "special identifiert \"next\"",
-            "event_id"
+            {
+              "description": "special identifiert ”next”"
+            },
+            {
+              "description": "event_id"
+            }
           ]
         }
       ]
     },
     {
-      "app": "timepage",
       "name": "Open Event Map",
       "description": "Open Timepage and show a specified event on the map",
       "url": "timpage://open_event_map?event=[event]",
@@ -58,8 +62,12 @@
           "name": "event",
           "description": "The event identifier",
           "options": [
-            "special identifiert \"next\"",
-            "event_id"
+            {
+              "description": "special identifiert ”next”"
+            },
+            {
+              "description": "event_id"
+            }
           ]
         }
       ]
