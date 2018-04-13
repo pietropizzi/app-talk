@@ -1,0 +1,28 @@
+{
+  "info": {
+    "identifier": "",
+    "name": "",
+    "iconUrl": "",
+    "appstoreUrl": "",
+    "documentationUrl": ""
+  },
+  "actions": [
+    {
+      "name": "",
+      "description": "",
+      "url": "",
+      "supportsXCallbackUrl": true,
+      "parameters": [
+        {
+          "name": "",
+          "description": "",
+          "options": [
+            {
+              "description": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
