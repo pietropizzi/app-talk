@@ -1,17 +1,17 @@
 {
-  "app": {
+  "info": {
     "identifier": "timepage",
     "name": "Timepage",
-    "icon_url": "",
-    "appstore_url": "https://itunes.apple.com/de/app/timepage/id989178902?l=en&mt=8",
-    "documentation_url": "https://moleskine.helpscoutdocs.com/article/92-timepage-url-scheme"
+    "iconUrl": "",
+    "appstoreUrl": "https://itunes.apple.com/de/app/timepage/id989178902?l=en&mt=8",
+    "documentationUrl": "https://moleskine.helpscoutdocs.com/article/92-timepage-url-scheme"
   },
   "actions": [
     {
       "name": "Add Event",
       "description": "",
       "url": "timpage://add-event?title=[title]&day=[day]",
-      "supports-x-callback-url": true,
+      "supportsXCallbackUrl": true,
       "parameters": [
         {
           "name": "title",
