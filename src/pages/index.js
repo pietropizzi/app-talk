@@ -14,7 +14,7 @@ export default ({ data: { allAppsJson: { edges: appEdges }} }) => {
 
 export const query = graphql`
   query AllAppsQuery {
-    allAppsJson {
+    allAppsJson(sort: { fields: [id], order: ASC }) {
       edges {
         node {
           info {
@@ -28,7 +28,6 @@ export const query = graphql`
             name
             description
             url
-            supportsXCallbackUrl
             parameters {
               name
               description
