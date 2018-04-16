@@ -1,0 +1,131 @@
+{
+  "info": {
+    "identifier": "1-writer",
+    "name": "1Writer",
+    "iconUrl": "",
+    "appstoreUrl": "https://itunes.apple.com/de/app/1writer-markdown-text-editor/id680469088?l=en&mt=8",
+    "documentationUrl": "http://1writerapp.com/docs/urlscheme"
+  },
+  "actions": [
+    {
+      "name": "Create",
+      "description": "Create a new document.",
+      "url": "onewriter://x-callback-url/create",
+      "parameters": [
+        {
+          "name": "path",
+          "description": "The path to the folder in which you want to create the document.",
+        },
+        {
+          "name": "name",
+          "description": "The name for the document.",
+        },
+        {
+          "name": "text",
+          "description": "The content for the document. If not specified, the content of the clipboard will be used.",
+        }
+      ]
+    },
+    {
+      "name": "Replace",
+      "description": "Replace content of a document.",
+      "url": "onewriter://x-callback-url/replace",
+      "parameters": [
+        {
+          "name": "path",
+          "description": "The path to the document.",
+        },
+        {
+          "name": "text",
+          "description": "The content for the document. If not specified, the content of the clipboard will be used.",
+        }
+      ]
+    },
+    {
+      "name": "Replace Selection",
+      "description": "Replace selected text in the current editing document.",
+      "url": "onewriter://x-callback-url/replace-selected",
+      "parameters": [
+        {
+          "name": "text",
+          "description": "The replacement text."
+        }
+      ]
+    },
+    {
+      "name": "Content",
+      "description": "Return content of a document.",
+      "url": "onewriter://x-callback-url/content",
+      "parameters": [
+        {
+          "name": "path",
+          "description": "The path to the document.",
+        },
+        {
+          "name": "param",
+          "description": "The content will be passed to the x-success URL using this parameter name. Default value is ”text”."
+        }
+      ]
+    },
+    {
+      "name": "Create Todo",
+      "description": "Create a to-do list by separating lines of the text parameter. You can start a line with ”+” to indicate a completed todo.",
+      "url": "onewriter://x-callback-url/create-todo",
+      "parameters": [
+        {
+          "name": "path",
+          "description": "The path to the folder in which you want to create the document.",
+        },
+        {
+          "name": "name",
+          "description": "The name for the document.",
+        },
+        {
+          "name": "text",
+          "description": "The content for the document. If not specified, the content of the clipboard will be used.",
+        }
+      ]
+    },
+    {
+      "name": "Open document",
+      "description": "Create a new document.",
+      "url": "onewriter://x-callback-url/open",
+      "parameters": [
+        {
+          "name": "path",
+          "description": "The path to the document.",
+        }
+      ]
+    },
+    {
+      "name": "Append",
+      "description": "Append to an existing document.",
+      "url": "onewriter://x-callback-url/append",
+      "parameters": [
+        {
+          "name": "path",
+          "description": "The path to the document.",
+        },
+        {
+          "name": "text",
+          "description": "The content for the document. If not specified, the content of the clipboard will be used.",
+        }
+      ]
+    },
+    {
+      "name": "Prepend",
+      "description": "Prepend content to an existing document.",
+      "url": "onewriter://x-callback-url/prepend",
+      "parameters": [
+        {
+          "name": "path",
+          "description": "The path to the document.",
+        },
+        {
+          "name": "text",
+          "description": "The content for the document. If not specified, the content of the clipboard will be used.",
+        }
+      ]
+    },
+  ]
+}

@@ -10,8 +10,7 @@
     {
       "name": "Add Event",
       "description": "",
-      "url": "timpage://add-event?title=[title]&day=[day]",
-      "supportsXCallbackUrl": true,
+      "url": "timpage://add-event",
       "parameters": [
         {
           "name": "title",
@@ -28,7 +27,7 @@
               "description": "Special strings ”today” or ”tomorrow”"
             },
             {
-              "description": "Upcoming weekday name (long or short) such as ”monday”, ”tuesday”, ”wed”, etc.  Is specific to the language set by the device. Always specifies the next upcoming day with this name."
+              "description": "Upcoming weekday name (long or short) such as ”monday”, ”tuesday”, ”wed”, etc. Is specific to the language set by the device. Always specifies the next upcoming day with this name."
             }
           ]
         }
@@ -37,7 +36,7 @@
     {
       "name": "Open Event",
       "description": "Open Timepage and show a specified event.",
-      "url": "timpage://open_event?event=[event]",
+      "url": "timpage://open_event",
       "parameters": [
         {
           "name": "event",
@@ -56,7 +55,7 @@
     {
       "name": "Open Event Map",
       "description": "Open Timepage and show a specified event on the map",
-      "url": "timpage://open_event_map?event=[event]",
+      "url": "timpage://open_event_map",
       "parameters": [
         {
           "name": "event",

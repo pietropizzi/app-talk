@@ -1,0 +1,312 @@
+{
+  "info": {
+    "identifier": "2-do",
+    "name": "2Do",
+    "iconUrl": "",
+    "appstoreUrl": "https://itunes.apple.com/de/app/2do-todo-list-tasks-notes/id303656546?l=en&mt=8",
+    "documentationUrl": "https://www.2doapp.com/kb/article/url-schemes.html"
+  },
+  "actions": [
+    {
+      "name": "Show ”All” Focus List",
+      "url": "twodo://x-callback-url/showAll"
+    },
+    {
+      "name": "Show ”Today” Focus List",
+      "url": "twodo://x-callback-url/showToday"
+    },
+    {
+      "name": "Show ”Starred” Focus List",
+      "url": "twodo://x-callback-url/showStarred"
+    },
+    {
+      "name": "Show ”Scheduled” Focus List",
+      "url": "twodo://x-callback-url/showScheduled"
+    },
+    {
+      "name": "Show List",
+      "description": "Show List with a given name.",
+      "url": "twodo://x-callback-url/showList",
+      "parameters": [
+        {
+          "name": "name",
+          "description": "The name of the list."
+        }
+      ]
+    },
+    {
+      "name": "Add New Task",
+      "description": "Launch the app with the New Task Screen.",
+      "url": "twodo://x-callback-url/addNewTask",
+      "parameters": [
+        {
+          "name": "ignoreDefaults",
+          "description": "Should the ”Ignore Due Date Defaults” be ignored",
+          "options": [
+            {
+              "description": "0 - apply any default due date / time settings in app."
+            },
+            {
+              "description": "1 - ignore default dates / times."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Search",
+      "description": "Launch the app with Search pre filled.",
+      "url": "twodo://x-callback-url/search",
+      "parameters": [
+        {
+          "name": "text",
+          "description": "The text to search for. Can be just text or something like ”type:overdue”"
+        }
+      ]
+    },
+    {
+      "name": "Get Task Unique Identifier",
+      "description": "Returns the internally used unique identifier for the task. x-success is filled with the a key named ”uid”",
+      "url": "twodo://x-callback-url/getTaskID",
+      "parameters": [
+        {
+          "name": "task",
+          "description": "Known task’s title."
+        },
+        {
+          "name": "forList",
+          "description": "The list containing the task."
+        },
+        {
+          "name": "saveInClipboard",
+          "description": "Should the UID be saved in the clipboard.",
+          "options": [
+            {
+              "description": "0 - No."
+            },
+            {
+              "description": "1 - Yes."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Paste Text",
+      "description": "Turn text into tasks.",
+      "url": "twodo://x-callback-url/paste",
+      "parameters": [
+        {
+          "name": "text",
+          "required": true,
+          "description": "The text to paste"
+        },
+        {
+          "name": "inProject",
+          "description": "Title of a project to paste into."
+        },
+        {
+          "name": "forList",
+          "description": "List that contains the project"
+        }
+      ]
+    },
+    {
+      "name": "Add Task",
+      "description": "",
+      "url": "twodo://x-callback-url/add",
+      "parameters": [
+        {
+          "name": "task",
+          "description": "Title of the taks"
+        },
+        {
+          "name": "type",
+          "description": "Type of taks to create.",
+          "options": [
+            {
+              "description": "0 - Task (default)"
+            },
+            {
+              "description": "1 - Project"
+            },
+            {
+              "description": "2 - Checklist"
+            }
+          ]
+        },
+        {
+          "name": "forList",
+          "description": "Name of an existing list in app, case-insensitive. Default list or the currently visible list on screen is selected if not used."
+        },
+        {
+          "name": "forParentName",
+          "description": "The name of the project or checklist you wish to add this task to. When using this parameter, you must also provide the name of the List this project belongs to, by using the forList parameter."
+        },
+        {
+          "name": "forParentTask",
+          "description": ":The internally used, unique identifier of a task. If supplied, this task will be added as a sub-task to the parent task. If the parent task was previously created as a normal task (vs. a project or a checklist), the parent task will automatically be converted into a project for you."
+        },
+        {
+          "name": "note",
+          "description": "Notes for the task"
+        },
+        {
+          "name": "priority",
+          "options": [
+            {
+              "description": "0 (none)"
+            },
+            {
+              "description": "1 (low)"
+            },
+            {
+              "description": "2 (medium)"
+            },
+            {
+              "description": "3 (high)"
+            }
+          ]
+        },
+        {
+          "name": "starred",
+          "options": [
+            {
+              "description": "0 (no)"
+            },
+            {
+              "description": "1 (yes)"
+            }
+          ]
+        },
+        {
+          "name": "tags",
+          "description": "Comma separated list of tags to assign to the task."
+        },
+        {
+          "name": "locations",
+          "description": "Comma separated list of locations to assign to the task."
+        },
+        {
+          "name": "due",
+          "description": "Due Date. Supports the format below:",
+          "options": [
+            {
+              "description": "yyyy-MM-dd - Sets on the date on default due time (based on your settings, unless due time is specified separately or ignoreDefaults is set to 1)"
+            },
+            {
+              "description": "Any number - Number of days from Today, starting from 0. e.g. 0 = Today, 1 = Tomorrow and so on"
+            }
+          ]
+        },
+        {
+          "name": "dueTime",
+          "description": "Due Time. Supports format HH:mm or hh:mm am/pm."
+        },
+        {
+          "name": "start",
+          "description": "Start Date and time. Supports the format below:",
+          "options": [
+            {
+              "description": "yyyy-MM-dd HH:mm - Sets on the start date on the date and time specified"
+            },
+            {
+              "description": "Any number - Number of days from Today, starting from 0. e.g. 0 = Today, 1 = Tomorrow and so on"
+            }
+          ]
+        },
+        {
+          "name": "repeat",
+          "options": [
+            {
+              "description": "1 (daily)"
+            },
+            {
+              "description": "2 (weekly)"
+            },
+            {
+              "description": "3 (bi-weekly)"
+            },
+            {
+              "description": "4 (monthly)"
+            }
+          ]
+        },
+        {
+          "name": "action",
+          "description": "Supports the following formats:",
+          "options": [
+            {
+              "description": "call:<number> - Add a Call action to call the specified number."
+            },
+            {
+              "description": "message:<number> - Add a Message action to message the specified number."
+            },
+            {
+              "description": "mail:<email> - Add a Email action to email the specified email address."
+            },
+            {
+              "description": "url:<url> - Add a Browse action to visit the specified URL address."
+            },
+            {
+              "description": "visit:<address> - Add a Visit action to visit the specified address."
+            },
+            {
+              "description": "google:<search term> - Add a Google action to search the specified keyword."
+            }
+          ]
+        },
+        {
+          "name": "picture",
+          "description": "This can be one of two things:",
+          "options": [
+            {
+              "description": "lastphoto - 2Do will grab the most recent photo placed on your camera roll."
+            },
+            {
+              "description": "A base64 encoded string."
+            }
+          ]
+        },
+        {
+          "name": "audio",
+          "description": "Prvide a base64 encoded audio attachment"
+        },
+        {
+          "name": "ignoreDefaults",
+          "options": [
+            {
+              "description": "0 (apply any default due date / time setting in app)"
+            },
+            {
+              "description": "1 (ignore default dates / times)"
+            }
+          ]
+        },
+        {
+          "name": "useQuickEntry",
+          "options": [
+            {
+              "description": "0 (add a task without allowing you to edit)"
+            },
+            {
+              "description": "1 (show pre-filled in a Quick Entry window)"
+            }
+          ]
+        },
+        {
+          "name": "saveInClipboard",
+          "description": "The newly created task’s unique identifier (UID) will be saved in the clipboard for easier retrieval.",
+          "options": [
+            {
+              "description": "0 (no)"
+            },
+            {
+              "description": "1 (yes)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
