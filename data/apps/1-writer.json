@@ -14,15 +14,15 @@
       "parameters": [
         {
           "name": "path",
-          "description": "The path to the folder in which you want to create the document.",
+          "description": "The path to the folder in which you want to create the document."
         },
         {
           "name": "name",
-          "description": "The name for the document.",
+          "description": "The name for the document."
         },
         {
           "name": "text",
-          "description": "The content for the document. If not specified, the content of the clipboard will be used.",
+          "description": "The content for the document. If not specified, the content of the clipboard will be used."
         }
       ]
     },
@@ -33,11 +33,11 @@
       "parameters": [
         {
           "name": "path",
-          "description": "The path to the document.",
+          "description": "The path to the document."
         },
         {
           "name": "text",
-          "description": "The content for the document. If not specified, the content of the clipboard will be used.",
+          "description": "The content for the document. If not specified, the content of the clipboard will be used."
         }
       ]
     },
@@ -59,7 +59,7 @@
       "parameters": [
         {
           "name": "path",
-          "description": "The path to the document.",
+          "description": "The path to the document."
         },
         {
           "name": "param",
@@ -74,15 +74,15 @@
       "parameters": [
         {
           "name": "path",
-          "description": "The path to the folder in which you want to create the document.",
+          "description": "The path to the folder in which you want to create the document."
         },
         {
           "name": "name",
-          "description": "The name for the document.",
+          "description": "The name for the document."
         },
         {
           "name": "text",
-          "description": "The content for the document. If not specified, the content of the clipboard will be used.",
+          "description": "The content for the document. If not specified, the content of the clipboard will be used."
         }
       ]
     },
@@ -93,7 +93,7 @@
       "parameters": [
         {
           "name": "path",
-          "description": "The path to the document.",
+          "description": "The path to the document."
         }
       ]
     },
@@ -104,11 +104,11 @@
       "parameters": [
         {
           "name": "path",
-          "description": "The path to the document.",
+          "description": "The path to the document."
         },
         {
           "name": "text",
-          "description": "The content for the document. If not specified, the content of the clipboard will be used.",
+          "description": "The content for the document. If not specified, the content of the clipboard will be used."
         }
       ]
     },
@@ -119,13 +119,13 @@
       "parameters": [
         {
           "name": "path",
-          "description": "The path to the document.",
+          "description": "The path to the document."
         },
         {
           "name": "text",
-          "description": "The content for the document. If not specified, the content of the clipboard will be used.",
+          "description": "The content for the document. If not specified, the content of the clipboard will be used."
         }
       ]
-    },
+    }
   ]
 }
