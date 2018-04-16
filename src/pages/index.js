@@ -6,7 +6,7 @@ export default ({ data: { allAppsJson: { edges: appEdges }} }) => {
   return (
     <div>
       {
-        appEdges.map(({ node }) => <AppListing app={node} />)
+        appEdges.map(({ node }) => <AppListing key={node.info.identifier} app={node} />)
       }
     </div>
   )
