@@ -1,27 +1,29 @@
 import React from 'react';
+import ParamRow from './param-row';
+import appUrlStyles from './app-url.module.css';
+
+const AppUrl = ({ url, parameters }) => {
+  const [ urlStart ] = url.split('?');
+  const [ schemeStart, path ] = urlStart.split('://');
+  return (
+    <div styleName='container'>
+      <div className='g-monospace'>
+        { `${schemeStart}://` }
+        <span className='g-text-dark'>{path}</span>
+      </div>
+      <div styleName='paramWrapper'>
+        { parameters && parameters.map((param, index) => <ParamRow key={param.name} param={param} index={index} /> ) }
+      </div>
+    </div>
+  );
+};
 
 export default ({ action: { name, description, url, supportsXCallbackUrl, parameters } }) => {
-  const [urlStart] = url.split('?');
-
   return (
     <div>
       <h3>{name}</h3>
-      <p>{description}</p>
-      <div>
-        <div>{urlStart}</div>
-        <div>
-          { parameters && parameters.map((param, index) =>
-            <div key={param.name}>
-              <div>{index === 0 ? '?' : '&'}<span>{param.name}</span>=</div>
-              <div>{param.description}</div>
-              { param.options
-                  ? param.options.map((option) => <div key={option.description}>{option.description}</div>)
-                  : null
-              }
-            </div>
-          ) }
-        </div>
-      </div>
+      <div>{description}</div>
+      <AppUrl url={url} parameters={parameters} />
     </div>
   );
 };

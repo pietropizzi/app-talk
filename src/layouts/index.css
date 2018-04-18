@@ -1,0 +1,10 @@
+.g-monospace {
+  font-family: 'Source Code Pro';
+  font-size: 2rem;
+  color: #8b8b8b;
+  letter-spacing: -0.5px;
+}
+
+.g-text-dark {
+  color: #222;
+}

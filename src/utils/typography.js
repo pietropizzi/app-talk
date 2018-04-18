@@ -7,23 +7,22 @@ const typography = new Typography({
   googleFonts: [
     {
       name: 'Rubik',
-      styles: [
-        '300',
-        '500',
-      ],
+      styles: [ '300', '500', ],
     },
     {
       name: 'Roboto',
-      styles: [
-        '400'
-      ],
+      styles: [ '400' ],
     },
+    {
+      name: 'Source Code Pro',
+      styles: ['400']
+    }
   ],
   headerFontFamily: ['Rubik', 'sans-serif'],
   bodyFontFamily: ['Roboto', 'sans-serif'],
   headerWeight: '500',
   headerColor: '#4a4a4a',
-  bodyColor: '#4a4a4a',
+  bodyColor: '#222',
   overrideStyles: ({ adjustFontSizeTo }) => ({
     h2: adjustFontSizeTo('30px'),
     h3: adjustFontSizeTo('24px')

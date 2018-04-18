@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.name {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-basis: 50%;
+}
+
+.description {
+  flex-basis: 50%;
+  margin-top: 12px;
+}
+
+.nameDot {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.nameLine {
+  height: 1px;
+  flex: 1;
+  margin: 0 6px;
+}

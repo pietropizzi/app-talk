@@ -1,0 +1,9 @@
+.container {
+  background-color: #f2f2f2;
+  border-radius: 12px;
+  padding: 12px 24px;
+}
+
+.paramWrapper {
+  padding-left: 24px;
+}
