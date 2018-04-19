@@ -14,7 +14,7 @@ const typography = new Typography({
       styles: [ '400' ],
     },
     {
-      name: 'Source Code Pro',
+      name: 'Fira Mono',
       styles: ['400']
     }
   ],
