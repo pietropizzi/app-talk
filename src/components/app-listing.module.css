@@ -3,7 +3,8 @@
   justify-content: row;
   align-items: center;
   padding-bottom: 12px;
-  margin: 36px 0;
+  padding-top: 36px;
+  margin-bottom: 36px;
   border-bottom: 1px solid #4a4a4a
 }
 
