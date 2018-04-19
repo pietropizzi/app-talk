@@ -1,9 +1,9 @@
-.container {
+.urlContainer {
   background-color: #f2f2f2;
   border-radius: 12px;
   padding: 12px 24px;
 }
 
-.paramWrapper {
+.urlParamWrapper {
   padding-left: 24px;
 }
