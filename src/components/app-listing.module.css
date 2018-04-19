@@ -1,0 +1,18 @@
+.titleContainer {
+  display: flex;
+  justify-content: row;
+  align-items: center;
+  padding-bottom: 12px;
+  margin-bottom: 36px;
+  border-bottom: 1px solid #4a4a4a
+}
+
+.title {
+  margin-left: 12px;
+}
+
+.appActionWrapper {
+  margin-bottom: 42px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid #e5e5e5;
+}

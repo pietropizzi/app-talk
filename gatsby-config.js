@@ -17,13 +17,20 @@ module.exports = {
         path: `${__dirname}/data/`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `source`,
+        path: `${__dirname}/src/`
+      }
+    },
     `gatsby-transformer-json`,
     {
       resolve: `gatsby-plugin-react-css-modules`,
       options: {
         // Exclude global styles from the plugin using a RegExp:
         // exclude: `\/global\/`
+      }
     }
-  }
   ]
 };

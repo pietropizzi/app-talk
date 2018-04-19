@@ -1,0 +1,28 @@
+.container {
+  background-color: #4a4a4a;
+  padding: 42px 0;
+}
+
+.appsContainer {
+  display: flex;
+  justify-content: row;
+}
+
+.app {
+  display: block;
+  margin-right: 24px;
+  margin-bottom: 36px;
+  text-decoration: none;
+}
+
+.jumpToAppText {
+  color: #fff;
+  margin-bottom: 24px;
+}
+
+.appTitle {
+  color: #fff;
+  font-size: 0.75rem;
+  text-align: center;
+  margin-top: 12px;
+}

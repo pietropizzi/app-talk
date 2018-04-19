@@ -1,6 +1,6 @@
 import React from 'react';
 import ParamRow from './param-row';
-import appUrlStyles from './app-action.module.css';
+import './app-action.module.css';
 
 const AppUrl = ({ url, parameters }) => {
   const [ urlStart ] = url.split('?');

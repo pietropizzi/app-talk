@@ -24,8 +24,14 @@ const typography = new Typography({
   headerColor: '#4a4a4a',
   bodyColor: '#222',
   overrideStyles: ({ adjustFontSizeTo }) => ({
-    h2: adjustFontSizeTo('30px'),
-    h3: adjustFontSizeTo('24px')
+    h2: {
+      ...adjustFontSizeTo('30px'),
+      margin: 0
+    },
+    h3: {
+      ...adjustFontSizeTo('24px'),
+      margin: 0
+    }
   })
 });
 

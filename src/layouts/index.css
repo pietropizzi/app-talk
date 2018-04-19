@@ -1,3 +1,19 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.g-module {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.g-type-h4 {
+  font-family: 'Rubik';
+  font-size: 1rem;
+  font-weight: 500;
+}
+
 .g-monospace {
   font-family: 'Fira Mono';
   font-size: 2rem;
