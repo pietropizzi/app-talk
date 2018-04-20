@@ -1,11 +1,13 @@
 .titleContainer {
+  background-color: #fff;
   display: flex;
   justify-content: row;
   align-items: center;
-  padding-bottom: 12px;
-  padding-top: 36px;
+  padding: 20px 0;
   margin-bottom: 36px;
-  border-bottom: 1px solid #4a4a4a
+  border-bottom: 1px solid #4a4a4a;
+  position: sticky;
+  top: 0;
 }
 
 .title {
