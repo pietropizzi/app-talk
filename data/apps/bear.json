@@ -22,6 +22,30 @@
         {
           "name": "exclude_trashed",
           "description": "if ”yes” exclude trashed notes."
+        },
+        {
+          "name": "x-success",
+          "description": "Your x-success callback will be called with the following parameters",
+          "options": [
+            {
+              "description": "note - note text."
+            },
+            {
+              "description": "identifier - note unique identifier."
+            },
+            {
+              "description": "title - note title."
+            },
+            {
+              "description": "is_trashed - ”yes” if the note is trashed."
+            },
+            {
+              "description": "modificationDate - note modification date in ISO 8601 format."
+            },
+            {
+              "description": "creationDate - note creation date in ISO 8601 format."
+            }
+          ]
         }
       ]
     }
