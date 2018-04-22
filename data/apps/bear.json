@@ -1,0 +1,29 @@
+{
+  "info": {
+    "identifier": "bear",
+    "name": "Bear",
+    "appstoreUrl": "https://itunes.apple.com/de/app/bear/id1016366447?l=en&mt=8",
+    "documentationUrl": "http://www.bear-writer.com/faq/X-callback-url%20Scheme%20documentation/"
+  },
+  "actions": [
+    {
+      "name": "Open Note",
+      "description": "Open a note identified by its title or id and return its content.",
+      "url": "bear://x-callback-url/open-note",
+      "parameters": [
+        {
+          "name": "id",
+          "description": "note unique identifier."
+        },
+        {
+          "name": "title",
+          "description": "note title."
+        },
+        {
+          "name": "exclude_trashed",
+          "description": "if ”yes” exclude trashed notes."
+        }
+      ]
+    }
+  ]
+}
