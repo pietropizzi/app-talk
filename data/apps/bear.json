@@ -48,6 +48,53 @@
           ]
         }
       ]
-    }
+    },
+    {
+      "name": "Create Note",
+      "description": "Create a new note and return its unique identifier. Empty notes are not allowed.",
+      "url": "bear://x-callback-url/create",
+      "parameters": [
+        {
+          "name": "title",
+          "description": "note title."
+        },
+        {
+          "name": "text",
+          "description": "note body."
+        },
+        {
+          "name": "tags",
+          "description": "a comma seperated list of tags."
+        },
+        {
+          "name": "pin",
+          "description": "if ”yes” pin the note to the top of the list."
+        },
+        {
+          "name": "file",
+          "description": "base64 representation of a file."
+        },
+        {
+          "name": "filename",
+          "description": "file name with extension. Both ”file” and ”filename” are required to successfully add a file."
+        },
+        {
+          "name": "open_note",
+          "description": "if ”no” do not display the new note in Bear’s main or external window."
+        },
+        {
+          "name": "x-success",
+          "description": "Your x-success callback will be called with the following parameters.",
+          "options": [
+            {
+              "description": "identifier - note unique identifier."
+            },
+            {
+              "description": "title - note title."
+            }
+          ]  
+        }
+      ]
+    } 
   ]
 }
