@@ -95,6 +95,37 @@
           ]  
         }
       ]
-    } 
+    },
+    {
+      "name":"Add Text",
+      "description":"Append or prepent text to a note identified by its title or id.",
+      "url":"bear://x-callback-url/add-text",
+      "parameters":[
+        {
+          "name":"id",
+          "description":"note unique identifier."
+        },
+        {
+          "name":"title",
+          "description":"title of the note."
+        },
+        {
+          "name":"text",
+          "description":"text to add."
+        },
+        {
+          "name":"mode",
+          "description":"the allowed values are ”prepend”, ”append”, ”replace_all” and ”replace”"
+        },
+        {
+          "name":"exclude_trashed",
+          "description":"if ”yes” ecxclude trashed notes."
+        },
+        {
+          "name":"open_note",
+          "description":"If ”no” do not display the new note in Bear’s main or external window."
+        }
+      ]
+    }
   ]
 }
