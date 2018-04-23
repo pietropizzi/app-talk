@@ -5,6 +5,7 @@
 }
 
 .logo {
+  display: block;
   width: 139px;
   height: 42px;
   background: transparent url(../images/logo.png) no-repeat 0 0;
@@ -13,7 +14,7 @@
 }
 
 .content {
-  max-width: 600px;
+  max-width: 620px;
   margin-top: 84px;
 }
 
