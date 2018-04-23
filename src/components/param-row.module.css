@@ -27,3 +27,8 @@
   flex: 1;
   margin: 0 6px;
 }
+
+.options {
+  list-style-type: circle;
+  margin-left: 2rem;
+}
