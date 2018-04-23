@@ -1,11 +1,10 @@
 import React from 'react';
+import Header from '../components/header';
 import './index.css';
 
 export default ({ children }) =>
   <div>
-    <div className='g-module'>
-      <h2>AppTalk</h2>
-    </div>
+    <Header />
     {children()}
   </div>
 ;

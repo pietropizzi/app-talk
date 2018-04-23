@@ -1,0 +1,48 @@
+.container {
+  background-color: #E6EDEC;
+  border-top: 6px solid #3F8273;
+  padding: 30px 0 84px;
+}
+
+.logo {
+  width: 139px;
+  height: 42px;
+  background: transparent url(../images/logo.png) no-repeat 0 0;
+  background-size: 139px 42px;
+  text-indent: -999em;
+}
+
+.content {
+  max-width: 600px;
+  margin-top: 84px;
+}
+
+.title {
+  color: #1D3D36;
+}
+
+.introText {
+  font-size: 24px;
+  color: #8b8b8b;
+  margin: 42px 0;
+}
+
+.explainerText {
+  color: #8b8b8b;
+}
+
+.content a {
+  color: #4a4a4a;
+  text-decoration: none;
+}
+
+.content a:hover,
+.content a:focus {
+  color: #222
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .logo {
+    background-image: url(../images/logo@2x.png);
+  }
+}

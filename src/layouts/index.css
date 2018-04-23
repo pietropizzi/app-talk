@@ -14,6 +14,11 @@ html {
   font-weight: 500;
 }
 
+.g-type-thin {
+  font-family: 'Rubik';
+  font-weight: 300;
+}
+
 .g-monospace {
   font-family: 'Fira Mono';
   font-size: 1.875rem;
