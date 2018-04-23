@@ -21,8 +21,8 @@ const AppUrl = ({ url, parameters }) => {
 export default ({ action: { name, description, url, supportsXCallbackUrl, parameters } }) => {
   return (
     <div>
-      <h3>{name}</h3>
-      <div>{description}</div>
+      <h3 styleName='title'>{name}</h3>
+      <div styleName='description' className='g-text-light'>{description}</div>
       <AppUrl url={url} parameters={parameters} />
     </div>
   );

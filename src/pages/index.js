@@ -19,14 +19,11 @@ export default ({ data: { apps: { edges: appEdges }, appIcons: { edges: iconEdge
   return (
     <div>
       <JumpToApps apps={apps} />
-      <div className='g-module'>
-        <div className='g-type-h4'>{'All apps'}</div>
-        {
-          apps.map(({ app, iconUrl }) =>
-            <AppListing key={app.info.identifier} app={app} iconUrl={iconUrl} />
-          )
-        }
-      </div>
+      {
+        apps.map(({ app, iconUrl }) =>
+          <AppListing key={app.info.identifier} app={app} iconUrl={iconUrl} />
+        )
+      }
     </div>
   )
 }

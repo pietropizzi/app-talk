@@ -7,16 +7,27 @@ export default ({ app: { info, actions }, iconUrl }) => {
   return (
     <div id={info.identifier}>
       <div styleName='titleContainer'>
-        <AppIcon url={iconUrl} />
-        <h2 styleName='title'>{info.name}</h2>
-      </div>
-      {
-        actions.map((action) =>
-          <div key={action.url} styleName='appActionWrapper'>
-            <AppAction action={action} />
+        <div styleName='titleInner' className='g-module'>
+          <div styleName='titleMain'>
+            <AppIcon url={iconUrl} />
+            <h2 styleName='title'>{info.name}</h2>
           </div>
-        )
-      }
+          <div styleName='titleSide'>
+            <a styleName='titleLink' href={info.appstoreUrl}>{'App Store'}</a>
+            &nbsp;·&nbsp;
+            <a styleName='titleLink' href={info.documentationUrl}>{'Documentation'}</a>
+          </div>
+        </div>
+      </div>
+      <div className='g-module'>
+        {
+          actions.map((action) =>
+            <div key={action.url} styleName='appActionWrapper'>
+              <AppAction action={action} />
+            </div>
+          )
+        }
+      </div>
     </div>
   );
 };

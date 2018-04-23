@@ -1,17 +1,40 @@
 .titleContainer {
-  background-color: #fff;
-  display: flex;
-  justify-content: row;
-  align-items: center;
-  padding: 20px 0;
+  background-color: #4a4a4a;
+  color: #fff;
+  padding: 12px 0;
   margin-bottom: 36px;
-  border-bottom: 1px solid #4a4a4a;
   position: sticky;
   top: 0;
 }
 
+.titleInner {
+  display: flex;
+  align-items: center;
+}
+
+.titleMain {
+  display: flex;
+  flex: 1;
+  align-items: center;
+}
+
+.titleSide {
+
+}
+
+.titleLink {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.titleLink:hover,
+.titleLink:focus {
+  color: #fff;
+}
+
 .title {
   margin-left: 12px;
+  color: #fff;
 }
 
 .appActionWrapper {

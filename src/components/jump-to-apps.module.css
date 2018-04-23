@@ -1,12 +1,17 @@
 .container {
+  margin-bottom: 24px;
+}
+
+.innerContainer {
   background-color: #4a4a4a;
   padding: 42px 0;
   margin-bottom: 24px;
+
 }
 
 .appsContainer {
   display: flex;
-  justify-content: row;
+  flex-wrap: wrap;
 }
 
 .app {

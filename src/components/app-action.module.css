@@ -7,3 +7,11 @@
 .urlParamWrapper {
   padding-left: 24px;
 }
+
+.title {
+  margin-bottom: 3px;
+}
+
+.description {
+  margin-bottom: 18px;
+}

@@ -25,11 +25,11 @@ const typography = new Typography({
   bodyColor: '#222',
   overrideStyles: ({ adjustFontSizeTo }) => ({
     h2: {
-      ...adjustFontSizeTo('30px'),
+      ...adjustFontSizeTo('24px'),
       margin: 0
     },
     h3: {
-      ...adjustFontSizeTo('24px'),
+      ...adjustFontSizeTo('20px'),
       margin: 0
     }
   })

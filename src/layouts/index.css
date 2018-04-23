@@ -16,10 +16,14 @@ html {
 
 .g-monospace {
   font-family: 'Fira Mono';
-  font-size: 2rem;
+  font-size: 1.875rem;
   color: #8b8b8b;
 }
 
 .g-text-dark {
   color: #222;
+}
+
+.g-text-light {
+  color: #8b8b8b;
 }
