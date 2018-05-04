@@ -1,7 +1,8 @@
 module.exports = {
     "env": {
         "browser": true,
-        "es6": true
+        "es6": true,
+        "node": true
     },
     "globals": {
       "graphql": true
@@ -20,6 +21,7 @@ module.exports = {
     },
     "rules": {
       "react/prop-types": 0,
-      "react/display-name": 0
+      "react/display-name": 0,
+      "no-console": 0
     }
 };
