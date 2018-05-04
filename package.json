@@ -7,7 +7,8 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "deploy": "rm -rf node_modules/gh-pages/.cache && gatsby build --prefix-paths && gh-pages -d public",
-    "lint": "./node_modules/.bin/eslint src/**/*.js"
+    "lintsrc": "./node_modules/.bin/eslint src/**/*.js",
+    "lintjson": "./node_modules/.bin/jsonlint-cli data/apps/*.json"
   },
   "dependencies": {
     "gatsby": "1.9.241",
@@ -20,6 +21,8 @@
   "devDependencies": {
     "eslint": "4.19.1",
     "eslint-plugin-react": "^7.7.0",
-    "gh-pages": "1.1.0"
+    "gh-pages": "1.1.0",
+    "jsonlint": "1.6.3",
+    "jsonlint-cli": "1.0.1"
   }
 }
