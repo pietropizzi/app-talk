@@ -1,6 +1,5 @@
 .container {
   display: flex;
-  flex-direction: row;
   align-items: flex-start;
 }
 
@@ -9,6 +8,7 @@
   flex-direction: row;
   align-items: center;
   flex-basis: 50%;
+  flex-shrink: 0;
 }
 
 .description {
@@ -31,4 +31,42 @@
 .options {
   list-style-type: circle;
   margin-left: 2rem;
+}
+
+@media (max-width: 800px) {
+  .nameDot {
+    width: 26px;
+    height: 26px;
+  }
+
+  .description {
+    margin-top: 7px;
+  }
+}
+
+@media (max-width: 650px) {
+  .nameDot {
+    width: 22px;
+    height: 22px;
+  }
+
+  .description {
+    margin-top: 4px;
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    display: block;
+  }
+
+  .nameLine {
+    display: none;
+  }
+
+  .description {
+    margin-top: 0px;
+    margin-bottom: 12px;
+    margin-left: 12px;
+  }
 }

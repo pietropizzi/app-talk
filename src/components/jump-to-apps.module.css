@@ -6,7 +6,6 @@
   background-color: #4a4a4a;
   padding: 42px 0;
   margin-bottom: 24px;
-
 }
 
 .appsContainer {
@@ -31,4 +30,19 @@
   font-size: 0.75rem;
   text-align: center;
   margin-top: 12px;
+}
+
+@media (max-width: 500px) {
+  .innerContainer {
+    padding: 24px 0;
+  }
+
+  .app {
+    margin-right: 12px;
+    margin-bottom: 18px;
+  }
+
+  .appTitle {
+    font-size: 0.625rem;
+  }
 }

@@ -13,3 +13,17 @@
   box-shadow: rgba(0, 0, 0, 0.5) 0 2px 6px;
   border-radius: 15px;
 }
+
+@media (max-width: 500px) {
+  .container {
+    width: 32px;
+    height: 32px;
+    border-radius: 7px;
+  }
+
+  .containerLarge {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+  }
+}

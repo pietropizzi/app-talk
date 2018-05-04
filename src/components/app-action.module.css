@@ -15,3 +15,13 @@
 .description {
   margin-bottom: 18px;
 }
+
+@media (max-width: 650px) {
+  .urlContainer {
+    padding: 12px;
+  }
+
+  .urlParamWrapper {
+    padding-left: 12px;
+  }
+}

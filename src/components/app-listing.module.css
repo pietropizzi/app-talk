@@ -18,10 +18,6 @@
   align-items: center;
 }
 
-.titleSide {
-
-}
-
 .titleLink {
   color: #ccc;
   text-decoration: none;
@@ -44,4 +40,14 @@
 .appActionWrapper:not(:last-child) {
   margin-bottom: 42px;
   border-bottom: 1px solid #e5e5e5;
+}
+
+@media (max-width: 500px) {
+  .title {
+    font-size: 1.25rem;
+  }
+
+  .titleSide {
+    font-size: 0.75rem;
+  }
 }

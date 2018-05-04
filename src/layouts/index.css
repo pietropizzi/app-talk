@@ -32,3 +32,25 @@ html {
 .g-text-light {
   color: #8b8b8b;
 }
+
+@media (max-width: 800px) {
+  .g-monospace {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 650px) {
+  .g-monospace {
+    font-size: 1.25rem;
+  }
+
+  .g-module {
+    padding: 0 18px;
+  }
+}
+
+@media (max-width: 350px) {
+  .g-module {
+    padding: 0 12px;
+  }
+}
