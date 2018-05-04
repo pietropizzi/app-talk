@@ -92,7 +92,7 @@
             {
               "description": "title - note title."
             }
-          ]  
+          ]
         }
       ]
     },
@@ -124,6 +124,204 @@
         {
           "name":"open_note",
           "description":"If ”no” do not display the new note in Bear’s main or external window."
+        }
+      ]
+    },
+    {
+      "name": "Add File",
+      "description": "Append or prepend a file to a note identified by its title or id.",
+      "url": "bear://x-callback-url/add-text",
+      "parameters": [
+        {
+          "name": "id",
+          "description": "note unique identifier."
+        },
+        {
+          "name": "title",
+          "description": "note title."
+        },
+        {
+          "name": "file",
+          "description": "base64 representation of a file"
+        },
+        {
+          "name": "filename",
+          "description": "file name with extension. Both file and filename are required to successfully add a file."
+        },
+        {
+          "name": "mode",
+          "description": "the allowed values are",
+          "options": [
+            {
+              "description": "prepend"
+            },
+            {
+              "description": "append"
+            },
+            {
+              "description": "replace"
+            },
+            {
+              "description": "replace_all"
+            }
+          ]
+        },
+        {
+          "name":"open_note",
+          "description":"If ”no” do not display the new note in Bear’s main or external window."
+        },
+        {
+          "name": "x-success",
+          "description": "Your x-success callback will be called with the following parameters.",
+          "options": [
+            {
+              "description": "note - note text"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Open Tag",
+      "description": "Show all the notes which have a selected tag in bear.",
+      "url": "bear://x-callback-url/open-tag",
+      "parameters": [
+        {
+          "name": "name",
+          "description": "The tag name."
+        }
+      ]
+    },
+    {
+      "name": "Rename Tag",
+      "description": "Rename an existing tag.",
+      "url": "bear://x-callback-url/rename-tag",
+      "parameters": [
+        {
+          "name": "name",
+          "description": "The tage name."
+        },
+        {
+          "name": "new_name",
+          "description": "The new tag name."
+        }
+      ]
+    },
+    {
+      "name": "Delete Tag",
+      "description": "Delete an existing tag.",
+      "url": "bear://x-callback-url/delete-tag",
+      "parameters": [
+        {
+          "name": "name",
+          "description": "The tage name."
+        }
+      ]
+    },
+    {
+      "name": "Trash",
+      "description": "Move a note to bear trash.",
+      "url": "bear://x-callback-url/trash",
+      "parameters": [
+        {
+          "name": "id",
+          "description": "note unique identifier."
+        }
+      ]
+    },
+    {
+      "name": "Search",
+      "description": "Show search results in Bear for all notes or for a specific tag.",
+      "url": "bear://x-callback-url/search",
+      "parameters": [
+        {
+          "name": "term",
+          "description": "String to search."
+        },
+        {
+          "name": "tag",
+          "description": "Tag to search into."
+        }
+      ]
+    },
+    {
+      "name": "Grab URL",
+      "description": "Create a new note with the content of a web page.",
+      "url": "bear://x-callback-url/grab-url",
+      "parameters": [
+        {
+          "name": "url",
+          "description": "URL to grab."
+        },
+        {
+          "name": "images",
+          "description": "If ”yes” grab the pages images"
+        },
+        {
+          "name": "tags",
+          "description": "a comma separated list of tags."
+        },
+        {
+          "name": "pin",
+          "description": "if ”yes” pin the note to the top of the list."
+        },
+        {
+          "name": "x-success",
+          "description": "Your x-success callback will be called with the following parameters.",
+          "options": [
+            {
+              "description": "identifier - note unique identifier"
+            },
+            {
+              "description": "title - note title"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Change Theme",
+      "description": "Change the selected Bear theme. Some themes may require a Bear Pro subscription.",
+      "url": "bear://x-callback-url/change-theme",
+      "parameters": [
+        {
+          "name": "theme",
+          "description": "Available values",
+          "options": [
+            { "description": "Red Graphite" },
+            { "description": "Charcoal" },
+            { "description": "Solarized Light" },
+            { "description": "Solarized Dark" },
+            { "description": "Panic Mode" },
+            { "description": "Dracula" },
+            { "description": "Gotham" },
+            { "description": "Toothpaste" },
+            { "description": "Cobalt" },
+            { "description": "Duotone Light" },
+            { "description": "Duotone Snow" },
+            { "description": "Dieci" },
+            { "description": "Ayu" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Change Font",
+      "description": "Change the selected Bear Font.",
+      "url": "bear://x-callback-url/change-font",
+      "parameters": [
+        {
+          "name": "font",
+          "description": "Available values",
+          "options": [
+            { "description": "Avenir Next" },
+            { "description": "System" },
+            { "description": "Helvetica Neue" },
+            { "description": "Menlo" },
+            { "description": "Georgia" },
+            { "description": "Courier" },
+            { "description": "Open Dyslexic" }
+          ]
         }
       ]
     }
