@@ -5,12 +5,14 @@ module.exports = {
         "node": true
     },
     "globals": {
-      "graphql": true
+      "graphql": true,
+      "clicky": true
     },
     "extends": [
       "plugin:react/recommended",
       "eslint:recommended"
     ],
+    "parser": "babel-eslint",
     "parserOptions": {
         "ecmaVersion": 7,
         "ecmaFeatures": {
