@@ -130,7 +130,7 @@
     {
       "name": "Add File",
       "description": "Append or prepend a file to a note identified by its title or id.",
-      "url": "bear://x-callback-url/add-text",
+      "url": "bear://x-callback-url/add-file",
       "parameters": [
         {
           "name": "id",
