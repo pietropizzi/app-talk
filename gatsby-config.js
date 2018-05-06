@@ -1,7 +1,9 @@
 module.exports = {
   pathPrefix: '/app-talk',
   siteMetadata: {
-    title: 'AppTalk - Let iOS apps talk'
+    title: 'AppTalk',
+    tagLine: 'Let iOS apps talk',
+    description: 'A directory of iOS apps that can be launched via URLs including ones that support x-callback-url.'
   },
   plugins: [
     {
@@ -25,6 +27,7 @@ module.exports = {
       }
     },
     `gatsby-transformer-json`,
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-react-css-modules`,
       options: {

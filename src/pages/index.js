@@ -1,8 +1,10 @@
 import React from 'react';
 import AppListing from '../components/app-listing';
 import JumpToApps from '../components/jump-to-apps';
+import Header from '../components/header';
+import { Helmet } from 'react-helmet';
 
-export default ({ data: { apps: { edges: appEdges }, appIcons: { edges: iconEdges }} }) => {
+export default ({ data: { site, apps: { edges: appEdges }, appIcons: { edges: iconEdges }} }) => {
   const apps = appEdges.map(({ node: app }) => {
     const { identifier } = app.info;
     const iconEdge = iconEdges.find(({ node }) => {
@@ -18,6 +20,11 @@ export default ({ data: { apps: { edges: appEdges }, appIcons: { edges: iconEdge
 
   return (
     <div>
+      <Helmet>
+        <title>{`${site.siteMetadata.title} - ${site.siteMetadata.tagLine}`}</title>
+        <meta name='description' content={site.siteMetadata.description} />
+      </Helmet>
+      <Header metaData={site.siteMetadata} />
       <JumpToApps apps={apps} />
       {
         apps.map(({ app, iconUrl }) =>
@@ -30,6 +37,13 @@ export default ({ data: { apps: { edges: appEdges }, appIcons: { edges: iconEdge
 
 export const query = graphql`
   query IndexQuery {
+    site {
+      siteMetadata {
+        title
+        tagLine
+        description
+      }
+    }
     appIcons: allFile(filter: { relativeDirectory: { eq: "images/app-icons" }}) {
       edges {
         node {
