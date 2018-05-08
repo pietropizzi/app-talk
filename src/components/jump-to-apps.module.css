@@ -32,6 +32,16 @@
   margin-top: 12px;
 }
 
+.backToTop {
+  display: block;
+  text-decoration: none;
+  font-size: 1.5rem;
+  position: fixed;
+  z-index: 1;
+  right: 12px;
+  bottom: 12px;
+}
+
 @media (max-width: 500px) {
   .innerContainer {
     padding: 24px 0;
