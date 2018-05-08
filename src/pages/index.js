@@ -8,15 +8,17 @@ export default ({ data: { site, apps: { edges: appEdges }, appIcons: { edges: ic
   const apps = appEdges.map(({ node: app }) => {
     const { identifier } = app.info;
     const iconEdge = iconEdges.find(({ node }) => {
-      return node.base.split('.')[0] === identifier;
+      return node.id.indexOf(identifier) > 0;
     });
-    const iconUrl = iconEdge ? iconEdge.node.publicURL : '';
+
+    const iconResolutions = iconEdge ? iconEdge.node.resolutions : '';
 
     return {
       app,
-      iconUrl
+      iconResolutions
     }
   });
+
 
   const { siteMetadata: { title, description, url, tagLine }} = site;
   const fullTitle = `${title} - ${tagLine}`;
@@ -37,8 +39,8 @@ export default ({ data: { site, apps: { edges: appEdges }, appIcons: { edges: ic
       <Header metaData={site.siteMetadata} />
       <JumpToApps apps={apps} />
       {
-        apps.map(({ app, iconUrl }) =>
-          <AppListing key={app.info.identifier} app={app} iconUrl={iconUrl} />
+        apps.map(({ app, iconResolutions }) =>
+          <AppListing key={app.info.identifier} app={app} iconResolutions={iconResolutions} />
         )
       }
     </div>

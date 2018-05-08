@@ -17,14 +17,18 @@ export const query = graphql`
         url
       }
     }
-    appIcons: allFile(filter: { relativeDirectory: { eq: "images/app-icons" }}) {
+
+    appIcons: allImageSharp(filter: { id: { regex: "/app-icons/" }}) {
       edges {
         node {
-          base
-          publicURL
+          id
+          resolutions(width: 64) {
+            ...GatsbyImageSharpResolutions
+          }
         }
       }
     }
+
     apps: allAppsJson(sort: { fields: [id], order: ASC }) {
       edges {
         node {

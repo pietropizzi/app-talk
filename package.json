@@ -12,12 +12,15 @@
   },
   "dependencies": {
     "gatsby": "1.9.241",
+    "gatsby-image": "1.0.51",
     "gatsby-link": "1.6.39",
     "gatsby-plugin-react-css-modules": "^1.0.15",
     "gatsby-plugin-react-helmet": "2.0.11",
+    "gatsby-plugin-sharp": "1.6.44",
     "gatsby-plugin-typography": "1.7.18",
     "gatsby-source-filesystem": "1.5.29",
     "gatsby-transformer-json": "1.0.16",
+    "gatsby-transformer-sharp": "1.6.24",
     "react-helmet": "5.2.0"
   },
   "devDependencies": {

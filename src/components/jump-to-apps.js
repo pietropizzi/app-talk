@@ -16,9 +16,9 @@ export default class JumpToApps extends React.Component {
             <div className='g-type-h4' styleName='jumpToAppText'>{'Jump to app'}</div>
             <div styleName='appsContainer'>
               {
-                this.props.apps.map(({ app: { info }, iconUrl }) =>
+                this.props.apps.map(({ app: { info }, iconResolutions }) =>
                   <a href={`#${info.identifier}`} key={info.identifier} styleName='app' onClick={this.onAppClick(info)}>
-                    <AppIcon large url={iconUrl} />
+                    <AppIcon large resolutions={iconResolutions} />
                     <div styleName='appTitle'>
                       { info.name }
                     </div>

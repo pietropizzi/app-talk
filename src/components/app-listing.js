@@ -3,13 +3,13 @@ import AppAction from './app-action';
 import AppIcon from './app-icon';
 import './app-listing.module.css'
 
-export default ({ app: { info, actions }, iconUrl }) => {
+export default ({ app: { info, actions }, iconResolutions }) => {
   return (
     <div id={info.identifier}>
       <div styleName='titleContainer'>
         <div styleName='titleInner' className='g-module'>
           <div styleName='titleMain'>
-            <AppIcon url={iconUrl} />
+            <AppIcon resolutions={iconResolutions} />
             <h2 styleName='title'>{info.name}</h2>
           </div>
           <div styleName='titleSide'>

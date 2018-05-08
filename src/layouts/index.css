@@ -33,6 +33,10 @@ html {
   color: #8b8b8b;
 }
 
+.gatsby-image-outer-wrapper {
+  height: 100%;
+}
+
 @media (max-width: 800px) {
   .g-monospace {
     font-size: 1.5rem;
