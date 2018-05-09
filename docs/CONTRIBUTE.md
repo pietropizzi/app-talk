@@ -1,5 +1,7 @@
 # Contribute to this project
 
+Why and how to contribute to the iOS app directory on [https://app-talk.com](https://app-talk.com).
+
 ## Why contribute?
 
 There are many reasons you might be interested to contribute. Maybe you have spotted an error, maybe some URLs are not valid anymore, maybe you know of an app that supports URLs and it is not part of this documentation effort yet.

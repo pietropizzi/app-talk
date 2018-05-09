@@ -1,5 +1,7 @@
 ![AppTalk](https://raw.githubusercontent.com/pietropizzi/app-talk/master/src/images/logo%402x.png)
 
+[https://app-talk.com](https://app-talk.com)
+
 Let iOS apps talk
 
 A directory of iOS apps that can be launched via URLs including ones that support x-callback-url.
