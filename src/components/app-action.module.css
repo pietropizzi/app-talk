@@ -2,6 +2,7 @@
   background-color: #f2f2f2;
   border-radius: 12px;
   padding: 12px 24px;
+  position: relative;
 }
 
 .urlParamWrapper {
@@ -16,6 +17,19 @@
   margin-bottom: 18px;
 }
 
+.copyButton {
+  border: 0;
+  padding: 0;
+  background: transparent url(../images/copy-icon.png) no-repeat center center;
+  background-size: 50%;
+  text-indent: -999em;
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  right: 0;
+  top: 12px;
+}
+
 @media (max-width: 650px) {
   .urlContainer {
     padding: 12px;
@@ -23,5 +37,11 @@
 
   .urlParamWrapper {
     padding-left: 12px;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .copyButton {
+    background-image: url(../images/copy-icon@2x.png);
   }
 }
