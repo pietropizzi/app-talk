@@ -14,10 +14,10 @@ export default ({ metaData, isSmall }) => {
             <div>
               <div className='g-type-thin' styleName='introText'>
                 { metaData.description }
-                <a href='/about'> Learn more&nbsp;&gt;</a>
+                <a href='https://github.com/pietropizzi/app-talk/blob/master/README.md#motivation'> Learn more&nbsp;&gt;</a>
               </div>
               <div className='g-type-thin' styleName='explainerText'>
-                Is an app / URL missing? Did you find an error? Help me keep the documentation up-to-date. <a href='/about'>See how to contribute&nbsp;&gt;</a>
+                Is an app / URL missing? Did you find an error? Help me keep the documentation up-to-date. <a href='https://github.com/pietropizzi/app-talk/blob/master/docus/CONTRIBUTE.md'>See how to contribute&nbsp;&gt;</a>
               </div>
             </div>
           }
