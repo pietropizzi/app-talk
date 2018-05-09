@@ -4,7 +4,7 @@
 
 There are many reasons you might be interested to contribute. Maybe you have spotted an error, maybe some URLs are not valid anymore, maybe you know of an app that supports URLs and it is not part of this documentation effort yet.
 
-No matter your motivation, your contribution is much appreciated! 🙇‍
+No matter your motivation, your contribution is much appreciated! 🙇
 
 ## How to contribute
 
