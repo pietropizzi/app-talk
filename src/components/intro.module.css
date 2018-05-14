@@ -1,0 +1,12 @@
+.container {
+  overflow: hidden;
+}
+
+.quote {
+  max-width: 700px;
+  margin-left: 50px;
+}
+
+.appActionWrapper {
+  margin-bottom: 42px;
+}

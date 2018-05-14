@@ -2,6 +2,15 @@ html {
   scroll-behavior: smooth;
 }
 
+a {
+  color: #4a4a4a;
+}
+
+a:hover,
+a:focus {
+  color: #222
+}
+
 .g-module {
   max-width: 1024px;
   margin: 0 auto;
@@ -35,7 +44,7 @@ html {
 }
 
 .g-text-light {
-  color: #8b8b8b;
+  color: #777;
 }
 
 .gatsby-image-outer-wrapper {

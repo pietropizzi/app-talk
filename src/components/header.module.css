@@ -32,16 +32,6 @@
   color: #8b8b8b;
 }
 
-.content a {
-  color: #4a4a4a;
-  text-decoration: none;
-}
-
-.content a:hover,
-.content a:focus {
-  color: #222
-}
-
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .logo {
     background-image: url(../images/logo@2x.png);

@@ -24,11 +24,15 @@ const AppUrl = ({ url, parameters }) => {
   );
 };
 
-export default ({ action: { name, description, url, parameters } }) => {
+export default ({ urlOnly, action: { name, description, url, parameters } }) => {
   return (
     <div>
-      <h3 styleName='title'>{name}</h3>
-      <div styleName='description' className='g-text-light'>{description}</div>
+      { !urlOnly &&
+        <div>
+          <h3 styleName='title'>{name}</h3>
+          <div styleName='description' className='g-text-light'>{description}</div>
+        </div>
+      }
       <AppUrl url={url} parameters={parameters} />
     </div>
   );
