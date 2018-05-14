@@ -16,8 +16,6 @@ export default ({ metaData, isSmall }) => {
                 { metaData.description }
                 &nbsp;<a href='#intro'>Learn&nbsp;more</a> or <a href='#jumpToApps'>See&nbsp;the&nbsp;apps</a>.
               </div>
-              <div className='g-type-thin' styleName='introText'>
-              </div>
               <div className='g-type-thin' styleName='explainerText'>
                 Is an app / URL missing? Did you find an error? Help me keep the documentation up-to-date. <a href='https://github.com/pietropizzi/app-talk/blob/master/docs/CONTRIBUTE.md'>See how to contribute</a>
               </div>
