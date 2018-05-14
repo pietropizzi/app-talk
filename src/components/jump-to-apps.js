@@ -10,7 +10,7 @@ export default class JumpToApps extends React.Component {
 
   render() {
     return (
-      <div styleName='container' id='jumpToApps'>
+      <div id='jumpToApps'>
         <div styleName='innerContainer'>
           <div className='g-module'>
             <div className='g-type-h4' styleName='jumpToAppText'>{'Jump to app'}</div>
@@ -28,7 +28,7 @@ export default class JumpToApps extends React.Component {
             </div>
           </div>
         </div>
-        <div className='g-module g-type-h4'>{'All apps'}</div>
+        <h3 className='g-module g-headline-seperator'>{'All apps'}</h3>
         <a styleName='backToTop' href='#jumpToApps'>🔝</a>
       </div>
     );

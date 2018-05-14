@@ -8,6 +8,11 @@ html {
   padding: 0 24px;
 }
 
+.g-headline-seperator {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
 .g-type-h4 {
   font-family: 'Rubik';
   font-size: 1rem;
