@@ -9,7 +9,7 @@
     {
       "name": "Add Event",
       "description": "",
-      "url": "timpage://add-event",
+      "url": "timepage://x-callback-url/add_event",
       "parameters": [
         {
           "name": "title",
@@ -65,6 +65,164 @@
             },
             {
               "description": "event_id"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Open Day",
+      "description": "Open Timepage and show a specified day.",
+      "url": "timepage://open_day",
+      "parameters": [
+        {
+          "name": "day",
+          "description": "Day can be specified as either:",
+          "options": [
+            {
+              "description": "Date in the format yyyy-mm-dd"
+            },
+            {
+              "description": "Special strings ”today” or ”tomorrow”"
+            },
+            {
+              "description": "Upcoming weekday name (long or short) such as ”monday”, ”tuesday”, ”wed”, etc. Is specific to the language set by the device. Always specifies the next upcoming day with this name."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Open Week",
+      "description": "Open Timepage and show a specified week",
+      "url": "timepage://open_week",
+      "parameters": [
+        {
+          "name": "week",
+          "description": "The week to open to. Can be one of",
+          "options": [
+            {
+              "description": "”this” - This week"
+            },
+            {
+              "description": "”next” - Next week"
+            },
+            {
+              "description": "index - specifies an offset to the current week. For example, when opening a specific week, index 0=this week, 1=next week, -1=last week, etc."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Open Month",
+      "description": "Open Timepage and show a specified month",
+      "url": "timepage://open_month",
+      "parameters": [
+        {
+          "name": "month",
+          "description": "The month to open to. Can be one of",
+          "options": [
+            {
+              "description": "”this” - This week"
+            },
+            {
+              "description": "”next” - Next week"
+            },
+            {
+              "description": "index - specifies an offset to the current month. For example, when opening a specific month, index 0=this month, 1=next month, -1=last month, etc."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Open Weather For A Day",
+      "description": "Open Timepage and show weather for a specified day.",
+      "url": "timepage://open_weather",
+      "parameters": [
+        {
+          "name": "day",
+          "description": "Day can be specified as either:",
+          "options": [
+            {
+              "description": "Date in the format yyyy-mm-dd"
+            },
+            {
+              "description": "Special strings ”today” or ”tomorrow”"
+            },
+            {
+              "description": "Upcoming weekday name (long or short) such as ”monday”, ”tuesday”, ”wed”, etc. Is specific to the language set by the device. Always specifies the next upcoming day with this name."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Open Weather For A Week",
+      "description": "Open Timepage and show weather for a specified week.",
+      "url": "timepage://open_weather",
+      "parameters": [
+        {
+          "name": "week",
+          "description": "The week to open to. Can be one of",
+          "options": [
+            {
+              "description": "”this” - This week"
+            },
+            {
+              "description": "”next” - Next week"
+            },
+            {
+              "description": "index - specifies an offset to the current week. For example, when opening a specific week, index 0=this week, 1=next week, -1=last week, etc."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Search",
+      "description": "Open Timepage and show search results for the specified search terms.",
+      "url": "timepage://search",
+      "parameters": [
+        {
+          "name": "query",
+          "description": "Search term to search for."
+        }
+      ]
+    },
+    {
+      "name": "Get Event",
+      "description": "Get a specified event and return its details via a specified callback URL.",
+      "url": "timepage://x-callback-url/get_event",
+      "parameters": [
+        {
+          "name": "event",
+          "description": "The event identifier",
+          "options": [
+            {
+              "description": "special identifiert ”next”"
+            },
+            {
+              "description": "event_id"
+            }
+          ]
+        },
+        {
+          "name": "x-success",
+          "description": "Your x-success callback will be called with the following parameters",
+          "options": [
+            {
+              "description": "start - start of the event as <yyyy-mm-dd hh:mm>"
+            },
+            {
+              "description": "end - end of the event as <yyyy-mm-dd hh:mm>"
+            },
+            {
+              "description": "title - event title"
+            },
+            {
+              "description": "location - event location"
             }
           ]
         }

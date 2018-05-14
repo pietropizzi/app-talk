@@ -22,7 +22,7 @@ export default ({ app: { info, actions }, iconResolutions }) => {
       <div className='g-module'>
         {
           actions.map((action) =>
-            <div key={action.url} styleName='appActionWrapper'>
+            <div key={`${action.url}-${action.name}`} styleName='appActionWrapper'>
               <AppAction action={action} />
             </div>
           )
