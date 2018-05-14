@@ -14,7 +14,7 @@ export default ({ metaData, isSmall }) => {
             <div>
               <div className='g-type-thin' styleName='introText'>
                 { metaData.description }
-                &nbsp;<a href='#intro'>Learn more</a> or <a href='#jumpToApps'>See the apps</a>.
+                &nbsp;<a href='#intro'>Learn&nbsp;more</a> or <a href='#jumpToApps'>See&nbsp;the&nbsp;apps</a>.
               </div>
               <div className='g-type-thin' styleName='introText'>
               </div>
