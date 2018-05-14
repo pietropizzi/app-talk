@@ -28,6 +28,13 @@
   position: absolute;
   right: 0;
   top: 12px;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.copyButton:hover,
+.copyButton:focus {
+  opacity: 1;
 }
 
 @media (max-width: 650px) {
