@@ -6,9 +6,12 @@ export default ({ metaData, isSmall }) => {
   return (
     <div styleName='container'>
       <div className='g-module'>
-        <h1>
-          <a styleName='logo' href='/'>{metaData.title}</a>
-        </h1>
+        <div styleName='logoRow'>
+          <h1 styleName='logoTitle'>
+            <a styleName='logo' href='/'>{metaData.title}</a>
+          </h1>
+          <Link styleName='navLink' to='/about' activeStyle={{ color: '#3f8273' }}>About</Link>
+        </div>
         <div styleName='content'>
           <h2 styleName='title'>{metaData.tagLine}</h2>
           { !isSmall &&

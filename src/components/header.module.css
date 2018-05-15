@@ -4,6 +4,16 @@
   padding: 30px 0 84px;
 }
 
+.logoRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logoTitle {
+  margin-bottom: 0;
+}
+
 .logo {
   display: block;
   width: 139px;
@@ -11,6 +21,10 @@
   background: transparent url(../images/logo.png) no-repeat 0 0;
   background-size: 139px 42px;
   text-indent: -999em;
+}
+
+.navLink {
+  text-decoration: none;
 }
 
 .content {
