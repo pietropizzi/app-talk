@@ -28,10 +28,10 @@ const xCallbackUrlParamsAction = {
 
 export default () => {
   return (
-    <div id='intro' styleName='container'>
+    <div>
       <div className='g-module'>
-        <h3 className='g-headline-seperator'>What is this?</h3>
-        <p>Let’s first answer what x-callback-url is. From <a href='http://x-callback-url.com'>x-callback-url.com</a>:</p>
+        <h3 className='g-headline-seperator'>What is this site?</h3>
+        <p>This site is about documenting iOS apps that support URLs to do certain actions. Part of that is a standard called <code>x-callback-url</code> which <a href='http://x-callback-url.com'>its makers</a> describe as:</p>
         <blockquote className='g-text-light' styleName='quote'>
           <p>The goal of the x-callback-url specification is to provide a standardized means for iOS developers to expose and document the methods they make available to other apps. Using x-callback-url’s source apps can launch other apps passing data and context information, and also provide parameters instructing the target app to return data and control back to the source app after executing an action.</p>
         </blockquote>

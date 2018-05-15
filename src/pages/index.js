@@ -1,6 +1,5 @@
 import React from 'react';
 import AppListing from '../components/app-listing';
-import Intro from '../components/intro';
 import JumpToApps from '../components/jump-to-apps';
 import Header from '../components/header';
 import { Helmet } from 'react-helmet';
@@ -52,7 +51,6 @@ export default class IndexPage extends React.Component {
           <link rel='icon' type='image/png' sizes='16x16' href='/favicon-16x16.png' />
         </Helmet>
         <Header metaData={site.siteMetadata} />
-        <Intro />
         <JumpToApps apps={apps} />
         {
           apps.map(({ app, iconResolutions }) =>
