@@ -1,0 +1,36 @@
+{
+  "info": {
+    "identifier": "vlc",
+    "name": "VLC",
+    "appstoreUrl": "https://itunes.apple.com/de/app/vlc-for-mobile/id650377962?l=en&mt=8",
+    "documentationUrl": "https://wiki.videolan.org/Documentation:IOS/#x-callback-url"
+  },
+  "actions": [
+    {
+      "name": "Stream",
+      "description": "Plays the stream provided by the ”url” parameter",
+      "url": "vlc-x-callback://x-callback-url/stream",
+      "parameters": [
+        {
+          "name": "url",
+          "description": "The URL to stream"
+        }
+      ]
+    },
+    {
+      "name": "Download",
+      "description": "Download the file provided by the ”url” parameter",
+      "url": "vlc-x-callback://x-callback-url/download",
+      "parameters": [
+        {
+          "name": "url",
+          "description": "The URL to stream"
+        },
+        {
+          "name": "filename",
+          "description": "VLC will store the file under the given filename."
+        }
+      ]
+    }
+  ]
+}
