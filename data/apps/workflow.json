@@ -1,0 +1,129 @@
+{
+  "info": {
+    "identifier": "workflow",
+    "name": "Workflow",
+    "appstoreUrl": "https://itunes.apple.com/de/app/workflow/id915249334?l=en&mt=8",
+    "documentationUrl": "https://workflow.is/docs/using-the-workflow-url-scheme"
+  },
+  "actions": [
+    {
+      "name": "Open Workflow",
+      "description": "Launch the app to the state when it was last used.",
+      "url": "workflow://"
+    },
+    {
+      "name": "Create A New Workflow",
+      "description": "Jump to My Workflows and create an empty new workflow.",
+      "url": "workflow://create-workflow"
+    },
+    {
+      "name": "Open A Workflow",
+      "description": "Launch the app to a particular workflow in your collection.",
+      "url": "workflow://open-workflow",
+      "parameters": [
+        {
+          "name": "name",
+          "description": "The name of the workflow"
+        }
+      ]
+    },
+    {
+      "name": "Run A Workflow",
+      "description": "This functionality may be useful in automation systems that extend beyond Workflow itself, so other apps can run a workflow in your collection. Or, you could utilize this URL in a task manager like OmniFocus or Todoist for running a workflow as one step in a project.",
+      "url": "workflow://x-callback-url/run-workflow",
+      "parameters": [
+        {
+          "name": "name",
+          "description": "The name of the workflow"
+        },
+        {
+          "name": "input",
+          "description": "This value determines what will be provided as input to the beginning of the workflow.",
+          "options": [
+            {
+              "description": "”text” - the input given by the parameter ”text” will be used as input."
+            },
+            {
+              "description": "”clipboard” - the contents of the clipboard will be used as input."
+            }
+          ]
+        },
+        {
+          "name": "text",
+          "description": "When the ”input” parameter is set to ”text” this text is used as input to the workflow."
+        },
+        {
+          "name": "x-success",
+          "description": "When the run was successful the callback will be called with",
+          "options": [
+            {
+              "description": "result - the textual output of the workflow."
+            }
+          ]
+        },
+        {
+          "name": "x-error",
+          "description": "When there was an error the callback will be called with",
+          "options": [
+            {
+              "description": "errorMessage - a description of the error."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Import A Workflow",
+      "description": "Workflow also has the ability to accept .wflow files and import them into My Workflows. This is useful, for example, if you would like to share a workflow online and provide a link for others to instantly add it to their library.",
+      "url": "workflow://x-callback-url/import-workflow",
+      "parameters": [
+        {
+          "name": "url",
+          "description": "A URL pointing to the .wflow file you want to import."
+        },
+        {
+          "name": "name",
+          "description": "What to name the new workflow. If not provided, the workflow filename is used."
+        },
+        {
+          "name": "silent",
+          "description": "By default, the imported workflow will be opened and displayed to the user. Set this parameter to ”true” to import without opening the workflow."
+        },
+        {
+          "name": "x-success",
+          "description": "When the run was successful the callback will be called with",
+          "options": [
+            {
+              "description": "result - the textual output of the workflow."
+            }
+          ]
+        },
+        {
+          "name": "x-error",
+          "description": "When there was an error the callback will be called with",
+          "options": [
+            {
+              "description": "errorMessage - a description of the error."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Open Gallery",
+      "description": "Open workflow on the main page of the gallery.",
+      "url": "workflow://gallery"
+    },
+    {
+      "name": "Search Gallery",
+      "description": "Search the gallery",
+      "url": "workflow://gallery/search",
+      "parameters": [
+        {
+          "name": "query",
+          "description": "The query to search for"
+        }
+      ]
+    }
+  ]
+}
