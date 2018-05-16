@@ -1,0 +1,125 @@
+{
+  "info": {
+    "identifier": "trello",
+    "name": "Trello",
+    "appstoreUrl": "https://itunes.apple.com/de/app/trello/id461504587?l=en&mt=8",
+    "documentationUrl": "https://trello.com/c/cJfzOdDm/188-automate-with-url-scheme"
+  },
+  "actions": [
+    {
+      "name": "Show Board",
+      "description": "Links to a board.",
+      "url": "trello://x-callback-url/showBoard",
+      "parameters": [
+        {
+          "name": "id",
+          "description": "board id. Use this or the ”shortlink”"
+        },
+        {
+          "name": "shortlink",
+          "description": "board shortlink. (can be with or without the ”https://trello.com/b/” prefix). Use this or the ”id”"
+        }
+      ]
+    },
+    {
+      "name": "Show Cards",
+      "description": "Links to a card.",
+      "url": "trello://x-callback-url/showCard",
+      "parameters": [
+        {
+          "name": "id",
+          "description": "card id. Use this or the ”shortlink”"
+        },
+        {
+          "name": "shortlink",
+          "description": "card shortlink. (can be with or without the ”https://trello.com/c/” prefix). Use this or the ”id”"
+        }
+      ]
+    },
+    {
+      "name": "Create Board",
+      "description": "Creates a new board.",
+      "url": "trello://x-callback-url/createBoard",
+      "parameters": [
+        {
+          "name": "name",
+          "description": "Name for the board."
+        },
+        {
+          "name": "organization",
+          "description": "Name of the organization in which to create the board."
+        },
+        {
+          "name": "permission",
+          "description": "Permission level to set",
+          "options": [
+            {
+              "description": "”private”"
+            },
+            {
+              "description": "”public - default”"
+            },
+            {
+              "description": "”organization”"
+            }
+          ]
+        },
+        {
+          "name": "x-success",
+          "description": "The callback will be called with the following parameters:",
+          "options": [
+            {
+              "description": "id - the board id"
+            },
+            {
+              "description": "shortlink - the board shortlink suffix"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Create Card",
+      "description": "Creates a new card in a specified board.",
+      "url": "trello://x-callback-url/createCard",
+      "parameters": [
+        {
+          "name": "id",
+          "description": "bord id. Use this or the ”shortlink”"
+        },
+        {
+          "name": "shortlink",
+          "description": "bord shortlink. (can be with or without the ”https://trello.com/b/” prefix). Use this or the ”id”"
+        },
+        {
+          "name": "name",
+          "description": "The name of the new card."
+        },
+        {
+          "name": "description",
+          "description": "The description text to attach to the card."
+        },
+        {
+          "name": "list-id",
+          "description": "id of the list within the specified board in which to insert the card (Default: First list)"
+        },
+        {
+          "name": "use-pasteboard",
+          "description": "Interpreted as a boolean (”0”, ”1”, ”true”, ”false”, etc.) that indicates whether the contents of the pasteboard should be included."
+        },
+        {
+          "name": "x-success",
+          "description": "The callback will be called with the following parameters:",
+          "options": [
+            {
+              "description": "id - the card id"
+            },
+            {
+              "description": "shortlink - the card shortlink suffix"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
