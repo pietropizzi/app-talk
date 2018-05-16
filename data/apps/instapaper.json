@@ -1,0 +1,21 @@
+{
+  "info": {
+    "identifier": "instapaper",
+    "name": "Instapaper",
+    "appstoreUrl": "https://itunes.apple.com/de/app/instapaper/id288545208?l=en&mt=8",
+    "documentationUrl": "http://blog.instapaper.com/post/4637427075"
+  },
+  "actions": [
+    {
+      "name": "Add URL",
+      "description": "Add the URL to Instapaper.",
+      "url": "x-callback-instapaper://x-callback-url/add",
+      "parameters": [
+        {
+          "name": "url",
+          "description": "The URL to add."
+        }
+      ]
+    }
+  ]
+}
