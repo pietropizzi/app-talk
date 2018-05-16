@@ -5,5 +5,589 @@
     "appstoreUrl": "https://itunes.apple.com/de/app/ulysses/id1225571038?l=en&mt=8",
     "documentationUrl": "https://ulyssesapp.com/kb/x-callback-url/"
   },
-  "actions": []
+  "actions": [
+    {
+      "name": "New Sheet",
+      "description": "Creates a new sheet.",
+      "url": "ulysses://x-callback-url/new-sheet",
+      "parameters": [
+        {
+          "name": "text",
+          "description": "The contents that should be inserted to the new sheet. Contents are imported as Markdown by default."
+        },
+        {
+          "name": "group",
+          "description": "Specifies the group the new sheet should be inserted to. This argument can be set to one of the following values:",
+          "options": [
+            {
+              "description": "A group name (e.g. My Group) that will match the first group having the same name, regardless of its position in the group hierarchy."
+            },
+            {
+              "description": "A path to a particular target group (e.g. /My Group/My Subgroup). Any path must begin with a slash."
+            },
+            {
+              "description": "A unique identifier of the target group."
+            },
+            {
+              "description": "If no value is given, the sheet is created inside the Inbox."
+            }
+          ]
+        },
+        {
+          "name": "format",
+          "description": "Specifies the format of the imported text. One of:",
+          "options": [
+            {
+              "description": "markdown - the default"
+            },
+            {
+              "description": "text"
+            },
+            {
+              "description": "html"
+            }
+          ]
+        },
+        {
+          "name": "index",
+          "description": "The position of the new sheet in its parent group. Use 0 to make it the first sheet."
+        }
+      ]
+    },
+    {
+      "name": "New Group",
+      "description": "Creates a new group.",
+      "url": "ulysses://x-callback-url/new-group",
+      "parameters": [
+        {
+          "name": "name",
+          "description": "The name of the group to be created"
+        },
+        {
+          "name": "parent",
+          "description": "Specifies the parent group the new group should be inserted to. This argument can be set to one of the following values:",
+          "options": [
+            {
+              "description": "A group name (e.g. My Group) that will match the first group having the same name, regardless of its position in the group hierarchy."
+            },
+            {
+              "description": "A path to a particular target group (e.g. /My Group/My Subgroup). Any path must begin with a slash."
+            },
+            {
+              "description": "A unique identifier of the target group."
+            },
+            {
+              "description": "If no value is given, the group is created inside the top level group."
+            }
+          ]
+        },
+        {
+          "name": "index",
+          "description": "The position of the new group in its parent group. Use 0 to make it the first group."
+        }
+      ]
+    },
+    {
+      "name": "Insert",
+      "description": "Inserts or appends text to a sheet.",
+      "url": "ulysses://x-callback-url/insert",
+      "parameters": [
+        {
+          "name": "id",
+          "description": "The identifier of the sheet the text should be inserted to."
+        },
+        {
+          "name": "text",
+          "description": "The contents that should be inserted to the new sheet. Must be URL-encoded. Contents are imported as Markdown by default."
+        },
+        {
+          "name": "format",
+          "description": "Specifies the format of the imported text. One of:",
+          "options": [
+            {
+              "description": "markdown - the default"
+            },
+            {
+              "description": "text"
+            },
+            {
+              "description": "html"
+            }
+          ]
+        },
+        {
+          "name": "position",
+          "description": "Optional. Set ”begin” or ”end” in order to insert text at the beginning of a document. If not given, the text is appended."
+        },
+        {
+          "name": "newline",
+          "description": "Specifies how newlines should be inserted to the text:",
+          "options": [
+            {
+              "description": "prepend - prepend the inserted text by a newline."
+            },
+            {
+              "description": "append - append the inserted text with a newline."
+            },
+            {
+              "description": "enclose - enclose the entire text with newlines."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Attach Note",
+      "description": "Creates a new note attachment on a sheet.",
+      "url": "ulysses://x-callback-url/attach-note",
+      "parameters": [
+        {
+          "name": "id",
+          "description": "The identifier of the sheet the text should be inserted to."
+        },
+        {
+          "name": "text",
+          "description": "The contents that should be inserted to the new sheet. Must be URL-encoded. Contents are imported as Markdown by default."
+        },
+        {
+          "name": "format",
+          "description": "Specifies the format of the imported text. One of:",
+          "options": [
+            {
+              "description": "markdown - the default"
+            },
+            {
+              "description": "text"
+            },
+            {
+              "description": "html"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Update Note",
+      "description": "Changes an existing note attachment on a sheet. Requires authorization.",
+      "url": "ulysses://x-callback-url/update-note",
+      "parameters": [
+        {
+          "name": "id",
+          "description": "The identifier of the sheet the text should be inserted to."
+        },
+        {
+          "name": "text",
+          "description": "The contents that should be inserted to the new sheet. Must be URL-encoded. Contents are imported as Markdown by default."
+        },
+        {
+          "name": "format",
+          "description": "Specifies the format of the imported text. One of:",
+          "options": [
+            {
+              "description": "markdown - the default"
+            },
+            {
+              "description": "text"
+            },
+            {
+              "description": "html"
+            }
+          ]
+        },
+        {
+          "name": "index",
+          "description": "The position of the note to change. Use 0 for the first note, 1 for the second note, and so on."
+        }
+      ]
+    },
+    {
+      "name": "Remove Note",
+      "description": "Removes a note attachment from a sheet. Requires authorization.",
+      "url": "ulysses://x-callback-url/remove-note",
+      "parameters": [
+        {
+          "name": "id",
+          "description": "The identifier of the sheet from which a note should be removed."
+        },
+        {
+          "name": "index",
+          "description": "The position of the note to remove. Use 0 for the first note, 1 for the second note, and so on."
+        }
+      ]
+    },
+    {
+      "name": "Attach Image",
+      "description": "Creates a new image attachment on a sheet.",
+      "url": "ulysses://x-callback-url/attach-image",
+      "parameters": [
+        {
+          "name": "id",
+          "description": "The identifier of the sheet the image should be attached to."
+        },
+        {
+          "name": "image",
+          "description": "The image data that should be used. The data must use base64 encoding. Make sure that the base64-encoded data is also URL encoded."
+        },
+        {
+          "name": "format",
+          "description": "The format of the provided image (use an image path extension, like png, pdf, jpg, raw, gif)."
+        },
+        {
+          "name": "filename",
+          "description": "A filename the image format should be detected from. Either the argument format or filename must be provided."
+        }
+      ]
+    },
+    {
+      "name": "Attach Keywords",
+      "description": "Adds one or more keywords to a sheet.",
+      "url": "ulysses://x-callback-url/attach-keywords",
+      "parameters": [
+        {
+          "name": "id",
+          "description": "The identifier of the sheet the keywords should be attached to."
+        },
+        {
+          "name": "keywords",
+          "description": "A comma separated list of keywords that should be attached to the sheet."
+        }
+      ]
+    },
+    {
+      "name": "Remove Keywords",
+      "description": "Removes one or more keywords from a sheet. Requires authorization.",
+      "url": "ulysses://x-callback-url/remove-keywords",
+      "parameters": [
+        {
+          "name": "id",
+          "description": "The identifier of the sheet the keywords should be removed from."
+        },
+        {
+          "name": "keywords",
+          "description": "A comma separated list of keywords that should be removed from the sheet."
+        }
+      ]
+    },
+    {
+      "name": "Set Group Title",
+      "description": "Changes the title of a group. Requires authorization.",
+      "url": "ulysses://x-callback-url/set-group-title",
+      "parameters": [
+        {
+          "name": "group",
+          "description": "The group for which the title should be changed. This argument can be set to one of the following values:",
+          "options": [
+            {
+              "description": "A group name (e.g. My Group) that will match the first group having the same name, regardless of its position in the group hierarchy."
+            },
+            {
+              "description": "A path to a particular target group (e.g. /My Group/My Subgroup). Any path must begin with a slash."
+            },
+            {
+              "description": "A unique identifier of the target group."
+            }
+          ]
+        },
+        {
+          "name": "title",
+          "description": "The new title"
+        }
+      ]
+    },
+    {
+      "name": "Set Sheet Title",
+      "description": "Changes the first paragraph of a sheet. Requires authorization. If the sheet has a first paragraph with the requested type, the paragraph contents will be changed (a heading replaces any existing heading). Otherwise, a new paragraph with the requested type and contents will be inserted at the beginning of the sheet.",
+      "url": "ulysses://x-callback-url/set-sheet-title",
+      "parameters": [
+        {
+          "name": "sheet",
+          "description": "The identifier of the sheet for which the title should be changed."
+        },
+        {
+          "name": "type",
+          "description": "The type of paragraph to use for the title. This argument can be set to one of the following values:",
+          "options": [
+            {
+              "description": "”heading1”, ..., ”heading6” - to use a heading paragraph."
+            },
+            {
+              "description": "”comment” - to use a comment paragraph."
+            },
+            {
+              "description": "”filename” - to use a filename paragraph such as ”@: My Filename”. Only applies to sheets in external folders."
+            }
+          ]
+        },
+        {
+          "name": "title",
+          "description": "The new title"
+        }
+      ]
+    },
+    {
+      "name": "Move",
+      "description": "Moves an item (sheet or group) to a target group and/or to a new position. Requires authorization.",
+      "url": "ulysses://x-callback-url/move",
+      "parameters": [
+        {
+          "name": "id",
+          "description": "The identifier of the item (sheet or group) that should be moved."
+        },
+        {
+          "name": "targetGroup",
+          "description": "Optional if ”index” is set. The group where the item should be moved. This argument can be set to one of the following values:",
+          "options": [
+            {
+              "description": "A group name (e.g. My Group) that will match the first group having the same name, regardless of its position in the group hierarchy."
+            },
+            {
+              "description": "A path to a particular group (e.g. /My Group/My Subgroup). Any path must begin with a slash."
+            },
+            {
+              "description": "A unique identifier of a sheet or group that should be opened. If the parameter is not set, the item will be moved inside of its current parent group."
+            }
+          ]
+        },
+        {
+          "name": "index",
+          "description": "Optional if ”targetGroup” is set. The position of the item in its target group. Use 0 to make it the first item."
+        }
+      ]
+    },
+    {
+      "name": "Copy",
+      "description": "Copies an item (sheet or group) to a target group and/or to a new position.",
+      "url": "ulysses://x-callback-url/copy",
+      "parameters": [
+        {
+          "name": "id",
+          "description": "The identifier of the item (sheet or group) that should be copied."
+        },
+        {
+          "name": "targetGroup",
+          "description": "Optional if ”index” is set. The group where the item should be copied. This argument can be set to one of the following values:",
+          "options": [
+            {
+              "description": "A group name (e.g. My Group) that will match the first group having the same name, regardless of its position in the group hierarchy."
+            },
+            {
+              "description": "A path to a particular group (e.g. /My Group/My Subgroup). Any path must begin with a slash."
+            },
+            {
+              "description": "A unique identifier of a sheet or group that should be opened. If the parameter is not set, the item will be moved inside of its current parent group."
+            }
+          ]
+        },
+        {
+          "name": "index",
+          "description": "Optional if ”targetGroup” is set. The position of the item in its target group. Use 0 to make it the first item."
+        }
+      ]
+    },
+    {
+      "name": "Trash",
+      "description": "Moves an item (sheet or group) to the trash. Requires authorization.",
+      "url": "ulysses://x-callback-url/trash",
+      "parameters": [
+        {
+          "name": "id",
+          "description": "The identifier of the item (sheet or group) that should be moved to the trash."
+        }
+      ]
+    },
+    {
+      "name": "Get Item (Group)",
+      "description": "Retrieves information about a group. Requires authorization.",
+      "url": "ulysses://x-callback-url/get-item",
+      "parameters": [
+        {
+          "name": "id",
+          "description": "The identifier of the group for which to retrieve information. "
+        },
+        {
+          "name": "recursive",
+          "description": "Determines whether the result should include all sub-groups of the group. The allowed values are:",
+          "options": [
+            {
+              "description": "”YES” - the default"
+            },
+            {
+              "description": "”NO”"
+            }
+          ]
+        },
+        {
+          "name": "x-success",
+          "description": "The ”x-success” callback retrieves an argument ”item”. The value is a URL-encoded JSON object providing information on the requested group with the following structure.",
+          "options": [
+            {
+              "description": "title - The title of the group."
+            },
+            {
+              "description": "type - The type of the item. This can be ”group”, ”filter” or ”trash”."
+            },
+            {
+              "description": "identifier - The identifier of the group"
+            },
+            {
+              "description": "hasLifetimeIdentifier - hether the identifier stays the same even if the group is moved or renamed. ”true” for items that are stored in the sections “iCloud” or “On My Mac” / “On My iPad”. ”false” for items in external folders or Dropbox."
+            },
+            {
+              "description": "containers - the item descriptions for all child groups of this group. Will be empty if the parameter ”recursive” was set to ”NO”."
+            },
+            {
+              "description": "sheets - The item descriptions for all sheets of this group. Will be empty for filters."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Get Item (Sheet)",
+      "description": "Retrieves information about a sheet. Requires authorization.",
+      "url": "ulysses://x-callback-url/get-item",
+      "parameters": [
+        {
+          "name": "id",
+          "description": "The identifier of the item sheet for which to retrieve information. "
+        },
+        {
+          "name": "x-success",
+          "description": "The ”x-success” callback retrieves an argument ”item”. The value is a URL-encoded JSON object providing information on the requested sheet with the following structure.",
+          "options": [
+            {
+              "description": "title - The title of the sheet."
+            },
+            {
+              "description": "titleType - The markup type of the title. Will be set to ”heading1”…”heading6”, ”comment” if the title is a heading or comment. Will be set to ”filename” on external folders or Dropbox if the title is the sheet’s filename (e.g. ”@: My Filname”). If no title is given this vlaue is set to ”null”."
+            },
+            {
+              "description": "type - The type of the item (always ”sheet”)"
+            },
+            {
+              "description": "identifier - The identifier of the sheet."
+            },
+            {
+              "description": "hasLifetimeIdentifier - hether the identifier stays the same even if the group is moved or renamed. ”true” for items that are stored in the sections “iCloud” or “On My Mac” / “On My iPad”. ”false” for items in external folders or Dropbox."
+            },
+            {
+              "description": "changeToken - A value that identifies the current verison of the sheet. The change token will have a different value whenever the sheet changes."
+            },
+            {
+              "description": "modificationDate - The timestamp when the sheet was last modified. The timestamp is given as the number of seconds relative to ”00:00:00 UTC on 1 January 2001.”"
+            },
+            {
+              "description": "creationDate - The timestamp when the sheet was last created."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Get Root Items",
+      "description": "Retrieves information about the root sections. Can be used to get a full listing of the entire Ulysses library. Requires authorization.",
+      "url": "ulysses://x-callback-url/get-root-items",
+      "parameters": [
+        {
+          "name": "recursive",
+          "description": "Determines whether the result should be a deep listing of the entire Ulysses library. The allowed values are ”YES” and ”NO”. Defaults to ”YES”."
+        },
+        {
+          "name": "x-success",
+          "description": "The ”x-success” callback retrieves an argument ”items”. The value is a URL-encoded JSON array. It contains an info object for each section such as „iCloud”, „On My iPad”, and one for each external folder."
+        }
+      ]
+    },
+    {
+      "name": "Read Sheet",
+      "description": "Retrieves the contents (text, notes, keywords) of a sheet. Requires authorization.",
+      "url": "ulysses://x-callback-url/read-sheet",
+      "parameters": [
+        {
+          "name": "id",
+          "description": "The identifier of the sheet that should be read."
+        },
+        {
+          "name": "text",
+          "description": "Determines whether the full text of the sheet should be included in the result. The allowed values are ”YES” and ”NO”. Defaults to ”NO”."
+        },
+        {
+          "name": "x-success",
+          "description": "The ”x-success” callback retrieves an argument ”sheet”. The value is a URL-encoded JSON object. It has the following structure:",
+          "options": [
+            {
+              "description": "title - The title of the sheet."
+            },
+            {
+              "description": "titleType - The markup type of the title. Will be set to ”heading1”…”heading6”, ”comment” if the title is a heading or comment. Will be set to ”filename” on external folders or Dropbox if the title is the sheet’s filename (e.g. ”@: My Filname”). If no title is given this vlaue is set to ”null”."
+            },
+            {
+              "description": "type - The type of the item (always ”sheet”)"
+            },
+            {
+              "description": "identifier - The identifier of the sheet."
+            },
+            {
+              "description": "hasLifetimeIdentifier - hether the identifier stays the same even if the group is moved or renamed. ”true” for items that are stored in the sections “iCloud” or “On My Mac” / “On My iPad”. ”false” for items in external folders or Dropbox."
+            },
+            {
+              "description": "changeToken - A value that identifies the current verison of the sheet. The change token will have a different value whenever the sheet changes."
+            },
+            {
+              "description": "modificationDate - The timestamp when the sheet was last modified. The timestamp is given as the number of seconds relative to ”00:00:00 UTC on 1 January 2001.”"
+            },
+            {
+              "description": "creationDate - The timestamp when the sheet was last created."
+            },
+            {
+              "description": "text - The sheets content encoded as Markdown. This is only available if the ”text” parameter was set to ”YES”."
+            },
+            {
+              "description": "keywords - The keywords of the sheet as an array of strings."
+            },
+            {
+              "description": "notes - The notes of the sheet as an array of strings. All notes are encoded as Markdown."
+            }
+          ]
+        },
+        {
+          "name": "Open",
+          "description": "Opens an item (sheet or group) with a particular identifier in Ulysses.",
+          "url": "ulysses://x-callback-url/open",
+          "parameters": [
+            {
+              "name": "id",
+              "description": "Specifies the item (sheet or group) that should be opened. This argument can be set to one of the following values:",
+              "options": [
+                {
+                  "description": "A group name (e.g. My Group) that will match the first group having the same name, regardless of its position in the group hierarchy."
+                },
+                {
+                  "description": "A path to a particular group (e.g. /My Group/My Subgroup). Any path must begin with a slash."
+                },
+                {
+                  "description": "A unique identifier of a sheet or group that should be opened."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Open All",
+      "description": "Opens the special “All” group",
+      "url": "ulysses://x-callback-url/open-all"
+    },
+    {
+      "name": "Open Recent",
+      "description": "Opens the special “Last 7 days” group",
+      "url": "ulysses://x-callback-url/open-recent"
+    },
+    {
+      "name": "Open Favorites",
+      "description": "Opens the special “Favorites” group",
+      "url": "ulysses://x-callback-url/open-favorites"
+    }
+  ]
 }
