@@ -1,0 +1,20 @@
+{
+  "info": {
+    "identifier": "overcast",
+    "name": "Overcast",
+    "appstoreUrl": "https://itunes.apple.com/de/app/overcast/id888422857?l=en&mt=8"
+  },
+  "actions": [
+    {
+      "name": "Add Url",
+      "description": "Subscribe to a new show under the given URL",
+      "url": "overcast://x-callback-url/add",
+      "parameters": [
+        {
+          "name": "url",
+          "description": "It will parse the URL and find the associated podcast feed."
+        }
+      ]
+    }
+  ]
+}
