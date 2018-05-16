@@ -1,0 +1,29 @@
+{
+  "info": {
+    "identifier": "gladys",
+    "name": "Gladys",
+    "appstoreUrl": "https://itunes.apple.com/de/app/gladys/id1257526927?l=en&mt=8",
+    "documentationUrl": "http://www.bru.build/gladys-callback-scheme"
+  },
+  "actions": [
+    {
+      "name": "Paste Clipboard",
+      "description": "Paste clipboard into Gladys",
+      "url": "gladys://x-callback-url/paste-clipboard",
+      "parameters": [
+        {
+          "name": "title",
+          "description": "A title to use to override the name of the item being pasted."
+        },
+        {
+          "name": "labels",
+          "description": "A comma-separated list of labels that will be added to the item that is being pasted."
+        },
+        {
+          "name": "note",
+          "description": "Text to add as a note for the item being pasted."
+        }
+      ]
+    }
+  ]
+}
