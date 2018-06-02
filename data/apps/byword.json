@@ -1,1 +1,176 @@
-{"info":{"identifier":"byword","name":"Byword","appStoreUrl":"https:\/\/itunes.apple.com\/de\/app\/byword\/id482063361?l=en&mt=8","documentationUrl":"https:\/\/bywordapp.com\/support\/url-scheme.html"}, "actions": []}
+{
+  "info": {
+    "identifier": "byword",
+    "name": "Byword",
+    "appstoreUrl": "https://itunes.apple.com/de/app/byword/id482063361?l=en&mt=8",
+    "documentationUrl": "https://bywordapp.com/support/url-scheme.html"
+  },
+  "actions": [
+    {
+      "name": "New",
+      "description": "Create a new file in Byword.",
+      "url": "byword://x-callback-url/new",
+      "parameters": [
+        {
+          "name": "location",
+          "description": "If not specified, defaults to the location being browsed. If there is none, Byword will ask the location. One of the following:",
+          "options": [
+            {
+              "description": "icloud"
+            },
+            {
+              "description": "dropbox"
+            },
+            {
+              "description": "local"
+            }
+          ]
+        },
+        {
+          "name": "path",
+          "description": "The directory path. If not specified, defaults to the folder being browsed. If there is none, the root folder of the location is used."
+        },
+        {
+          "name": "name",
+          "description": "The filename of the file to create, with extension. If a filename already exists a new one is created. If not specified an untitled file is created."
+        },
+        {
+          "name": "text",
+          "description": "The text to insert into the new file."
+        }
+      ]
+    },
+    {
+      "name": "Open",
+      "description": "Open an existing file. Fails if the file does not exist.",
+      "url": "byword://x-callback-url/open",
+      "parameters": [
+        {
+          "name": "location",
+          "description": "If not specified, defaults to the location being browsed. If there is none, Byword will ask the location. One of the following:",
+          "options": [
+            {
+              "description": "icloud"
+            },
+            {
+              "description": "dropbox"
+            },
+            {
+              "description": "local"
+            }
+          ]
+        },
+        {
+          "name": "path",
+          "description": "The directory path. If not specified, defaults to the folder being browsed. If there is none, the root folder of the location is used."
+        },
+        {
+          "name": "name",
+          "description": "The filename of the file to open, with extension."
+        }
+      ]
+    },
+    {
+      "name": "Append",
+      "description": "Append content to an existing file. If the file does not exist a new one is created.",
+      "url": "byword://x-callback-url/append",
+      "parameters": [
+        {
+          "name": "location",
+          "description": "If not specified, defaults to the location being browsed. If there is none, Byword will ask the location. One of the following:",
+          "options": [
+            {
+              "description": "icloud"
+            },
+            {
+              "description": "dropbox"
+            },
+            {
+              "description": "local"
+            }
+          ]
+        },
+        {
+          "name": "path",
+          "description": "The directory path. If not specified, defaults to the folder being browsed. If there is none, the root folder of the location is used."
+        },
+        {
+          "name": "name",
+          "description": "The filename of the file to open, with extension. If the file doesn’t exist it will be created."
+        },
+        {
+          "name": "text",
+          "description": "The text to append."
+        }
+      ]
+    },
+    {
+      "name": "Prepend",
+      "description": "Prepend content to an existing file. If the file does not exist a new one is created.",
+      "url": "byword://x-callback-url/prepend",
+      "parameters": [
+        {
+          "name": "location",
+          "description": "If not specified, defaults to the location being browsed. If there is none, Byword will ask the location. One of the following:",
+          "options": [
+            {
+              "description": "icloud"
+            },
+            {
+              "description": "dropbox"
+            },
+            {
+              "description": "local"
+            }
+          ]
+        },
+        {
+          "name": "path",
+          "description": "The directory path. If not specified, defaults to the folder being browsed. If there is none, the root folder of the location is used."
+        },
+        {
+          "name": "name",
+          "description": "The filename of the file to open, with extension. If the file doesn’t exist it will be created."
+        },
+        {
+          "name": "text",
+          "description": "The text to prepend."
+        }
+      ]
+    },
+    {
+      "name": "Replace",
+      "description": "Replace the contents of an existing file. If the file doesn’t exist a new one is created.",
+      "url": "byword://x-callback-url/replace",
+      "parameters": [
+        {
+          "name": "location",
+          "description": "If not specified, defaults to the location being browsed. If there is none, Byword will ask the location. One of the following:",
+          "options": [
+            {
+              "description": "icloud"
+            },
+            {
+              "description": "dropbox"
+            },
+            {
+              "description": "local"
+            }
+          ]
+        },
+        {
+          "name": "path",
+          "description": "The directory path. If not specified, defaults to the folder being browsed. If there is none, the root folder of the location is used."
+        },
+        {
+          "name": "name",
+          "description": "The filename of the file. If the file doesn’t exist it will be created."
+        },
+        {
+          "name": "text",
+          "description": "The text to insert."
+        }
+      ]
+    }
+  ]
+}
