@@ -1,0 +1,80 @@
+{
+  "info": {
+    "identifier": "fantastical-2",
+    "name": "Fantastical 2",
+    "appstoreUrl": "https://itunes.apple.com/de/app/fantastical-2-for-iphone/id718043190?l=en&mt=8",
+    "documentationUrl": "https://flexibits.com/fantastical-iphone/faq"
+  },
+  "actions": [
+    {
+      "name": "Parse",
+      "description": "Begin creating a new event with the given sentence.",
+      "url": "fantastical2://x-callback-url/parse",
+      "parameters": [
+        {
+          "name": "sentence",
+          "description": "Begin creating a new event with the given sentence."
+        },
+        {
+          "name": "notes",
+          "description": "The notes parameter can be added to specify a note with the event."
+        },
+        {
+          "name": "add",
+          "description": "Set to 1 to automatically add an event - be careful!"
+        },
+        {
+          "name": "reminder",
+          "description": "Set to 1 to make this a reminder instead of an event."
+        },
+        {
+          "name": "due",
+          "description": "When is the reminder due. Requires the format ”yyyy-MM-dd HH:mm”"
+        },
+        {
+          "name": "title",
+          "description": "The event title"
+        },
+        {
+          "name": "location",
+          "description": "The event location"
+        },
+        {
+          "name": "url",
+          "description": "A URL for the event"
+        },
+        {
+          "name": "start",
+          "description": "The start time of the event. Requires the format ”yyyy-MM-dd HH:mm”"
+        },
+        {
+          "name": "end",
+          "description": "The end time of the event. Requires the format ”yyyy-MM-dd HH:mm”"
+        },
+        {
+          "name": "allDay",
+          "description": "Set to 1 to make this an all day event"
+        }
+      ]
+    },
+    {
+      "name": "Show",
+      "description": "Jumps to the specified date.",
+      "url": "fantastical2://x-callback-url/show",
+      "parameters": [
+        {
+          "name": "date",
+          "description": "The date to jump to. Supports the following formats",
+          "options": [
+            {
+              "description": "”yyyy-mm-dd”"
+            },
+            {
+              "description": "Natural language such as ”Tuesday” or ”next month”. Fantastical will do its best to show the date."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
