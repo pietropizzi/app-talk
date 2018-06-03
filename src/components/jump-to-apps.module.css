@@ -6,11 +6,14 @@
 .appsContainer {
   display: flex;
   flex-wrap: wrap;
+  margin-left: -12px;
 }
 
 .app {
-  display: block;
-  margin-right: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 88px;
   margin-bottom: 36px;
   text-decoration: none;
 }
@@ -42,8 +45,12 @@
     padding: 24px 0;
   }
 
+  .appsContainer {
+    margin-left: -6px;
+  }
+
   .app {
-    margin-right: 12px;
+    width: 54px;
     margin-bottom: 18px;
   }
 
