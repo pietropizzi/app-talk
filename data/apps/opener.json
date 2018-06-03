@@ -1,0 +1,38 @@
+{
+  "info": {
+    "identifier": "opener",
+    "name": "Opener",
+    "appstoreUrl": "https://itunes.apple.com/app/id989565871",
+    "documentationUrl": "http://www.opener.link/api.html"
+  },
+  "actions": [
+    {
+      "name": "Show options",
+      "description": "Show the available options to open a given URL.",
+      "url": "opener://x-callback-url/show-options",
+      "parameters": [
+        {
+          "name": "url",
+          "required": true,
+          "description": "The URL"
+        },
+        {
+          "name": "allow-auto-open",
+          "description": "Set to ”false” to make the app not perform any automatic actions on launch."
+        }
+      ]
+    },
+    {
+      "name": "Show Store Product Details",
+      "description": "Shows the details of an iTunes product within Opener (or Opener's action extension if open) in an ”SKStoreProductViewController” or an iOS store app.",
+      "url": "opener://x-callback-url/show-store-product-details",
+      "parameters": [
+        {
+          "name": "id",
+          "required": true,
+          "description": "A numeric iTunes identifier for the product."
+        }
+      ]
+    }
+  ]
+}
