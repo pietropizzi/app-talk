@@ -29,6 +29,7 @@ export default {
               properties: {
                 name: { type: 'string', required: true },
                 description: { type: 'string' },
+                required: { type: 'bool' },
                 options: {
                   type: 'array',
                   items: {

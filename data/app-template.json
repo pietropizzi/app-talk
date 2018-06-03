@@ -14,6 +14,7 @@
         {
           "name": "",
           "description": "",
+          "required": true,
           "options": [
             {
               "description": ""
