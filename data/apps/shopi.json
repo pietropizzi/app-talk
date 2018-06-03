@@ -1,0 +1,80 @@
+{
+  "info": {
+    "identifier": "shopi",
+    "name": "Shopi",
+    "appstoreUrl": "https://itunes.apple.com/app/id626076360?mt=8",
+    "documentationUrl": "http://sapient-pair.com/shopi/automation.html"
+  },
+  "actions": [
+    {
+      "name": "Show All Lists",
+      "description": "Ensure the main display is showing the view showing all shopping lists.",
+      "url": "shopi://x-callback-url/show-lists"
+    },
+    {
+      "name": "Show List",
+      "description": "Show a specific list.",
+      "url": "shopi://x-callback-url/show-list",
+      "parameters": [
+        {
+          "name": "name",
+          "required": true,
+          "description": "The list name."
+        }
+      ]
+    },
+    {
+      "name": "Create List",
+      "description": "Create a new list",
+      "url": "shopi://x-callback-url/create-list",
+      "parameters": [
+        {
+          "name": "name",
+          "required": true,
+          "description": "The list name."
+        }
+      ]
+    },
+    {
+      "name": "Add List Item",
+      "description": "Add an item to a list (or the currently displayed list if not specified).",
+      "url": "shopi://x-callback-url/add-item",
+      "parameters": [
+        {
+          "name": "list",
+          "required": true,
+          "description": "The name of the list to add this item to."
+        },
+        {
+          "name": "name",
+          "required": true,
+          "description": "The name of the item to add."
+        },
+        {
+          "name": "amount",
+          "description": "How many."
+        },
+        {
+          "name": "crossed",
+          "description": "Should the item be crossed (”yes”) or not (”no”)"
+        }
+      ]
+    },
+    {
+      "name": "Clear List Items",
+      "description": "Clear items from a list.",
+      "url": "shopi://x-callback-url/clear-list",
+      "parameters": [
+        {
+          "name": "name",
+          "required": true,
+          "description": "The list name."
+        },
+        {
+          "name": "crossed-only",
+          "description": "Only clear crossed items when set to “yes”."
+        }
+      ]
+    }
+  ]
+}
