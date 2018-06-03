@@ -1,0 +1,21 @@
+{
+  "info": {
+    "identifier": "chrome",
+    "name": "Chrome",
+    "appstoreUrl": "https://itunes.apple.com/de/app/google-chrome/id535886823?l=en&mt=8"
+  },
+  "actions": [
+    {
+      "name": "Open URL",
+      "description": "Open the given URL",
+      "url": "googlechrome-x-callback://x-callback-url/open",
+      "parameters": [
+        {
+          "name": "url",
+          "required": true,
+          "description": "The URL to open"
+        }
+      ]
+    }
+  ]
+}
