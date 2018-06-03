@@ -1,0 +1,36 @@
+{
+  "info": {
+    "identifier": "run-javascript",
+    "name": "RunJavaScript",
+    "appstoreUrl": "https://itunes.apple.com/us/app/runjavascript/id1254402852",
+    "documentationUrl": "http://www.runjavascriptapp.com"
+  },
+  "actions": [
+    {
+      "name": "Run",
+      "url": "runjavascript://x-callback-url/run",
+      "parameters": [
+        {
+          "name": "script",
+          "description": "URL encoded JavaScript to run. Either script or file parameter is required"
+        },
+        {
+          "name": "file",
+          "description": "Used to execute JavaScript files stored in the local documents folder or at a remote location. Files ending with .js will be handled as script file. Files ending with .html will be rendered as web page and RunJavaScript API will be injected. Any http resource will be rendered as web page and RunJavaScript API will be injected. Either script or file parameter is required"
+        },
+        {
+          "name": "baseURL",
+          "description": "value will be set as the origin of execution environment. It is useful while making REST calls to remote servers."
+        },
+        {
+          "name": "input",
+          "description": "Input data to be used by the script. Input can be text (URL encoded), JSON (URL encoded) or other format."
+        },
+        {
+          "name": "inputName",
+          "description": "Parameter name used as input. If provided input data will be retrieved from parameter named by inputName."
+        }
+      ]
+    }
+  ]
+}
