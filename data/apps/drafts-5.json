@@ -1,1 +1,232 @@
-{"info":{"identifier":"drafts-5","name":"Drafts 5","appStoreUrl":"https:\/\/itunes.apple.com\/de\/app\/drafts-5-capture-act\/id1236254471?l=en&mt=8","documentationUrl":"http:\/\/getdrafts.com\/urls\/"}, "actions": []}
+{
+  "info": {
+    "identifier": "drafts-5",
+    "name": "Drafts 5",
+    "appStoreUrl": "https://itunes.apple.com/de/app/drafts-5-capture-act/id1236254471?l=en&mt=8",
+    "documentationUrl": "http://getdrafts.com/urls/"
+  },
+  "actions": [
+    {
+      "name": "Create",
+      "description": "Create a new draft with the content passed in the “text” argument.",
+      "url": "drafts5://x-callback-url/create",
+      "parameters": [
+        {
+          "name": "text",
+          "required": true,
+          "description": "Text to be used at the content of the new draft."
+        },
+        {
+          "name": "tag",
+          "description": "Name of a tag to attach to the draft. Parameter can appear multiple times to add more than one tag."
+        },
+        {
+          "name": "action",
+          "description": "Name of an action in the action list. If provided, this action will be run on the specified draft."
+        },
+        {
+          "name": "allowEmpty",
+          "description": "If an action parameter is provided, adding allowEmpty=false to the URL will prevent that action from running if the text is empty. This can be used to terminate a loop of x-callback-urls running on lines of a draft."
+        }
+      ]
+    },
+    {
+      "name": "Open",
+      "description": "Open an existing draft based on the UUID argument.",
+      "url": "drafts5://x-callback-url/open",
+      "parameters": [
+        {
+          "name": "uuid",
+          "required": true,
+          "description": "The UUID identifier for a draft."
+        },
+        {
+          "name": "action",
+          "description": "Name of an action in the action list. If provided, this action will be run on the specified draft."
+        },
+        {
+          "name": "allowEmpty",
+          "description": " If an action parameter is provided, adding allowEmpty=false to the URL will prevent that action from running if the text is empty. This can be used to terminate a loop of x-callback-urls running on lines of a draft."
+        }
+      ]
+    },
+    {
+      "name": "Get",
+      "description": "Return the current content of the draft specified by the UUID argument as an argument to the x-success URL provided.",
+      "url": "drafts5://x-callback-url/get",
+      "parameters": [
+        {
+          "name": "uuid",
+          "required": true,
+          "description": "The UUID identifier for a draft."
+        },
+        {
+          "name": "retParam",
+          "description": "The name of the argument to use to pass the draft content back to the x-success URL. Defaults to “text”, but if the requesting app expects another value (like Workflow’s “input”) use this argument to override."
+        }
+      ]
+    },
+    {
+      "name": "Prepend",
+      "description": "Prepend the passed text to the beginning of a draft identified by the UUID argument.",
+      "url": "drafts5://x-callback-url/prepend",
+      "parameters": [
+        {
+          "name": "uuid",
+          "required": true,
+          "description": "The UUID identifier for a draft."
+        },
+        {
+          "name": "text",
+          "required": true,
+          "description": "Text to add."
+        },
+        {
+          "name": "action",
+          "description": "Name of an action in the action list. If provided, this action will be run on the specified draft."
+        },
+        {
+          "name": "allowEmpty",
+          "description": " If an action parameter is provided, adding allowEmpty=false to the URL will prevent that action from running if the text is empty. This can be used to terminate a loop of x-callback-urls running on lines of a draft."
+        },
+        {
+          "name": "tag",
+          "description": "Name of a tag to attach to the draft. Parameter can appear multiple times to add more than one tag."
+        }
+      ]
+    },
+    {
+      "name": "Append",
+      "description": "Append the passed text to the end of a draft identified by the UUID argument.",
+      "url": "drafts5://x-callback-url/prepend",
+      "parameters": [
+        {
+          "name": "uuid",
+          "required": true,
+          "description": "The UUID identifier for a draft."
+        },
+        {
+          "name": "text",
+          "required": true,
+          "description": "Text to add."
+        },
+        {
+          "name": "action",
+          "description": "Name of an action in the action list. If provided, this action will be run on the specified draft."
+        },
+        {
+          "name": "allowEmpty",
+          "description": " If an action parameter is provided, adding allowEmpty=false to the URL will prevent that action from running if the text is empty. This can be used to terminate a loop of x-callback-urls running on lines of a draft."
+        },
+        {
+          "name": "tag",
+          "description": "Name of a tag to attach to the draft. Parameter can appear multiple times to add more than one tag."
+        }
+      ]
+    },
+    {
+      "name": "Repace Range",
+      "description": "Replace content in an existing draft, based on a range.",
+      "url": "drafts5://x-callback-url/replaceRange",
+      "parameters": [
+        {
+          "name": "uuid",
+          "required": true,
+          "description": "The UUID identifier for a draft."
+        },
+        {
+          "name": "text",
+          "required": true,
+          "description": "Text to insert in the specified range"
+        },
+        {
+          "name": "start",
+          "required": true,
+          "description": "Start position of the range to replace."
+        },
+        {
+          "name": "length",
+          "required": true,
+          "description": "Number of characters in the range to replace."
+        }
+      ]
+    },
+    {
+      "name": "Search",
+      "description": "Open drafts directly to the draft search field.",
+      "url": "drafts5://x-callback-url/search",
+      "parameters": [
+        {
+          "name": "query",
+          "description": "Initial text to use in the search."
+        },
+        {
+          "name": "tag",
+          "description": "Tag to use to filter the query."
+        }
+      ]
+    },
+    {
+      "name": "Workspace",
+      "description": "Open drafts directly the draft list with a named workspace selected.",
+      "url": "drafts5://x-callback-url/workspace",
+      "parameters": [
+        {
+          "name": "name",
+          "description": "Name of a saved workspace to load."
+        }
+      ]
+    },
+    {
+      "name": "Run Action",
+      "description": "Run a drafts action on the passed text without saving that text to a draft.",
+      "url": "drafts5://x-callback-url/runAction",
+      "parameters": [
+        {
+          "name": "text",
+          "required": true,
+          "description": "Text to add"
+        },
+        {
+          "name": "action",
+          "description": "Name of an action in the action list. If provided, this action will be run on the specified draft."
+        },
+        {
+          "name": "allowEmpty",
+          "description": " If an action parameter is provided, adding allowEmpty=false to the URL will prevent that action from running if the text is empty. This can be used to terminate a loop of x-callback-urls running on lines of a draft."
+        }
+      ]
+    },
+    {
+      "name": "Dictate",
+      "description": "Open Drafts dictation interface. Pass the resulting dictated text to the x-success URL instead of saving it in Drafts.",
+      "url": "drafts5://x-callback-url/dictate",
+      "parameters": [
+        {
+          "name": "locale",
+          "description": " Locale identifier to use for dictation, in the standard language-country abbreviated format. Examples: en-US (English-United States), it-IT (Italian-Italy), es-MX (Spanish-Mexico), etc. Any locale supported by Siri dictation can be used."
+        },
+        {
+          "name": "retParam",
+          "description": "The name of the argument to use to pass the draft content back to the x-success URL. Defaults to “text”, but if the requesting app expects another value (like Workflow’s “input”) use this argument to override."
+        }
+      ]
+    },
+    {
+      "name": "Arrange",
+      "description": "Open Drafts arrange interface. Pass the resulting arranged text to the x-success URL instead of saving it in Drafts.",
+      "url": "drafts5://x-callback-url/arrange",
+      "parameters": [
+        {
+          "name": "text",
+          "required": true,
+          "description": "Text to arrange."
+        },
+        {
+          "name": "retParam",
+          "description": " The name of the argument to use to pass the draft content back to the x-success URL. Defaults to “text”, but if the requesting app expects another value (like Workflow’s “input”) use this argument to override."
+        }
+      ]
+    }
+  ]
+}
