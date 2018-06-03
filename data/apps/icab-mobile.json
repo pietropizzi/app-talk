@@ -1,0 +1,163 @@
+{
+  "info": {
+    "identifier": "icab-mobile",
+    "name": "iCab Mobile",
+    "appstoreUrl": "https://itunes.apple.com/de/app/icab-mobile-web-browser/id308111628?l=en&mt=8",
+    "documentationUrl": "http://www.icab.de/blog/2012/07/01/icab-mobile-6-0-supports-x-callback-url/"
+  },
+  "actions": [
+    {
+      "name": "Add Bookmark",
+      "description": "Adds a bookmark with the given URL and title to the Bookmarks of iCab Mobile",
+      "url": "x-icabmobile://x-callback-url/addBookmark",
+      "parameters": [
+        {
+          "name": "url",
+          "required": true,
+          "description": "The URL to add as bookmark."
+        },
+        {
+          "name": "title",
+          "description": "The title of the bookmark."
+        }
+      ]
+    },
+    {
+      "name": "Add Filter",
+      "description": "Creates a new filter. Without the type parameter, iCab defaults to “block”",
+      "url": "x-icabmobile://x-callback-url/addFilter",
+      "parameters": [
+        {
+          "name": "url",
+          "required": true,
+          "description": "Filter URL. Can use wildcards “*”, “?” and “[abc]” to make the url filter valid for more than a single page."
+        },
+        {
+          "name": "type",
+          "options": [
+            {
+              "description": "off"
+            },
+            {
+              "description": "block"
+            },
+            {
+              "description": "load"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Add Search Engine",
+      "description": "Adds a new search engine to the list of search engines.",
+      "url": "x-icabmobile://x-callback-url/addSearchEngine",
+      "parameters": [
+        {
+          "name": "url",
+          "required": true,
+          "description": "Should include the string “%@” where the search term needs to be added"
+        },
+        {
+          "name": "title",
+          "description": "The name of the search engine"
+        }
+      ]
+    },
+    {
+      "name": "Add Reading List",
+      "description": "Adds the page with the given URL and title to the Reading list",
+      "url": "x-icabmobile://x-callback-url/addReadingList",
+      "parameters": [
+        {
+          "name": "url",
+          "required": true,
+          "description": "The URL to add."
+        },
+        {
+          "name": "title",
+          "description": "The title in the reading list."
+        }
+      ]
+    },
+    {
+      "name": "Search",
+      "description": "Launches iCab and opens the search window, so the user can directly start entering a search term, if the search term is given, the search is started immediately.",
+      "url": "x-icabmobile://x-callback-url/search",
+      "parameters": [
+        {
+          "name": "searchTerm",
+          "description": "The term to search for"
+        }
+      ]
+    },
+    {
+      "name": "Fullscreen",
+      "description": "Launches iCab in fullscreen mode.",
+      "url": "x-icabmobile://x-callback-url/fullscreen"
+    },
+    {
+      "name": "Normal Mode",
+      "description": "Launches iCab in normal mode.",
+      "url": "x-icabmobile://x-callback-url/normalmode"
+    },
+    {
+      "name": "Open",
+      "description": "Opens the page in the given destination and enters the fullscreen mode when requested. The URL “quickstarter:” can be used to open the Quickstarter page.",
+      "url": "x-icabmobile://x-callback-url/open",
+      "parameters": [
+        {
+          "name": "url",
+          "required": true,
+          "description": "The URL to open."
+        },
+        {
+          "name": "destination",
+          "description": "Where to open the URL. One of the following:",
+          "options": [
+            {
+              "description": "currentTab"
+            },
+            {
+              "description": "backgroundTab"
+            },
+            {
+              "description": "newTab"
+            }
+          ]
+        },
+        {
+          "name": "fullscreen",
+          "options": [
+            {
+              "description": "yes"
+            },
+            {
+              "description": "no"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Download",
+      "description": "Starts the download of the file at URL and uses the filename to save it in the download manager.",
+      "url": "x-icabmobile://x-callback-url/download",
+      "parameters": [
+        {
+          "name": "url",
+          "required": true,
+          "description": "The URL to download from."
+        },
+        {
+          "name": "filename",
+          "description": "Filename to save it in downloadmanager."
+        },
+        {
+          "name": "referrer",
+          "description": "The referrer can be set, in case a web page only allows the download if it was initiated from a certain web page."
+        }
+      ]
+    }
+  ]
+}
