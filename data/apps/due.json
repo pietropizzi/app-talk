@@ -1,1 +1,76 @@
-{"info":{"identifier":"due","name":"Due","appStoreUrl":"https:\/\/itunes.apple.com\/de\/app\/due-reminders-timers\/id390017969?l=en&mt=8","documentationUrl":"http:\/\/www.dueapp.com\/developer.html"}, "actions": []}
+{
+  "info": {
+    "identifier": "due",
+    "name": "Due",
+    "appStoreUrl": "https://itunes.apple.com/de/app/due-reminders-timers/id390017969?l=en&mt=8",
+    "documentationUrl": "http://www.dueapp.com/developer.html"
+  },
+  "actions": [
+    {
+      "name": "Add",
+      "description": "Launches Due on the iOS device with the add reminder view prefilled using information provided in the parameters described below.",
+      "url": "due://x-callback-url/add",
+      "parameters": [
+        {
+          "name": "title",
+          "description": "The title for the reminder. If provided, the title of the reminder is filled up automatically and the keyboard will not be shown automatically."
+        },
+        {
+          "name": "duedate",
+          "description": "The due date of the new reminder, expressed in number of seconds from the first instant of 1 January 1970, GMT. Use to set an absolute due date for the reminder. The ”duedate” is interpreted according to the optional ”timezone” value. "
+        },
+        {
+          "name": "secslater",
+          "description": "The due date of the new reminder, expressed in number of seconds from now. Use to set a relative due date for the reminder from now. Due would calculate a due date for the reminder based on this value. If ”duedate” is filled, Due would ignore the ”secslater”, ”minslater” and ”hourslater” parameters and set up the reminder’s due date based on the ”duedate” parameter only."
+        },
+        {
+          "name": "minslater",
+          "description": "The due date of the new reminder, expressed in number of minutes from now. Use to set a relative due date for the reminder from now. Due would calculate a due date for the reminder based on this value. If ”duedate” is filled, Due would ignore the ”secslater”, ”minslater” and ”hourslater” parameters and set up the reminder’s due date based on the ”duedate” parameter only."
+        },
+        {
+          "name": "hourslater",
+          "description": "The due date of the new reminder, expressed in number of hours from now. Use to set a relative due date for the reminder from now. Due would calculate a due date for the reminder based on this value. If ”duedate” is filled, Due would ignore the ”secslater”, ”minslater” and ”hourslater” parameters and set up the reminder’s due date based on the ”duedate” parameter only."
+        },
+        {
+          "name": "timezone",
+          "description": "The timezone used to interpret the dates provided in ”duedate” and ”recurfromdate” parameters, expressed as a string for use with ”[NSTimeZone timeZoneWithName:]” method. If unspecified, dates provided in the ”duedate” and ”recurfromdate” parameters are interpreted as absolute GMT times or Universal times."
+        },
+        {
+          "name": "recurunit",
+          "description": "The calendar interval (NSCalendarUnit) at which to repeat the reminder. Valid values are ”NSDayCalendarUnit” (16), ”NSWeekCalendarUnit” (256), ”NSMonthCalendarUnit” (8) and ”NSYearCalendarUnit” (4)."
+        },
+        {
+          "name": "recurfreq",
+          "description": "The frequency at which the recurrence rule repeats over the unit of time indicated in ”recurunit”. For example, a reminder with recurunit of NSWeekCalendarUnit (256) and recurfreq of 2 will repeat every 2 weeks. Valid values are 1-30. The default value is 1, ie. repeat every 1 of recurunit."
+        },
+        {
+          "name": "recurfromdate",
+          "description": "The date to start recurrence from (eg. every 3 days from this date), expressed in number of seconds from the first instant of 1 January 1970, GMT. Usually the same as the ”duedate”. If unspecified, the recurrence will be repeat-from-completion, eg. a yearly repeat-on-completion reminder will repeat again on June 1st, 2012 if the user completes it on June 1st, 2011, but will repeat on June 3rd, 2012 if the user only completes it on June 3rd, 2011."
+        },
+        {
+          "name": "recurbyday",
+          "description": "A comma-separated list of days of the week. The day-of-week units corresponds to the integers 1 through 7 (where 1 is Sunday, 2 is Monday, 7 is Saturday) for weekly repeating reminders, but must be modified to the integers 8 through 42 to indicate the nth occurrence of the specific day-of-week within a monthly repeating reminder. The values 1 through 7 indicate all days of this type within the recurunit, and is only valid for use with weekly reminders. Monthly recurunit reminders require you to specify the nth occurrence of the day-of-week within the month. To indicate the nth occurrence, you need to add n*7 to the day-of-week unit (where n=1 through 4 indicates 1st through 4th occurences, and n=5 indicates the last occurrence within the month). "
+        },
+        {
+          "name": "recurbysetpos",
+          "description": "A single integer of value 1 or -1 that is used only in conjunction with a monthly ”recurunit” along with a valid ”recurbydays” to indicate either the nth occurrence of a day or weekday of the month. The first day of the month can be indicated with a recurbysetpos of value 1, with a recurbydays of values 1,2,3,4,5,6,7."
+        }
+      ]
+    },
+    {
+      "name": "Search",
+      "description": "Launches Due on the iOS device and searches for a query string in the specified section.",
+      "url": "due://x-callback-url/search",
+      "parameters": [
+        {
+          "name": "query",
+          "description": "The string to search for when Due is launched."
+        },
+        {
+          "name": "section",
+          "description": "The section to search in. Can either be 'Reminders', 'Timers' or 'Logbook'. If not provided, or if an invalid value is provided, the search will take place in Reminders."
+        }
+      ]
+    }
+  ]
+}
