@@ -1,0 +1,81 @@
+{
+  "info": {
+    "identifier": "multi-timer",
+    "name": "MultiTimer",
+    "appstoreUrl": "https://itunes.apple.com/app/apple-store/id973421278?mt=8",
+    "documentationUrl": "http://persapps.com/app/multitimer/url-scheme.php"
+  },
+  "actions": [
+    {
+      "name": "Start Timer",
+      "url": "multitimer://x-callback-url/start-timer",
+      "parameters": [
+        {
+          "name": "name",
+          "required": true,
+          "description": "Timer label."
+        },
+        {
+          "name": "board",
+          "description": "Board title."
+        }
+      ]
+    },
+    {
+      "name": "Stop timer",
+      "url": "multitimer://x-callback-url/stop-timer",
+      "parameters": [
+        {
+          "name": "name",
+          "required": true,
+          "description": "Timer label."
+        },
+        {
+          "name": "board",
+          "description": "Board title."
+        }
+      ]
+    },
+    {
+      "name": "Pause timer",
+      "url": "multitimer://x-callback-url/pause-timer",
+      "parameters": [
+        {
+          "name": "name",
+          "required": true,
+          "description": "Timer label."
+        },
+        {
+          "name": "board",
+          "description": "Board title."
+        }
+      ]
+    },
+    {
+      "name": "Resume timer",
+      "url": "multitimer://x-callback-url/resume-timer",
+      "parameters": [
+        {
+          "name": "name",
+          "required": true,
+          "description": "Timer label."
+        },
+        {
+          "name": "board",
+          "description": "Board title."
+        }
+      ]
+    },
+    {
+      "name": "Run command",
+      "url": "multitimer://x-callback-url/run-command",
+      "parameters": [
+        {
+          "name": "name",
+          "required": true,
+          "description": "Command name."
+        }
+      ]
+    }
+  ]
+}
