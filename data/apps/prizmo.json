@@ -1,0 +1,71 @@
+{
+  "info": {
+    "identifier": "prizmo",
+    "name": "Prizmo Go",
+    "appstoreUrl": "https://itunes.apple.com/de/app/prizmo-go-instant-text-ocr/id1183367390?l=en&mt=8",
+    "documentationUrl": "https://github.com/creaceed/PrizmoAPI"
+  },
+  "actions": [
+    {
+      "name": "Capture Text",
+      "description": "Start Prizmo to take a picture and perform English OCR on it. The following options are supported:",
+      "url": "prizmo://x-callback-url/captureText",
+      "parameters": [
+        {
+          "name": "language",
+          "description": "language can be any ISO 639-1 language code (like en, fr, de) and will instruct which language should be picked in the OCR engine."
+        },
+        {
+          "name": "destination",
+          "description": "Destination can be either 'url' to send the captured text in the callback URL to the calling app, or 'pasteboard' to write the text in a pasteboard."
+        },
+        {
+          "name": "pasteboardName",
+          "description": "when destination is set to 'pasteboard', this option can be used to determine which pasteboard should be used (the default value is the general pasteboard)."
+        },
+        {
+          "name": "cropMode",
+          "description": "This controls the cropping method used while taking the picture in Prizmo. Possible values are:",
+          "options": [
+            {
+              "description": "full - full screen (no cropping)"
+            },
+            {
+              "description": "oneline - thin capture line into the picture (for single line of text)"
+            },
+            {
+              "description": "manual - the last chosen opening"
+            },
+            {
+              "description": "detect - live page detection while shooting"
+            }
+          ]
+        },
+        {
+          "name": "x-success",
+          "description": "The resulting text is passed as the ”text” argument if destination is set to ”url” (see above)."
+        }
+      ]
+    },
+    {
+      "name": "Read Text",
+      "description": "Will read the provided text with the Ryan voice in Prizmo Voice Reader.",
+      "url": "prizmo://x-callback-url/readText",
+      "parameters": [
+        {
+          "name": "text",
+          "required": true,
+          "description": "The text to read in Prizmo Voice Reader."
+        },
+        {
+          "name": "voice",
+          "description": "The voice that should be used to read the text. The voice should have been previously installed by the user."
+        },
+        {
+          "name": "language",
+          "description": "if a specific voice is not set, the language can be specified. It will pick the first available voice for that language."
+        }
+      ]
+    }
+  ]
+}
