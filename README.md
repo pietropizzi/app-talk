@@ -17,3 +17,12 @@ So I wanted to fix this. And the only way to have a chance to stay up-to-date is
 ## Contribute
 
 Read about how to [contribute to this project](https://github.com/pietropizzi/app-talk/blob/master/docs/CONTRIBUTE.md).
+
+## Future plans
+
+I started a GitHub project in this repo to track the ideas / plans I have. https://github.com/pietropizzi/app-talk/projects/1
+
+The main points for now:
+
+* Allow rich text (probably Markdown) in the description of the actions
+* Add search field to filter apps
