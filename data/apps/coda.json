@@ -1,0 +1,68 @@
+{
+  "info": {
+    "identifier": "coda",
+    "name": "Coda",
+    "appstoreUrl": "https://itunes.apple.com/de/app/coda/id500906297?l=en&mt=8",
+    "documentationUrl": "https://library.panic.com/coda-ios/url-schema/"
+  },
+  "actions": [
+    {
+      "name": "New",
+      "description": "Creates a new file. If one exists, a file with a unique name will be created.",
+      "url": "coda://x-callback-url/new",
+      "parameters": [
+        {
+          "name": "name",
+          "required": true,
+          "description": "The filename (if not included, creates a unique filename)."
+        },
+        {
+          "name": "path",
+          "description": "The directory path (if not included, defaults to Documents)."
+        },
+        {
+          "name": "text",
+          "description": "The text to add to the file."
+        }
+      ]
+    },
+    {
+      "name": "Append",
+      "description": "Append text to a file, creating it if necessary.",
+      "url": "coda://x-callback-url/append",
+      "parameters": [
+        {
+          "name": "name",
+          "description": "The filename (if not included, creates a unique filename)."
+        },
+        {
+          "name": "path",
+          "description": "The directory path (if not included, defaults to Documents)."
+        },
+        {
+          "name": "text",
+          "description": "The text to add to the file."
+        }
+      ]
+    },
+    {
+      "name": "Replace",
+      "description": "Replaces the contents of a file, creating it if necessary.",
+      "url": "coda://x-callback-url/replace",
+      "parameters": [
+        {
+          "name": "name",
+          "description": "The filename (if not included, creates a unique filename)."
+        },
+        {
+          "name": "path",
+          "description": "The directory path (if not included, defaults to Documents)."
+        },
+        {
+          "name": "text",
+          "description": "The text to add to the file."
+        }
+      ]
+    }
+  ]
+}
