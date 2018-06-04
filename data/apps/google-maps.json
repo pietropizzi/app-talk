@@ -1,0 +1,85 @@
+{
+  "info": {
+    "identifier": "google-maps",
+    "name": "Google Maps",
+    "appstoreUrl": "https://itunes.apple.com/de/app/google-maps-gps-navigation/id585027354?l=en&mt=8",
+    "documentationUrl": "https://developers.google.com/maps/documentation/urls/ios-urlscheme"
+  },
+  "actions": [
+    {
+      "name": "Display a map",
+      "description": "Display the map at a specified zoom level and location. You can also overlay other views on top of your map, or display Street View imagery.",
+      "url": "comgooglemaps-x-callback://x-callback-url",
+      "parameters": [
+        {
+          "name": "center",
+          "description": "This is the map viewport center point. Formatted as a comma separated string of ”latitude,longitude”"
+        },
+        {
+          "name": "mapmode",
+          "description": "Sets the kind of map shown. Can be set to: ”standard” or ”streetview”. If not specified, the current application settings will be used."
+        },
+        {
+          "name": "views",
+          "description": "Turns specific views on/off. Can be set to: ”satellite”, ”traffic”, or ”transit”. Multiple values can be set using a comma-separator. If the parameter is specified with no value, then it will clear all views."
+        },
+        {
+          "name": "zoom",
+          "description": "Specifies the zoom level of the map."
+        }
+      ]
+    },
+    {
+      "name": "Search",
+      "description": "Display search queries in a specified viewport location.",
+      "url": "comgooglemaps-x-callback://x-callback-url",
+      "parameters": [
+        {
+          "name": "q",
+          "description": "The query string for your search."
+        },
+        {
+          "name": "center",
+          "description": "This is the map viewport center point. Formatted as a comma separated string of ”latitude,longitude”"
+        },
+        {
+          "name": "mapmode",
+          "description": "Sets the kind of map shown. Can be set to: ”standard” or ”streetview”. If not specified, the current application settings will be used."
+        },
+        {
+          "name": "views",
+          "description": "Turns specific views on/off. Can be set to: ”satellite”, ”traffic”, or ”transit”. Multiple values can be set using a comma-separator. If the parameter is specified with no value, then it will clear all views."
+        },
+        {
+          "name": "zoom",
+          "description": "Specifies the zoom level of the map."
+        }
+      ]
+    },
+    {
+      "name": "Directions",
+      "description": "Request and display directions between two locations.",
+      "url": "comgooglemaps-x-callback://x-callback-url",
+      "parameters": [
+        {
+          "name": "saddr",
+          "description": "Sets the starting point for directions searches. This can be a ”latitude,longitude” or a query formatted address. If it is a query string that returns more than one result, the first result will be selected. If the value is left blank, then the user’s current location will be used."
+        },
+        {
+          "name": "daddr",
+          "description": "Sets the end point for directions searches. Has the same format and behavior as ”saddr”"
+        },
+        {
+          "name": "directionsmode",
+          "description": "Method of transportation. Can be set to.",
+          "options": [
+            { "description": "driving" },
+            { "description": "transit" },
+            { "description": "bicyling" },
+            { "description": "walking" }
+          ]
+        }
+      ]
+    }
+  ]
+}
