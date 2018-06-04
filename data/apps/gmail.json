@@ -1,0 +1,37 @@
+{
+  "info": {
+    "identifier": "gmail",
+    "name": "Gmail",
+    "appstoreUrl": "https://itunes.apple.com/us/app/gmail-email-from-google/id422689480?mt=8&ign-mpt=uo%3D4",
+    "documentationUrl": "https://onetapless.com/blog/gmail-and-x-callback-url"
+  },
+  "actions": [
+    {
+      "name": "Compose",
+      "description": "Compose a mail.",
+      "url": "googlegmail-x-callback://x-callback-url",
+      "parameters": [
+        {
+          "name": "subject",
+          "description": "The mail’s subject."
+        },
+        {
+          "name": "body",
+          "description": "The mail’s body text."
+        },
+        {
+          "name": "to",
+          "description": "The recipient."
+        },
+        {
+          "name": "cc",
+          "description": "The ”cc” recipient."
+        },
+        {
+          "name": "bcc",
+          "description": "The ”bcc” recipient."
+        }
+      ]
+    }
+  ]
+}
