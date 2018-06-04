@@ -1,0 +1,564 @@
+{
+  "info": {
+    "identifier": "things-3",
+    "name": "Things 3",
+    "appstoreUrl": "https://itunes.apple.com/de/app/things-3/id904237743?l=en&mt=8",
+    "documentationUrl": "https://support.culturedcode.com/customer/en/portal/articles/2803573"
+  },
+  "actions": [
+    {
+      "name": "Add",
+      "description": "Add a to-do.",
+      "url": "things://add",
+      "parameters": [
+        {
+          "name": "title",
+          "description": "String. The title of the to-do to add. Ignored if titles is also specified."
+        },
+        {
+          "name": "titles",
+          "description": "String separated by new lines (encoded to ”%0a”). Use instead of ”title” to create multiple to-dos. Takes priority over ”title” and ”show-quick-entry”. The other parameters are applied to all the created to-dos."
+        },
+        {
+          "name": "notes",
+          "description": "String. The text to use for the notes field of the to-do. Maximum unencoded length: 10,000 characters."
+        },
+        {
+          "name": "when",
+          "description": "String. Using a date time string adds a reminder for that time. The time component is ignored if anytime or someday is specified. Possible values:",
+          "options": [
+            {
+              "description": "today"
+            },
+            {
+              "description": "tomorrow"
+            },
+            {
+              "description": "evening"
+            },
+            {
+              "description": "anytime"
+            },
+            {
+              "description": "someday"
+            },
+            {
+              "description": "yyyy-mm-dd"
+            },
+            {
+              "description": "yyyy-mm-dd@HH:MM"
+            }
+          ]
+        },
+        {
+          "name": "deadline",
+          "description": "The deadline to apply to the to-do.",
+          "options": [
+            {
+              "description": "today"
+            },
+            {
+              "description": "tomorrow"
+            },
+            {
+              "description": "yyyy-mm-dd"
+            }
+          ]
+        },
+        {
+          "name": "tags",
+          "description": "Comma separated strings corresponding to the titles of tags. Does not apply a tag if the specified tag doesn’t exist."
+        },
+        {
+          "name": "checklist-items",
+          "description": "String separated by new lines (encoded to ”%0a”). Checklist items to add to the to-do (maximum of 100)."
+        },
+        {
+          "name": "list-id",
+          "description": "String. The ID of a project or area to add to. Takes precedence over ”list”."
+        },
+        {
+          "name": "list",
+          "description": "String. The title of a project or area to add to. Ignored if list-id is present."
+        },
+        {
+          "name": "heading",
+          "description": "String. The title of a heading within a project to add to. Ignored if a project is not specified, or if the heading doesn't exist."
+        },
+        {
+          "name": "completed",
+          "description": "Boolean. Whether or not the to-do should be set to complete. Default: ”false”. Ignored if ”canceled” is also set to ”true”."
+        },
+        {
+          "name": "canceled",
+          "description": "Boolean. Whether or not the to-do should be set to canceled. Default: ”false”. Takes priority over “completed”."
+        },
+        {
+          "name": "show-quick-entry",
+          "description": "Boolean. Whether or not to show the quick entry dialog (populated with the provided data) instead of adding a new to-do. Ignored if ”titles” is specified. Default: ”false”."
+        },
+        {
+          "name": "reveal",
+          "description": "Boolean. Whether or not to navigate to and show the newly created to-do. If multiple to-dos have been created, the first one will be shown. Ignored if ”show-quick-entry” is also set to ”true”. Default: ”false”."
+        },
+        {
+          "name": "creation-date",
+          "description": "ISO8601 date time string. The date to set as the creation date for the to-do in the database. Ignored if the date is in the future."
+        },
+        {
+          "name": "completion-date",
+          "description": "ISO8601 date time string. The date to set as the completion date for the to-do in the database. Ignored if the to-do is not completed or canceled, or if the date is in the future."
+        },
+        {
+          "name": "x-success",
+          "description": "The x-success callback will be called with the follwoing parameter:",
+          "options": [
+            {
+              "description": "x-things-id - Comma separated string. The IDs of the to-dos created."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Add Project",
+      "description": "Add a project.",
+      "url": "things://add-project",
+      "parameters": [
+        {
+          "name": "title",
+          "description": "String. The title of the project."
+        },
+        {
+          "name": "notes",
+          "description": "String. The text to use for the notes field of the project. Maximum unencoded length: 10,000 characters."
+        },
+        {
+          "name": "when",
+          "description": "String. Using a date time string adds a reminder for that time. The time component is ignored if anytime or someday is specified. Possible values:",
+          "options": [
+            {
+              "description": "today"
+            },
+            {
+              "description": "tomorrow"
+            },
+            {
+              "description": "evening"
+            },
+            {
+              "description": "anytime"
+            },
+            {
+              "description": "someday"
+            },
+            {
+              "description": "yyyy-mm-dd"
+            },
+            {
+              "description": "yyyy-mm-dd@HH:MM"
+            }
+          ]
+        },
+        {
+          "name": "deadline",
+          "description": "The deadline to apply to the to-do.",
+          "options": [
+            {
+              "description": "today"
+            },
+            {
+              "description": "tomorrow"
+            },
+            {
+              "description": "yyyy-mm-dd"
+            }
+          ]
+        },
+        {
+          "name": "tags",
+          "description": "Comma separated strings corresponding to the titles of tags. Does not apply a tag if the specified tag doesn’t exist."
+        },
+        {
+          "name": "area-id",
+          "description": "String. The ID of an area to add to. Takes precedence over ”area”."
+        },
+        {
+          "name": "area",
+          "description": "String. The title of an area to add to. Ignored if ”area-id” is present."
+        },
+        {
+          "name": "to-dos",
+          "description": "String separated by new lines (encoded to ”%0a”). Titles of to-dos to create inside the project."
+        },
+        {
+          "name": "completed",
+          "description": "Boolean. Whether or not the project should be set to complete. Default: ”false”. Ignored if ”canceled” is also set to ”true”."
+        },
+        {
+          "name": "canceled",
+          "description": "Boolean. Whether or not the project should be set to canceled. Default: ”false”. Takes priority over “completed”."
+        },
+        {
+          "name": "reveal",
+          "description": "Boolean. Whether or not to navigate into the newly created project. Default: ”false”."
+        },
+        {
+          "name": "creation-date",
+          "description": "ISO8601 date time string. The date to set as the creation date for the project in the database. If the ”to-dos” parameter is also specified, this date is applied to them, too. Ignored if the date is in the future."
+        },
+        {
+          "name": "completion-date",
+          "description": "ISO8601 date time string. The date to set as the completion date for the project in the database. If the ”to-dos” parameter is also specified, this date is applied to them, too. Ignored if the to-do is not completed or canceled, or if the date is in the future."
+        },
+        {
+          "name": "x-success",
+          "description": "The x-success callback will be called with the follwoing parameter:",
+          "options": [
+            {
+              "description": "x-things-id - The ID of the project created."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Update",
+      "description": "Update an existing to-do.",
+      "url": "things://update",
+      "parameters": [
+        {
+          "name": "auth-token",
+          "required": true,
+          "description": "String. The Things URL scheme authorization token."
+        },
+        {
+          "name": "id",
+          "required": true,
+          "description": "String. The ID of the to-do to update."
+        },
+        {
+          "name": "title",
+          "description": "String. The title of the to-do. This will replace the existing title."
+        },
+        {
+          "name": "notes",
+          "description": "String. The notes of the to-do. This will replace the existing notes. Maximum unencoded length: 10,000 characters."
+        },
+        {
+          "name": "prepend-notes",
+          "description": "String. Text to add before the existing notes of a to-do. Maximum unencoded length: 10,000 characters."
+        },
+        {
+          "name": "append-notes",
+          "description": "String. Text to add after the existing notes of a to-do. Maximum unencoded length: 10,000 characters."
+        },
+        {
+          "name": "when",
+          "description": "String. Using a date time string adds a reminder for that time. The time component is ignored if anytime or someday is specified. This field cannot be updated on repeating to-dos. Possible values:",
+          "options": [
+            {
+              "description": "today"
+            },
+            {
+              "description": "tomorrow"
+            },
+            {
+              "description": "evening"
+            },
+            {
+              "description": "anytime"
+            },
+            {
+              "description": "someday"
+            },
+            {
+              "description": "yyyy-mm-dd"
+            },
+            {
+              "description": "yyyy-mm-dd@HH:MM"
+            }
+          ]
+        },
+        {
+          "name": "deadline",
+          "description": "The deadline to apply to the to-do.",
+          "options": [
+            {
+              "description": "today"
+            },
+            {
+              "description": "tomorrow"
+            },
+            {
+              "description": "yyyy-mm-dd"
+            }
+          ]
+        },
+        {
+          "name": "tags",
+          "description": "Comma separated strings corresponding to the titles of tags. Replaces all current tags. Does not apply a tag if the specified tag doesn’t exist."
+        },
+        {
+          "name": "add-tags",
+          "description": "Comma separated strings corresponding to the titles of tags. Adds the specified tags to a to-do. Does not apply a tag if the specified tag doesn’t exist."
+        },
+        {
+          "name": "checklist-items",
+          "description": "”\\n” (encoded to ”%0a”) separated strings. Set the checklist items of the to-do (maximum of 100). Will replace all existing checklist items."
+        },
+        {
+          "name": "prepend-checklist-items",
+          "description": "”\\n” (encoded to ”%0a”) separated strings. Add checklist items to the front of the list of checklist items in the to-do (maximum of 100). Will replace all existing checklist items."
+        },
+        {
+          "name": "append-checklist-items",
+          "description": "”\\n” (encoded to ”%0a”) separated strings. Add checklist items to the end of the list of checklist items in the to-do (maximum of 100). Will replace all existing checklist items."
+        },
+        {
+          "name": "list-id",
+          "description": "String. The ID of a project or area to move the to-do into. Takes precedence over ”list”."
+        },
+        {
+          "name": "list",
+          "description": "String. The title of a project or area to move the to-do into. Ignored if list-id is present."
+        },
+        {
+          "name": "heading",
+          "description": "String. The title of a heading within a project to move the to-do to. Ignored if the to-do is not in a project with the specified heading. Can be used together with ”list” or ”list-id”."
+        },
+        {
+          "name": "completed",
+          "description": "Boolean. Complete a to-do or set a to-do to incomplete. Ignored if ”canceled” is also set to ”true”. Setting ”completed=false” on a canceled to-do will also mark it as incomplete. This field cannot be updated on repeating to-dos."
+        },
+        {
+          "name": "canceled",
+          "description": "Boolean. Cancel a to-do or set a to-do to incomplete. Takes priority over ”completed”. Setting ”canceled=false” on a completed to-do will also mark it as incomplete. This field cannot be updated on repeating to-dos."
+        },
+        {
+          "name": "reveal",
+          "description": "Boolean. Whether or not to navigate to and show the updated to-do. Default: ”false”."
+        },
+        {
+          "name": "duplicate",
+          "description": "Boolean. Set to ”true” to duplicate the to-do before updating it, leaving the original to-do untouched. Repeating to-dos cannot be duplicated. Default: ”false”."
+        },
+        {
+          "name": "creation-date",
+          "description": "ISO8601 date time string. Set the creation date for the to-do in the database. Ignored if the date is in the future."
+        },
+        {
+          "name": "completion-date",
+          "description": "ISO8601 date time string. Set the completion date for the to-do in the database. Ignored if the to-do is not completed or canceled, or if the date is in the future. This field cannot be updated on repeating to-dos."
+        },
+        {
+          "name": "x-success",
+          "description": "The x-success callback will be called with the follwoing parameter:",
+          "options": [
+            {
+              "description": "x-things-id - String. The ID of the to-do updated."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Update Project",
+      "description": "Update an existing project.",
+      "url": "things://update-project",
+      "parameters": [
+        {
+          "name": "auth-token",
+          "required": true,
+          "description": "String. The Things URL scheme authorization token."
+        },
+        {
+          "name": "id",
+          "required": true,
+          "description": "String. The ID of the project to update."
+        },
+        {
+          "name": "title",
+          "description": "String. The title of the project. This will replace the existing title."
+        },
+        {
+          "name": "notes",
+          "description": "String. The notes of the project. This will replace the existing notes. Maximum unencoded length: 10,000 characters."
+        },
+        {
+          "name": "prepend-notes",
+          "description": "String. Text to add before the existing notes of a project. Maximum unencoded length: 10,000 characters."
+        },
+        {
+          "name": "append-notes",
+          "description": "String. Text to add after the existing notes of a project. Maximum unencoded length: 10,000 characters."
+        },
+        {
+          "name": "when",
+          "description": "String. Set the when field of a project. Including a time adds a reminder for that time. The time component is ignored if ”someday” is specified. This field cannot be updated on repeating projects. Possible values:",
+          "options": [
+            {
+              "description": "today"
+            },
+            {
+              "description": "tomorrow"
+            },
+            {
+              "description": "evening"
+            },
+            {
+              "description": "anytime"
+            },
+            {
+              "description": "someday"
+            },
+            {
+              "description": "yyyy-mm-dd"
+            },
+            {
+              "description": "yyyy-mm-dd@HH:MM"
+            }
+          ]
+        },
+        {
+          "name": "deadline",
+          "description": "Date string. The deadline to apply to the project. This field cannot be updated on repeating projects."
+        },
+        {
+          "name": "tags",
+          "description": "Comma separated strings corresponding to the titles of tags. Replaces all current tags. Does not apply a tag if the specified tag doesn’t exist."
+        },
+        {
+          "name": "add-tags",
+          "description": "Comma separated strings corresponding to the titles of tags. Adds the specified tags to a project. Does not apply a tag if the specified tag doesn’t exist."
+        },
+        {
+          "name": "area-id",
+          "description": "String. The ID of an area to move the project into. Takes precedence over ”area”."
+        },
+        {
+          "name": "area",
+          "description": "String. The title of an area to move the project into. Ignored if ”area-id” is present."
+        },
+        {
+          "name": "completed",
+          "description": "Boolean. Complete a project or set a project to incomplete. Ignored if ”canceled” is also set to ”true”. Setting to ”true” will be ignored unless all child to-dos are completed or canceled and all child headings archived. Setting to ”false” on a canceled project will mark it as incomplete. This field cannot be updated on repeating projects."
+        },
+        {
+          "name": "canceled",
+          "description": "Boolean. Cancel a project or set a project to incomplete. Takes priority over ”completed”. Setting to ”true” will be ignored unless all child to-dos are completed or canceled and all child headings archived. Setting to ”false” on a completed project will mark it as incomplete. This field cannot be updated on repeating projects."
+        },
+        {
+          "name": "reveal",
+          "description": "Boolean. Whether or not to navigate to and show the updated project. Default: ”false”"
+        },
+        {
+          "name": "duplicate",
+          "description": "Boolean. Set to ”true” to duplicate the project before updating it, leaving the original project untouched. Repeating projects cannot be duplicated. Default: ”false”."
+        },
+        {
+          "name": "creation-date",
+          "description": "ISO8601 date time string. Set the creation date for the project in the database. Ignored if the date is in the future."
+        },
+        {
+          "name": "completion-date",
+          "description": "ISO8601 date time string. Set the completion date for the project in the database. Ignored if the project is not completed or canceled, or if the date is in the future. This field cannot be updated on repeating to-dos."
+        },
+        {
+          "name": "x-success",
+          "description": "The x-success callback will be called with the follwoing parameter:",
+          "options": [
+            {
+              "description": "x-things-id - String. The ID of the project updated."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Show",
+      "description": "Navigate to and show an area, project, tag or to-do, or one of the built-in lists, optionally filtering by one or more tags.",
+      "url": "things://show",
+      "parameters": [
+        {
+          "name": "id",
+          "description": "String. The ID of an area, project, tag or to-do to show; or one of the following built-in list IDs:",
+          "options": [
+            { "description": "inbox" },
+            { "description": "today" },
+            { "description": "anytime" },
+            { "description": "upcoming" },
+            { "description": "someday" },
+            { "description": "logbook" }
+          ]
+        },
+        {
+          "name": "query",
+          "description": "String. The name of an area, project, tag or a built-in list to show. This is equivalent to entering the query text in to the quick find within Things and selecting the first result. Ignored if ”id” is also set. Note: task cannot be shown using the query parameter; use the ”id” parameter or the ”search” command instead."
+        },
+        {
+          "name": "filter",
+          "description": "String. Comma separated strings corresponding to the titles of tags that the list should be filtered by."
+        }
+      ]
+    },
+    {
+      "name": "Search",
+      "description": "Invoke and show the search screen.",
+      "url": "things://search",
+      "parameters": [
+        {
+          "name": "query",
+          "description": "String. The search query."
+        }
+      ]
+    },
+    {
+      "name": "Version",
+      "description": "The version of the Things app and URL scheme.",
+      "url": "things://version",
+      "parameters": [
+        {
+          "name": "x-success",
+          "description": "The x-success callback will be called with the follwoing parameters:",
+          "options": [
+            {
+              "description": "x-things-scheme-version - String. The version of the Things URL scheme."
+            },
+            {
+              "description": "x-things-client-version - String. The build number of the app."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "JSON",
+      "description": "Things also has an advanced, JSON-based add command that allows more control over the projects and to-dos imported into Things. This command is intended to be used by app developers or other people familiar with scripting or programming.",
+      "url": "things://json",
+      "parameters": [
+        {
+          "name": "auth-token",
+          "description": "String. The Things URL scheme authorization token. This is required whenever the provided JSON data contains an ”update” operation."
+        },
+        {
+          "name": "data",
+          "description": "JSON string. The JSON should be an array containing ”to-do” and ”project” objects."
+        },
+        {
+          "name": "reveal",
+          "description": "Boolean. Whether or not to navigate to and show the newly created to-do or project. If multiple items have been created, the first one will be shown. Default: ”false”."
+        },
+        {
+          "name": "x-success",
+          "description": "The x-success callback will be called with the follwoing parameter:",
+          "options": [
+            {
+              "description": "x-things-ids - JSON string. An array of IDs of the to-dos and projects created that were specified in the top level JSON array. The IDs of the to-dos created inside projects are not returned."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
