@@ -1,0 +1,32 @@
+{
+  "info": {
+    "identifier": "textkraft-pocket",
+    "name": "Textkraft",
+    "appstoreUrl": "https://itunes.apple.com/de/app/textkraft-pocket/id909848112?l=en&mt=8",
+    "documentationUrl": "http://www.infovole.de/en/support-en/x-callback-url-in-textkraft/"
+  },
+  "actions": [
+    {
+      "name": "Create",
+      "description": "Creates a new document.",
+      "url": "textkraftpocket://x-callback-url/create",
+      "parameters": [
+        {
+          "name": "text",
+          "description": "The initial text for the new document."
+        }
+      ]
+    },
+    {
+      "name": "append",
+      "description": "Appends text to the current (frontmost) document, if this is an editable text document.",
+      "url": "textkraftpocket://x-callback-url/append",
+      "parameters": [
+        {
+          "name": "text",
+          "description": "The text to append."
+        }
+      ]
+    }
+  ]
+}
