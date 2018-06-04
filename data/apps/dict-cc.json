@@ -1,0 +1,29 @@
+{
+  "info": {
+    "identifier": "dict-cc",
+    "name": "dict.cc",
+    "appstoreUrl": "https://itunes.apple.com/de/app/dict-cc-dictionary/id327732352?l=en&mt=8",
+    "documentationUrl": "https://www.dict.cc/iphone.php"
+  },
+  "actions": [
+    {
+      "name": "Translate",
+      "description": "Translate a phrase in dict.cc.",
+      "url": "dictcc-x-callback://x-callback-url/translate",
+      "parameters": [
+        {
+          "name": "word",
+          "description": "The word or sentence to translate."
+        },
+        {
+          "name": "language-pair",
+          "description": "For example ”de-en” to translate from German to English."
+        },
+        {
+          "name": "x-success",
+          "description": "The string ”DCCTRANS” in your x-success URL will be replaced with the translation."
+        }
+      ]
+    }
+  ]
+}
