@@ -20,7 +20,7 @@ Read about how to [contribute to this project](https://github.com/pietropizzi/ap
 
 ## Future plans
 
-I started a GitHub project in this repo to track the ideas / plans I have. https://github.com/pietropizzi/app-talk/projects/1
+I started a GitHub [project in this repo to track the ideas / plans](https://github.com/pietropizzi/app-talk/projects/1) I have.
 
 The main points for now:
 
