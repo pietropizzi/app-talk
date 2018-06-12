@@ -3,7 +3,7 @@ module.exports = {
   siteMetadata: {
     title: 'AppTalk',
     tagLine: 'Let iOS apps talk',
-    description: 'A directory of iOS apps that can be launched via URLs including ones that support x-callback-url.',
+    description: 'A user contributable directory of iOS apps with x-callback-urls.',
     url: 'https://app-talk.com'
   },
   plugins: [
