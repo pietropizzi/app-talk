@@ -1,6 +1,6 @@
 {
-  "name": "gatsby-starter-hello-world",
-  "description": "Gatsby hello world starter",
+  "name": "app-talk",
+  "description": "AppTalk - Let iOS apps talk. A user contributable directory of iOS apps with x-callback-urls.",
   "license": "MIT",
   "scripts": {
     "develop": "gatsby develop",
