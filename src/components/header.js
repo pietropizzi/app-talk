@@ -10,7 +10,12 @@ export default ({ metaData, isSmall }) => {
           <h1 styleName='logoTitle'>
             <a styleName='logo' href='/'>{metaData.title}</a>
           </h1>
-          <Link styleName='navLink' to='/about' activeStyle={{ color: '#3f8273' }}>About</Link>
+          <nav>
+            <ul styleName='navList'>
+              <li><Link styleName='navLink' to='/about' activeStyle={{ color: '#3f8273' }}>About</Link></li>
+              <li><a styleName='navLink' href='https://github.com/pietropizzi/app-talk'>GitHub</a></li>
+            </ul>
+          </nav>
         </div>
         <div styleName='content'>
           <h2 styleName='title'>{metaData.tagLine}</h2>

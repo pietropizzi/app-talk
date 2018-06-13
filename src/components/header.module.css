@@ -7,7 +7,7 @@
 .logoRow {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .logoTitle {
@@ -23,8 +23,21 @@
   text-indent: -999em;
 }
 
+.navList {
+  list-style: none;
+  margin: 0;
+  display: flex;
+}
+
+.navList > li {
+  margin: 0;
+}
+
 .navLink {
   text-decoration: none;
+  margin-left: 20px;
+  display: block;
+  padding: 5px 0;
 }
 
 .content {
