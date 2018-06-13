@@ -1,0 +1,69 @@
+{
+	"info": {
+		"identifier": "working-copy",
+		"name": "Working Copy", 
+		"appstoreUrl": "https://itunes.apple.com/us/app/working-copy/id896694807?l=en&mt=8",
+		"documentationUrl": "https://workingcopyapp.com/url-schemes.html#x-callback-url"
+	},
+	"actions": [{
+		"name": "Writing files",
+		"description": "Write to existing or new files.",
+		"url": "working-copy://x-callback-url/write/",
+		"parameters": [{
+			"name": "key",
+			"description": "Secret URL key to avoid unauthorized command execution.",
+			"required": true
+		}, {
+			"name": "repo",
+			"description": "Repository name or remote URL of repository. You will have to pick a repository if this parameter is missing.",
+			"required": false
+		}, {
+			"name": "path",
+			"description": "Path of file written to relative to repository root without leading slash. You are asked to pick/create a file if this parameter is missing.",
+			"required": false
+		}, {
+			"name": "text",
+			"description": "Text written to file. The text parameter is transferred as UTF-8 but will be written in the encoding of the existing file or UTF-8 for new files. If you do not include either a text or base64 parameter the clipboard content is written.",
+			"required": false
+		}, {
+			"name": "base64",
+			"description": "Binary data written to file in base64 format. If you do not include either a text or base64 parameter the clipboard content is written.",
+			"required": false
+		}, {
+			"name": "askcommit",
+			"description": "Ask to commit and push after writing.",
+			"required": false,
+			"options": [{
+				"description": "0 - default : do not ask to commit"
+			}, {
+				"description": "1 : ask to commit and push the file"
+			}]
+		}, {
+			"name": "append",
+			"description": "Append to existing file instead of overwriting.",
+			"required": false,
+			"options": [{
+				"description": "0 - default : text, base64 or clipboard content replaces existing file"
+			}, {
+				"description": "1 : text, base64 or clipboard content is appended to existing file"
+			}]
+		}, {
+			"name": "overwrite",
+			"description": "To avoid loosing information the command refuses to write to files that have uncommitted changes and this parameter changes this behaviour.",
+			"required": false,
+			"options": [{
+				"description": "0 - default : refuse to write to files with uncommitted changes"
+			}, {
+				"description": "1 : allow overwriting files with uncommitted changes"
+			}]
+		}, {
+			"name": "filename",
+			"description": "When path hasn't been provided and user picks where to save, this parameter is the suggested filename of the new file.",
+			"required": false
+		}, {
+			"name": "uti",
+			"description": "Universal Type Identifier expected of destination file. This is only used when path hasn't been provided and user picks where to save. User will be warned before picking a file with extension that doesn't match UTI. Default value is public.plain-text or public.item depending on whether content is specified with text or base64.",
+			"required": false
+		}]
+	}]
+}
