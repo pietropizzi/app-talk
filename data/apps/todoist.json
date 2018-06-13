@@ -1,0 +1,125 @@
+{
+  "info": {
+    "identifier": "todoist",
+    "name": "Todoist",
+    "appstoreUrl": "https://itunes.apple.com/us/app/todoist-organize-your-life/id572688855?mt=8",
+    "documentationUrl": "https://developer.todoist.com/sync/v7/#url-schemes"
+  },
+  "actions": [
+    {
+      "name": "Open",
+      "description": "Opens Todoist.",
+      "url": "todoist://"
+    },
+    {
+      "name": "Open Today",
+      "description": "Opens the today view.",
+      "url": "todoist://today"
+    },
+    {
+      "name": "Open Next 7 Days",
+      "description": "Opens the next 7 days view.",
+      "url": "todoist://next7days"
+    },
+    {
+      "name": "Open Profile",
+      "description": "Opens the profile view.",
+      "url": "todoist://profile"
+    },
+    {
+      "name": "Open Inbox",
+      "description": "Opens the inbox view.",
+      "url": "todoist://inbox"
+    },
+    {
+      "name": "Open Team Inbox",
+      "description": "Opens the team inbox view. If the user doesn’t have a business account (access to team inbox), it will show an alert saying that he/she doesn’t have access to the team inbox because he/she doesn’t have a business account and will be redirected automatically to the inbox view.",
+      "url": "todoist://teaminbox"
+    },
+    {
+      "name": "Add Task",
+      "description": "Opens the add task view to add a new task to Todoist.",
+      "url": "todoist://addtask",
+      "parameters": [
+        {
+          "name": "content",
+          "description": "The content of the task, which should be a string that in Percent-encoding (also known as URL encoding).",
+          "required": false
+        },
+        {
+          "name": "date",
+          "description": "The due date of the task, which should be a string that in Percent-encoding (also known as URL encoding). Look at our reference to see which formats are supported.",
+          "required": false
+        },
+        {
+          "name": "priority",
+          "description": "The priority of the task (a number between 1 and 4, 4 for very urgent and 1 for natural). Note: Keep in mind that very urgent is the priority 1 on clients. So, p1 will return 4 in the API.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "Projects",
+      "description": "Opens the projects view (shows all projects).",
+      "url": "todoist://projects"
+    },
+    {
+      "name": "Open Project",
+      "description": "Opens a specific project using the id of the project.",
+      "url": "todoist://project",
+      "parameters": [
+        {
+          "name": "id",
+          "description": "The id of the project to view. If the id doesn’t exist, you don’t have access to the project, or the value is empty, an alert will be showed and the user will be redirected to the projects view.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "Labels",
+      "description": "Opens the labels view (shows all labels).",
+      "url": "todoist://labels"
+    },
+    {
+      "name": "Open Label",
+      "description": "Opens a specific label using the id of the label.",
+      "url": "todoist://label",
+      "parameters": [
+        {
+          "name": "id",
+          "description": "The id of the label to view. If the id doesn’t exist, you don’t have access to the label, or the value is empty, an alert will be showed and the user will be redirected to the labels view.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "Filters",
+      "description": "Opens the filters view (shows all filters).",
+      "url": "todoist://filters"
+    },
+    {
+      "name": "Open Filter",
+      "description": "Opens a specific filter using the id of the filter.",
+      "url": "todoist://filter",
+      "parameters": [
+        {
+          "name": "id",
+          "description": "The id of the filter to view. If the id doesn’t exist, you don’t have access to the filter, or the value is empty, an alert will be showed and the user will be redirected to the filters view.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "Search",
+      "description": "Used to search in the Todoist application.",
+      "url": "todoist://search",
+      "parameters": [
+        {
+          "name": "query",
+          "description": "The query to search in the Todoist application, which should be a string that is in Percent-encoding (also known as URL encoding).",
+          "required": true
+        }
+      ]
+    }
+  ]
+}
