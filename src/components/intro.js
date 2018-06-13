@@ -35,7 +35,7 @@ export default () => {
         <blockquote className='g-text-light' styleName='quote'>
           <p>The goal of the x-callback-url specification is to provide a standardized means for iOS developers to expose and document the methods they make available to other apps. Using x-callback-url’s source apps can launch other apps passing data and context information, and also provide parameters instructing the target app to return data and control back to the source app after executing an action.</p>
         </blockquote>
-        <p>This site aims to document apps and their URLs in a standardized and easy-to-parse way. It also aims to stay up-to-date by <a href='https://github.com/pietropizzi/app-talk/blob/master/docs/CONTRIBUTE.md'>allowing everyone to participate</a>.</p>
+        <p>This site aims to document apps and their URLs in a standardized and easy-to-parse way. It also aims to stay up-to-date by <a href='https://github.com/pietropizzi/app-talk/blob/master/CONTRIBUTING.md'>allowing everyone to participate</a>.</p>
         <h3 className='g-headline-seperator'>Standard Parameters</h3>
         <p>Each URL will be listed by documenting it’s parameters. All x-callback-url compatible URLs support the following parameters:</p>
         <div styleName='appActionWrapper'>

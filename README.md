@@ -16,7 +16,7 @@ So I wanted to fix this. And the only way to have a chance to stay up-to-date is
 
 ## Contribute
 
-Read about how to [contribute to this project](https://github.com/pietropizzi/app-talk/blob/master/docs/CONTRIBUTE.md).
+Read about how to [contribute to this project](https://github.com/pietropizzi/app-talk/blob/master/CONTRIBUTING.md).
 
 ## Future plans
 
