@@ -29,7 +29,6 @@ export default class JumpToApps extends React.Component {
           </div>
         </div>
         <h3 className='g-module g-headline-seperator'>{'All apps'}</h3>
-        <a styleName='backToTop' href='#jumpToApps'>🔝</a>
       </div>
     );
   }

@@ -34,6 +34,16 @@
   color: #fff;
 }
 
+.toApps {
+  text-decoration: none;
+  margin-left: -12px;
+  margin-right: 10px;
+  width: 15px;
+  height: 15px;
+  text-indent: -999em;
+  background: transparent url(../images/apps.svg) no-repeat 0 0;
+}
+
 .appActionWrapper {
   padding-bottom: 48px;
 }
@@ -43,12 +53,26 @@
   border-bottom: 1px solid #e5e5e5;
 }
 
+@media (max-width: 650px) {
+  .toApps {
+    margin-left: -8px;
+  }
+}
+
 @media (max-width: 500px) {
   .title {
     font-size: 1.25rem;
+    margin-left: 6px;
   }
 
   .titleSide {
     font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .toApps {
+    margin-left: -4px;
+    margin-right: 6px;
   }
 }

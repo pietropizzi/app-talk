@@ -9,6 +9,7 @@ export default ({ app: { info, actions }, iconResolutions }) => {
       <div styleName='titleContainer'>
         <div styleName='titleInner' className='g-module'>
           <div styleName='titleMain'>
+            <a styleName='toApps' href='#jumpToApps'>Jump to apps</a>
             <AppIcon resolutions={iconResolutions} />
             <h2 styleName='title'>{info.name}</h2>
           </div>
@@ -16,7 +17,7 @@ export default ({ app: { info, actions }, iconResolutions }) => {
             { !!info.appstoreUrl && <a styleName='titleLink' href={info.appstoreUrl}>{'App Store'}</a> }
             { !!info.appstoreUrl && !!info.documentationUrl && <span>&nbsp;·&nbsp;</span> }
             { !!info.documentationUrl && <a styleName='titleLink' href={info.documentationUrl}>{'Documentation'}</a> }
-        </div>
+          </div>
         </div>
       </div>
       <div className='g-module'>
