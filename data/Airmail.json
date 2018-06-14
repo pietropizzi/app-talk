@@ -1,0 +1,40 @@
+{
+  "info": {
+    "identifier": "airmail",
+    "name": "Airmail",
+    "appstoreUrl": "https://itunes.apple.com/us/app/airmail-your-mail-with-you/id993160329?mt=8",
+    "documentationUrl": "http://docs.airmailapp.com/airmail-for-ios/airmail-ios-url-scheme"
+  },
+  "actions": [
+    {
+      "name": "compose",
+      "description": "Compose a new mail",
+      "url": "airmail://x-callback-url/send",
+      "parameters": [
+        {
+          "name": "subject",
+          "description": "Subject of email.",
+        },
+        {
+          "name": "plainBody",
+          "description": "Body text of email.",
+        },
+        {
+          "name": "from",
+          "description": "The recipient."
+        },
+        {
+          "name": "cc",
+          "descritption": "The cc recipient."
+        },
+        {
+          "name:  "bcc",
+          "description": "The bcc recipient."
+              
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
