@@ -28,7 +28,7 @@
           "description": "The cc recipient."
         },
         {
-          "name:"  "bcc",
+          "name:"  "bcc"
           "description": "The bcc recipient."
               
             }
