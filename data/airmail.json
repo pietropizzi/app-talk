@@ -30,9 +30,6 @@
         {
           "name":  "bcc",
           "description": "The bcc recipient."
-              
-            }
-          ]
         }
       ]
     }
