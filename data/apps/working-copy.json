@@ -8,7 +8,7 @@
   "actions": [{
     "name": "Writing files",
     "description": "Write to existing or new files.",
-    "url": "working-copy://x-callback-url/write/",
+    "url": "working-copy://x-callback-url/write",
     "parameters": [{
       "name": "key",
       "description": "Secret URL key to avoid unauthorized command execution.",
@@ -63,6 +63,121 @@
     }, {
       "name": "uti",
       "description": "Universal Type Identifier expected of destination file. This is only used when path hasn't been provided and user picks where to save. User will be warned before picking a file with extension that doesn't match UTI. Default value is public.plain-text or public.item depending on whether content is specified with text or base64.",
+      "required": false
+    }]
+  },
+  {
+    "name": "Reading files",
+    "description": "You can get the contents of text or binary files.",
+    "url": "working-copy://x-callback-url/read",
+    "parameters": [{
+      "name": "key",
+      "description": "Secret URL key to avoid unauthorized command execution.",
+      "required": true
+    }, {
+      "name": "repo",
+      "description": "Repository name or remote URL of repository. You will have to pick a repository if this parameter is missing.",
+      "required": false
+    }, {
+      "name": "path",
+      "description": "Path of file relative to repository root without leading slash. You are asked to pick a file if this parameter is missing.",
+      "required": false
+    }, {
+      "name": "base64",
+      "description": "Binary data written to file in base64 format. If you do not include either a text or base64 parameter the clipboard content is written.",
+      "required": false,
+      "options": [{
+        "description": "0 - default : transfer file content as UTF-8 unless binary."
+      }, {
+        "description": "1 : always transfer file content as base64 data."
+      }]
+    },{
+      "name": "uti",
+      "description": "Universal Type Identifier expected of picked file. This is only used when path hasn't been provided and user picks what to read. User will be warned before picking a file with extension that doesn't match UTI. Default value for uti is 'public.plain-text' but this is changed to 'public.item' if base64 indicates that you accept binary results.",
+      "required": false
+    }]
+  },
+  {
+    "name": "Moving files",
+    "description": "Move or rename files within a repository.",
+    "url": "working-copy://x-callback-url/move",
+    "parameters": [{
+      "name": "key",
+      "description": "Secret URL key to avoid unauthorized command execution.",
+      "required": true
+    }, {
+      "name": "repo",
+      "description": "Repository name or remote URL of repository.",
+      "required": true
+    }, {
+      "name": "source",
+      "description": "Path of source file relative to repository root without leading slash.",
+      "required": true
+    }, {
+      "name": "destination",
+      "description": "Path of destination file relative to repository root without leading slash.",
+      "required": true
+    }]
+  },
+  {
+    "name": "Committing changes",
+    "description": "Commit files, directories or entire repository.",
+    "url": "working-copy://x-callback-url/commit",
+    "parameters": [{
+      "name": "key",
+      "description": "Secret URL key to avoid unauthorized command execution.",
+      "required": true
+    }, {
+      "name": "repo",
+      "description": "Repository name or remote URL of repository.",
+      "required": true
+    }, {
+      "name": "path",
+      "description": "Used to specify the files to take into account, where a missing or empty parameter means the entire repository is checked for modified files to commit.",
+      "required": false
+    }, {
+      "name": "message",
+      "description": "Supply a message parameter for the commit message and formatting/wrapping this message in accordance with best practices is your responsibility.",
+      "required": true
+    }, {
+      "name": "limit",
+      "description": "To avoid accidentally committing unexpected changes the limit parameter is checked and if there are more changed files covered by path than allowed by limit the commit fails. The default is limit=1 but you can set it to large values if you intentionally want to commit all changed files.",
+      "required": false
+    }]
+  },
+  {
+    "name": "Push to remote",
+    "description": "Send commits back to the origin remote.",
+    "url": "working-copy://x-callback-url/push",
+    "parameters": [{
+      "name": "key",
+      "description": "Secret URL key to avoid unauthorized command execution.",
+      "required": true
+    }, {
+      "name": "repo",
+      "description": "Repository name or remote URL of repository. Push all repositories remotes by using wildcards on the form repo=* where the asterix matches one or more characters. These wildcards are only resolved against name, not remote URLs.",
+      "required": true
+    }, {
+      "name": "remote",
+      "description": "Push to other remotes than origin with this parameter.",
+      "required": false
+    }]
+  },
+  {
+    "name": "Pull from remote",
+    "description": "Fetch and merge changes from remote.",
+    "url": "working-copy://x-callback-url/pull",
+    "parameters": [{
+      "name": "key",
+      "description": "Secret URL key to avoid unauthorized command execution.",
+      "required": true
+    }, {
+      "name": "repo",
+      "description": "Repository name or remote URL of repository. Pull all repositories remotes by using wildcards on the form repo=* where the asterix matches one or more characters. These wildcards are only resolved against name, not remote URLs.",
+      "required": true
+    }, {
+      "name": "remote",
+      "description": "Pull from other remotes than origin with this parameter.",
       "required": false
     }]
   }]
