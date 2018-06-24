@@ -1,0 +1,71 @@
+{
+  "info": {
+    "identifier": "copied",
+    "name": "Copied",
+    "appstoreUrl": "https://itunes.apple.com/de/app/copied/id1015767349?l=en&mt=8",
+    "documentationUrl": "https://copiedapp.com/help/#urlscheme"
+  },
+  "actions": [
+    {
+      "name": "Show Clipboard",
+      "description": "Show the clipboard.",
+      "url": "copied://clipboard"
+    },
+    {
+      "name": "Open List",
+      "description": "Open list with the name ”listName”.",
+      "url": "copied://list/{listName}"
+    },
+    {
+      "name": "Find Clipping",
+      "description": "Search the content with a query.",
+      "url": "copied://search",
+      "parameters": [
+        {
+          "name": "q",
+          "required": true,
+          "description": "The query to search for."
+        }
+      ]
+    },
+    {
+      "name": "New Clipping",
+      "description": "Add a new clipping to Copied. All parameters are option, if neither ”title” nor ”url” are given the content of the clipboard will be used.",
+      "url": "copied://x-callback-url/save",
+      "parameters": [
+        {
+          "name": "title",
+          "description": "The title of the clippping."
+        },
+        {
+          "name": "text",
+          "description": "The text of the clipping."
+        },
+        {
+          "name": "url",
+          "description": "The url of the clipping"
+        },
+        {
+          "name": "list",
+          "description": "The list to add the clipping to"
+        }
+      ]
+    },
+    {
+      "name": "Copy Clipping",
+      "description": "Copy the clipping at the given index.",
+      "url": "copied://x-callback-url/copy",
+      "parameters": [
+        {
+          "name": "index",
+          "required": true,
+          "description": "An integer that starts from 0."
+        },
+        {
+          "name": "list",
+          "description": "If a name of a list is given the index will be inside that list"
+        }
+      ]
+    }
+  ]
+}
