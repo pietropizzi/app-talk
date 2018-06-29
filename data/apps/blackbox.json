@@ -20,6 +20,6 @@
       "name": "Reset",
       "description": "Presents options for resetting the game.",
       "url": "blackbox://reset"
-    },
+    }
   ]
 }
