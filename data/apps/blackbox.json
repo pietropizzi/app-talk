@@ -1,0 +1,25 @@
+{
+  "info": {
+    "identifier": "blackbox",
+    "name": "Blackbox",
+    "appstoreUrl": "https://itunes.apple.com/us/app/blackbox-think-outside-box/id962969578",
+    "documentationUrl": ""
+  },
+  "actions": [
+    {
+      "name": "Open",
+      "description": "Opens Blackbox.",
+      "url": "blackbox://"
+    },
+    {
+      "name": "Unlock Meta Challenge",
+      "description": "Unlocks a deep link related meta challenge.",
+      "url": "blackbox://meta"
+    },
+    {
+      "name": "Reset",
+      "description": "Presents options for resetting the game.",
+      "url": "blackbox://reset"
+    }
+  ]
+}
