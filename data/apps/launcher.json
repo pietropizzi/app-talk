@@ -1,0 +1,48 @@
+{
+  "info": {
+    "identifier": "launcher",
+    "name": "Launcher",
+    "appstoreUrl": "https://itunes.apple.com/app/id905099592"
+  },
+  "actions": [
+    {
+      "name": "Open Launcher",
+      "description": "Open launcher app.",
+      "url": "launcher://",
+      "parameters": [
+        {
+          "name": "idx",
+          "required": false,
+          "description": "0-based index of widget page to open. Defaults to 0 which is the first Launcher widget."
+        }
+      ]
+    },
+    {
+      "name": "Add New Launcher",
+      "description": "Add a new launcher.",
+      "url": "launcher://x-callback-url/addnew",
+      "parameters": [
+        {
+          "name": "name",
+          "required": true,
+          "description": "The name for the new launcher."
+        },
+        {
+          "name": "url",
+          "required": true,
+          "description": "The URL to launch for the new launcher."
+        },
+        {
+          "name": "iconB64",
+          "required": false,
+          "description": "Base64-encoded icon for the new launcher. Should be at least 152x152 pixels. If not included, will try to use current image on clipboard."
+        },
+        {
+          "name": "idx",
+          "required": false,
+          "description": "0-based index of widget to add launcher to. Defaults to 0 which is the first launcher widget."
+        }
+      ]
+    }
+  ]
+}
