@@ -1,25 +1,25 @@
 {
   "info": {
     "identifier": "awair",
-    "name": "Awair - Breathe Easy",
+    "name": "Awair",
     "appstoreUrl": "https://itunes.apple.com/app/id1034660006"
   },
   "actions": [
     {
-      "name": "list",
-      "description": "Device List view",
+      "name": "List",
+      "description": "Opens the Device List view",
       "url": "awair://list"
     },{
-      "name": "score",
-      "description": "Awair Score tab",
+      "name": "Score",
+      "description": "Opens the Awair Score tab",
       "url": "awair://score"
     },{
-      "name": "tips",
-      "description": "Tips tab",
+      "name": "Tips",
+      "description": "Opens the Tips tab",
       "url": "awair://tips"
     },{
-      "name": "trend",
-      "description": "Trend tab",
+      "name": "Trend",
+      "description": "Opens the Trend tab",
       "url": "awair://trend",
       "parameters": [ 
         {
@@ -69,12 +69,12 @@
         }
       ]
     },{
-      "name": "awairplus",
-      "description": "Awair+ tab",
+      "name": "Awair+",
+      "description": "Opens the Awair+ tab",
       "url": "awair://awairplus"
     },{
-      "name": "notifications",
-      "description": "Inbox tab",
+      "name": "Notifications",
+      "description": "Opens the Inbox tab",
       "url": "awair://notifications"
     }
   ]
