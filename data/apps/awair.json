@@ -1,0 +1,81 @@
+{
+  "info": {
+    "identifier": "awair",
+    "name": "Awair",
+    "appstoreUrl": "https://itunes.apple.com/app/id1034660006"
+  },
+  "actions": [
+    {
+      "name": "List",
+      "description": "Opens the Device List view",
+      "url": "awair://list"
+    },{
+      "name": "Score",
+      "description": "Opens the Awair Score tab",
+      "url": "awair://score"
+    },{
+      "name": "Tips",
+      "description": "Opens the Tips tab",
+      "url": "awair://tips"
+    },{
+      "name": "Trend",
+      "description": "Opens the Trend tab",
+      "url": "awair://trend",
+      "parameters": [ 
+        {
+          "name": "deviceType",
+          "description": "The model name",
+          "required": true,
+          "options": [
+            {
+              "description": "awair"
+            },{
+              "description": "awair-glow"
+            },{
+              "description": "awair-mint"
+            },{
+              "description": "awair-omni"
+            }
+          ]
+        },{
+          "name": "deiviceId",
+          "description": "numeric identifier of the device",
+          "required": true
+        },{
+          "name": "component",
+          "description": "Sensor Component",
+          "required": true,
+          "options": [
+            {
+              "description": "score"
+            },{
+              "description": "temp"
+            },{
+              "description": "humid"
+            },{
+              "description": "co2"
+            },{
+              "description": "voc"
+            },{
+              "description": "dust"
+            },{
+              "description": "pm25"
+            }
+          ]
+        },{
+          "name": "timestamp",
+          "description": "of the format: 2017-04-12T23:22:00.000Z",
+          "required": true
+        }
+      ]
+    },{
+      "name": "Awair+",
+      "description": "Opens the Awair+ tab",
+      "url": "awair://awairplus"
+    },{
+      "name": "Notifications",
+      "description": "Opens the Inbox tab",
+      "url": "awair://notifications"
+    }
+  ]
+}
