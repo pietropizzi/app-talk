@@ -18,7 +18,7 @@
         },
         {
           "name": "x-success",
-          "description": "URL to be calledthe shortened link as a \"url\" parameter.",
+          "description": "URL to be called with the shortened link as a \"url\" parameter.",
           "required": false
         }
       ]
