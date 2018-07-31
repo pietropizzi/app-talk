@@ -1,0 +1,27 @@
+{
+  "info": {
+    "identifier": "bitly",
+    "name": "Bitly",
+    "appstoreUrl": "https://itunes.apple.com/us/app/bitly/id525106063?mt=8",
+    "documentationUrl": "http://dev.bitly.com/ios_tools.html"
+  },
+  "actions": [
+    {
+      "name": "shorten",
+      "description": "Create a shortened link. The user will be prompted to add the new link to her list of links. If she chooses not to, the link will be returned as a \"url\" parameter on the x-success callback.",
+      "url": "bitly://x-callback-url/shorten",
+      "parameters": [
+        {
+          "name": "url",
+          "description": "the URL to be shortened",
+          "required": true
+        },
+        {
+          "name": "x-success",
+          "description": "URL to be called with the shortened link as a \"url\" parameter.",
+          "required": false
+        }
+      ]
+    }
+  ]
+}
