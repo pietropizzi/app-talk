@@ -1,0 +1,44 @@
+{
+  "info": {
+    "identifier": "calca",
+    "name": "Calca",
+    "appstoreUrl": "https://itunes.apple.com/us/app/calca/id635757879?mt=8",
+    "documentationUrl": "http://calca.io/x-callback-url/"
+  },
+  "actions": [
+    {
+      "name": "create",
+      "description": "Create a new document with the given name and contents. It is saved in the active storage location in the folder that was last browsed. The document is opened and set to edit.",
+      "url": "calca://x-callback-url/create",
+      "parameters": [
+        {
+          "name": "body",
+          "description": "Can contain full Markdown text and calculations.",
+          "required": true
+        },
+        {
+          "name": "title",
+          "description": "Will become the file name and should not have a file extension attached.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "calc",
+      "description": "Calc a block of text and return it to the calling application. The text is computed in the same way as if it were opened in Calca: all lines with => are computed and the values written out.",
+      "url": "calc://x-callback-url/calc",
+      "parameters": [
+        {
+          "name": "body",
+          "description": "Can range from a simple query suchas as 2+2=> to a full document.",
+          "required": true
+        },
+        {
+          "name": "x-success",
+          "description": "A URL to open after the text has been calculated. If the URL contains the string [[output]], it is replaced with the fully calculated text.",
+          "required": true
+        }
+      ]
+    }
+  ]
+}
