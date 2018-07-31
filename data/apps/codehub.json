@@ -1,0 +1,32 @@
+{
+  "info": {
+    "identifier": "code-hub",
+    "name": "CodeHub",
+    "appstoreUrl": "https://itunes.apple.com/us/app/codehub-a-client-for-github/id707173885?mt=8",
+    "documentationUrl": "https://github.com/CodeHubApp/CodeHub/wiki/CodeHub-x-callback-url-API"
+  },
+  "actions": [
+    {
+      "name": "create new gist",
+      "description": "Create a new gist on github.com.",
+      "url": "codehub://x-callback-url/gist/create",
+      "parameters": [
+        {
+          "name": "description",
+          "description": "A string description of the Gist. Default is empty",
+          "required": false
+        },
+        {
+          "name": "public",
+          "description": "A boolean value indicating whether the gist is public or not. Default is false.",
+          "required": false
+        },
+        {
+          "name": "fileN",
+          "description": "This parameter can be defined multiple times. The \"N\" in the name is a placeholder for a unique name for the file. The value of the argument is the content of the file",
+          "required": false
+        }
+      ]
+    }
+  ]
+}
