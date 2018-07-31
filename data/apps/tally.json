@@ -1,0 +1,162 @@
+{
+  "info": {
+    "identifier": "tally-2",
+    "name": "Tally 2",
+    "appstoreUrl": "https://itunes.apple.com/us/app/tally-2-quick-counter/id957912407?mt=8",
+    "documentationUrl": "https://agiletortoise.zendesk.com/hc/en-us/articles/200689534-Tally-URL-Schemes"
+  },
+  "actions": [
+    {
+      "name": "open",
+      "description": "",
+      "url": "tally2://x-callback-url/open",
+      "parameters": [
+        {
+          "name": "title",
+          "description": "name of an existing tally",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "get",
+      "description": "Lookup the tally based on the title parameter, and call the x-success parameter URL with the current value of the tally added as a parameter.",
+      "url": "tally2://x-callback-url/get",
+      "parameters": [
+        {
+          "name": "title",
+          "description": "the name of an existing  tally",
+          "required": true
+        },
+        {
+          "name": "retParam",
+          "description": "the name of the \"value\" parameter appended to the x-success callback",
+          "required": false
+        },
+        {
+          "name": "x-success",
+          "description": "The following parameters will be added:",
+          "required": false,
+          "options": [
+            {
+              "description": "title - the incoming title parameter"
+            },
+            {
+              "description": "value - the value of the tally after the action is completed"
+            }
+          ]
+        },
+        {
+          "name": "x-error",
+          "description": "fired if Tally is unable to locate the requested tally",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "increment",
+      "description": "Lookup the tally based on the title parameter, and increment it. Increment will be based on the configuration of the tally – so if it is set to step by 5, the increment will be by five.",
+      "url": "tally2://x-callback-url/increment",
+      "parameters": [
+        {
+          "name": "title",
+          "description": "the name of an existing  tally",
+          "required": true
+        },
+        {
+          "name": "retParam",
+          "description": "the name of the \"value\" parameter appended to the x-success callback",
+          "required": false
+        },
+        {
+          "name": "x-success",
+          "description": "The following parameters will be added:",
+          "required": false,
+          "options": [
+            {
+              "description": "title - the incoming title parameter"
+            },
+            {
+              "description": "value - the value of the tally after the action is completed"
+            }
+          ]
+        },
+        {
+          "name": "x-error",
+          "description": "fired if Tally is unable to locate the requested tally",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "decrement",
+      "description": "Lookup the tally based on the title parameter, and decrement it. Decrement will be based on the configuration of the tally – so if it is set to step by 5, the decrement will be by five.",
+      "url": "tally2://x-callback-url/decrement",
+      "parameters": [
+        {
+          "name": "title",
+          "description": "the name of an existing  tally",
+          "required": true
+        },
+        {
+          "name": "retParam",
+          "description": "the name of the \"value\" parameter appended to the x-success callback",
+          "required": false
+        },
+        {
+          "name": "x-success",
+          "description": "The following parameters will be added:",
+          "required": false,
+          "options": [
+            {
+              "description": "title - the incoming title parameter"
+            },
+            {
+              "description": "value - the value of the tally after the action is completed"
+            }
+          ]
+        },
+        {
+          "name": "x-error",
+          "description": "fired if Tally is unable to locate the requested tally",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "reset",
+      "description": "Lookup the tally based on the title parameter, and reset it to it's initial value.",
+      "url": "tally2://x-callback-url/reset",
+      "parameters": [
+        {
+          "name": "title",
+          "description": "the name of an existing  tally",
+          "required": true
+        },
+        {
+          "name": "retParam",
+          "description": "the name of the \"value\" parameter appended to the x-success callback",
+          "required": false
+        },
+        {
+          "name": "x-success",
+          "description": "The following parameters will be added:",
+          "required": false,
+          "options": [
+            {
+              "description": "title - the incoming title parameter"
+            },
+            {
+              "description": "value - the value of the tally after the action is completed"
+            }
+          ]
+        },
+        {
+          "name": "x-error",
+          "description": "fired if Tally is unable to locate the requested tally",
+          "required": false
+        }
+      ]
+    }
+  ]
+}
