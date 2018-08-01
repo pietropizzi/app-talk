@@ -1,0 +1,49 @@
+{
+  "info": {
+    "identifier": "terminology",
+    "name": "Terminology",
+    "appstoreUrl": "https://itunes.apple.com/us/app/terminology-dictionary/id687798859?mt=8",
+    "documentationUrl": "https://agiletortoise.zendesk.com/hc/en-us/articles/200781400-Terminology-URL-schemes"
+  },
+  "actions": [
+    {
+      "name": "lookup",
+      "description": "Launch Terminology and lookup the text, just as if the user had searched for and selected the text from inside Terminology.",
+      "url": "terminology://x-callback-url/lookup",
+      "parameters": [
+        {
+          "name": "text",
+          "description": "The text to lookup. Can be a single word, or a text selection.",
+          "required": true
+        },
+        {
+          "name": "action",
+          "description": "The name of a valid action in either the top or bottom actions list in Terminology. If present, the lookup will open directly to the action as if the action were triggered on the lookup term.",
+          "required": false
+        },
+        {
+          "name": "x-source",
+          "description": "A friendly name for the app making the call. It will be displayed to the user to identify the request.",
+          "required": false
+        },
+        {
+          "name": "x-success",
+          "description": "The URL to use to return the user to the calling application. If provided, the user will get a dialog to allow them to easily return to the calling app after viewing the definition.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "search",
+      "description": "Launches Terminology directly to search for the value of the text parameter.",
+      "url": "terminology://x-callback-url/search",
+      "parameters": [
+        {
+          "name": "text",
+          "description": "The text to lookup. Can be a single word, or a text selection.",
+          "required": true
+        }
+      ]
+    }
+  ]
+}
