@@ -1,0 +1,84 @@
+{
+  "info": {
+    "identifier": "story-planner",
+    "name": "Story Planner",
+    "appstoreUrl": "https://itunes.apple.com/us/app/story-planner-for-writers/id860024390?mt=8",
+    "documentationUrl": "https://literautas.com/es/apps/story-planner/x-callback-url/"
+  },
+  "actions": [
+    {
+      "name": "add",
+      "description": "Add a new project.",
+      "url": "storyplanner://x-callback-url/add",
+      "parameters": [
+        {
+          "name": "title",
+          "description": "the title of the project",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "project (by title)",
+      "description": "Open an existing project by title.",
+      "url": "storyplanner://x-callback-url/project",
+      "parameters": [
+        {
+          "name": "title",
+          "description": "the title of the project",
+          "required": true
+        },
+        {
+          "name": "tab",
+          "description": "a tab to open within the project",
+          "required": false,
+          "options": [
+            {
+              "description": "characters"
+            },
+            {
+              "description": "locations"
+            },
+            {
+              "description": "scenes"
+            },
+            {
+              "description": "plots"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "project (by identifier)",
+      "description": "Open an existing project by identifier. You can get the identifier within the project by opening export options and choosing \"Copy identifier\".",
+      "url": "storyplanner://x-callback-url/project",
+      "parameters": [
+        {
+          "name": "id",
+          "description": "the identifier of the project",
+          "required": true
+        },
+        {
+          "name": "tab",
+          "description": "a tab to open within the project",
+          "required": false,
+          "options": [
+            {
+              "description": "characters"
+            },
+            {
+              "description": "locations"
+            },
+            {
+              "description": "scenes"
+            },
+            {
+              "description": "plots"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
