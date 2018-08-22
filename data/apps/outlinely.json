@@ -1,0 +1,119 @@
+{
+  "info": {
+    "identifier": "outlinely",
+    "name": "Outlinely",
+    "appstoreUrl": "https://itunes.apple.com/de/app/outlinely-outliner-notes/id1170878793?l=en&mt=8",
+    "documentationUrl": "https://glamdevelopment.com/outlinely/learn/x-callback-url"
+  },
+  "actions": [
+    {
+      "name": "Open",
+      "description": "Open an outline.",
+      "url": "outlinely://x-callback-url/open",
+      "parameters": [
+        {
+          "name": "path",
+          "description": "The path to the outline. Example: ”Inbox/Today”, ”Ideas/Business Idea”. Case sensitive.",
+          "required": true
+        },
+        {
+          "name": "storage",
+          "options": [
+            {
+              "description": "iCloud"
+            },
+            {
+              "description": "local"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "New",
+      "description": "Create a new outline.",
+      "url": "outlinely://x-callback-url/new",
+      "parameters": [
+        {
+          "name": "text",
+          "required": true,
+          "description": "Initial content"
+        },
+        {
+          "name": "group",
+          "required": true,
+          "description": "The path to the group where the new outline is created. Example: ”Inbox”, ”Idea”, ”Research/Technology”."
+        },
+        {
+          "name": "title",
+          "description": "The outline’s title"
+        },
+        {
+          "name": "storage",
+          "options": [
+            {
+              "description": "iCloud"
+            },
+            {
+              "description": "local"
+            }
+          ]
+        },
+        {
+          "name": "type",
+          "options": [
+            {
+              "description": "markdown - default"
+            },
+            {
+              "description": "richtext"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "insert",
+      "description": "Insert text into an existing outline.",
+      "url": "outlinely://x-callback-url/insert",
+      "parameters": [
+        {
+          "name": "text",
+          "required": true,
+          "description": "Initial content"
+        },
+        {
+          "name": "path",
+          "description": "The path to the outline. Example: ”Inbox/Today”, ”Ideas/Business Idea”. Case sensitive.",
+          "required": true
+        },
+        {
+          "name": "storage",
+          "options": [
+            {
+              "description": "iCloud"
+            },
+            {
+              "description": "local"
+            }
+          ]
+        },
+        {
+          "name": "parent",
+          "description": "If specified, Outlinely will attempt to add text to section in the outline with the specified name."
+        },
+        {
+          "name": "mode",
+          "options": [
+            {
+              "description": "append - default"
+            },
+            {
+              "description": "prepend"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
