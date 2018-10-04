@@ -1,0 +1,88 @@
+{
+  "info": {
+    "identifier": "price-tag",
+    "name": "Price Tag",
+    "appstoreUrl": "https://itunes.apple.com/au/app/price-tag/id1166819590?mt=8"
+  },
+  "actions": [
+    {
+      "name": "Show Explore",
+      "description": "Open the Explore tab.",
+      "url": "pricetag://explore"
+    },
+    {
+      "name": "Show Favorite List",
+      "description": "Open the Favorite tab.",
+      "url": "pricetag://favorites"
+    },
+    {
+      "name": "Show Price Drop List",
+      "description": "Open the Price Drop tab.",
+      "url": "pricetag://pricedrop"
+    },
+    {
+      "name": "Show App Detail Using URL",
+      "description": "Show the app detail using the App Store URL of the App.",
+      "url": "pricetag://app",
+      "parameters": [
+        {
+          "name": "url",
+          "description": "App Store URL",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "Show App Detail Using ID",
+      "description": "Show the app detail using the App Store ID of the App.",
+      "url": "pricetag://app",
+      "parameters": [
+        {
+          "name": "id",
+          "description": "App Store ID",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "Import Apps",
+      "description": "Import apps into Price Tag.",
+      "url": "pricetag://import",
+      "parameters": [
+        {
+          "name": "ids",
+          "description": "Commas separated list of App Store ID's",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "Search",
+      "description": "Searches Price Tag.",
+      "url": "pricetag://search",
+      "parameters": [
+        {
+          "name": "key",
+          "description": "URL encoded search parameters.",
+          "required": true
+        },
+        {
+          "name": "p",
+          "description": "Type of search being performed. Defaults to iOS if not specified.",
+          "required": false,
+          "options": [
+            {
+              "description": "iOS - Search for iOS apps."
+            },
+            {
+              "description": "macOS - Search for macOS apps."
+            },
+            {
+              "description": "post - Search the posts."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
