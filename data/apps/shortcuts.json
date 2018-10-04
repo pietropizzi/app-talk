@@ -1,0 +1,151 @@
+{
+  "info": {
+    "identifier": "shortcuts",
+    "name": "Shortcuts",
+    "appstoreUrl": "https://itunes.apple.com/au/app/shortcuts/id915249334?mt=8",
+    "documentationUrl": "https://support.apple.com/en-au/guide/shortcuts/about-url-schemes-apd621a1ad7a/ios"
+  },
+  "actions": [
+    {
+      "name": "Open Shortcuts",
+      "description": "Launch the app to the state when it was last used.",
+      "url": "shortcuts://"
+    },
+    {
+      "name": "Create a New Shortcut",
+      "description": "Jump to the shortcut editor and to create a new, empty shortcut.",
+      "url": "shortcuts://create-shortcut"
+    },
+    {
+      "name": "Open a Shortcut",
+      "description": "Launch the app to a particular shortcut in your collection.",
+      "url": "shortcuts://open-shortcut",
+      "parameters": [
+        {
+          "name": "name",
+          "description": "The name of the shortcut",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "Run a Shortcut",
+      "description": "This functionality may be useful in automation systems that extend beyond Shortcuts itself, so that other apps can run a shortcut in your collection. Or you could use the Shortcuts URL scheme in a task manager like OmniFocus or Todoist for running a shortcut as one step in a project.",
+      "url": "shortcuts://x-callback-url/run-shortcut",
+      "parameters": [
+        {
+          "name": "name",
+          "description": "The name of the shortcut to run",
+          "required": true
+        },
+        {
+          "name": "input",
+          "description": "This value determines what will be provided as input to the beginning of the shortcut.",
+          "required": false,
+          "options": [
+            {
+              "description": "”text” - the input given by the parameter ”text” will be used as input."
+            },
+            {
+              "description": "”clipboard” - the contents of the clipboard will be used as input."
+            }
+          ]
+        },
+        {
+          "name": "text",
+          "description": "When the ”input” parameter is set to ”text” this text is used as input to the shortcut.",
+          "required": false
+        },
+        {
+          "name": "x-success",
+          "description": "A URL that opens when the run was successful. A parameter named result is appended to the URL and contains the textual output of the shortcut.",
+          "required": false,
+          "options": [
+            {
+              "description": "result - the textual output of the shortcut."
+            }
+          ]
+        },
+        {
+          "name": "x-cancel",
+          "description": "A URL that opens when the run is canceled by the user. Because the shortcut did not complete, no output from the shortcut is provided.",
+          "required": false
+        },
+        {
+          "name": "x-error",
+          "description": "A URL that opens when the run fails because an error occurred. A parameter named errorMessage is appended to the URL and contains a description of the error.",
+          "required": false,
+          "options": [
+            {
+              "description": "errorMessage - a description of the error."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Import a Shortcut",
+      "description": "You can import .shortcut files into the Shortcuts app and add them to your collection. This is useful, for example, if you want to share a shortcut online and provide a link for others to quickly add it to their library.",
+      "url": "shortcuts://x-callback-url/import-shortcut",
+      "parameters": [
+        {
+          "name": "url",
+          "description": "A URL pointing to the .shortcut file you want to import.",
+          "required": true
+        },
+        {
+          "name": "name",
+          "description": "A title for the new shortcut. If you don’t provide a name, the shortcut filename is used.",
+          "required": false
+        },
+        {
+          "name": "silent",
+          "description": "By default, the imported shortcut is opened and displayed to the user. Set this parameter to ”true” to import without opening the shortcut.",
+          "required": false
+        },
+        {
+          "name": "x-success",
+          "description": "A URL that opens when the import was successful. A parameter named result is appended to the URL and contains the textual output of the shortcut.",
+          "required": false,
+          "options": [
+            {
+              "description": "result - the textual output of the shortcut."
+            }
+          ]
+        },
+        {
+          "name": "x-cancel",
+          "description": "A URL that opens when the import is canceled by the user.",
+          "required": false
+        },
+        {
+          "name": "x-error",
+          "description": "A URL that opens when the import fails because an error occurred. A parameter named errorMessage is appended to the URL and contains a description of the error.",
+          "required": false,
+          "options": [
+            {
+              "description": "errorMessage - a description of the error."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Open Gallery",
+      "description": "Open Shortcuts on the main page of the Gallery.",
+      "url": "shortcuts://gallery"
+    },
+    {
+      "name": "Search Gallery",
+      "description": "Search the gallery",
+      "url": "shortcuts://gallery/search",
+      "parameters": [
+        {
+          "name": "query",
+          "description": "URL-encoded keywords to be searched in the Gallery.",
+          "required": true
+        }
+      ]
+    }
+  ]
+}
