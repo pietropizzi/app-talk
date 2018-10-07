@@ -1,0 +1,56 @@
+{
+  "info": {
+    "identifier": "scriptable",
+    "name": "Scriptable",
+    "appstoreUrl": "https://itunes.apple.com/au/app/scriptable/id1405459188?mt=8"
+  },
+  "actions": [
+    {
+      "name": "Open Scriptable",
+      "description": "Opens Scriptable.",
+      "url": "scriptable://"
+    },
+    {
+      "name": "Add Script",
+      "description": "Add a new script.",
+      "url": "scriptable:///add"
+    },
+    {
+      "name": "Open Script",
+      "description": "Add a new script.",
+      "url": "scriptable:///open",
+      "parameters": [
+        {
+          "name": "scriptName",
+          "description": "URL Encoded name of the script to be opened.",
+          "required": true
+        },
+        {
+          "name": "openSettings",
+          "description": "Indicates if the script settings should be opened.",
+          "required": false,
+          "options": [
+            {
+              "description": "true - Script settings will be opened."
+            },
+            {
+              "description": "false - Script settings will not be opened."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Run Script",
+      "description": "Run a script.",
+      "url": "scriptable:///run",
+      "parameters": [
+        {
+          "name": "scriptName",
+          "description": "URL Encoded name of the script to be run.",
+          "required": true
+        }
+      ]
+    }
+  ]
+}
