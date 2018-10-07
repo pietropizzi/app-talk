@@ -1,0 +1,37 @@
+{
+  "info": {
+    "identifier": "infuse",
+    "name": "Infuse",
+    "appstoreUrl": "https://itunes.apple.com/au/app/infuse-pro-5/id1136220915?mt=8",
+    "documentationUrl": "https://support.firecore.com/hc/en-us/articles/215090997-Callback-URLs-iOS-only-"
+  },
+  "actions": [
+    {
+      "name": "Open Infuse",
+      "description": "Opens Infuse.",
+      "url": "infuse://"
+    },
+    {
+      "name": "Play Video in Infuse",
+      "description": "Plays the video from the provided URL in Infuse.",
+      "url": "infuse://x-callback-url/play",
+      "parameters": [
+        {
+          "name": "url",
+          "description": "URL encoded URL of a video to be played in Infuse",
+          "required": true
+        },
+        {
+          "name": "x-success",
+          "description": "A URL that opens once the video has been played.",
+          "required": false
+        },
+        {
+          "name": "x-error",
+          "description": "A URL that opens if the playback of the video failed.",
+          "required": false
+        }
+      ]
+    }
+  ]
+}
