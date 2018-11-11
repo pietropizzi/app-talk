@@ -1,35 +1,11 @@
 {
   "info": {
     "identifier": "day-one",
-    "name": "day One",
+    "name": "Day One",
     "appstoreUrl": "https://itunes.apple.com/ca/app/day-one-journal/id1044867788",
     "documentationUrl": "http://help.dayoneapp.com/tips-and-tutorials/day-one-url-scheme"
   },
   "actions": [
-    {
-      "name": "Open Day One",
-      "url": "dayone://"
-    },
-    {
-      "name": "Open Actifity Feed",
-      "url": "dayone://activity"
-    },
-    {
-      "name": "Open Timeline",
-      "url": "dayone://entries"
-    },
-    {
-      "name": "Open Calendar",
-      "url": "dayone://calendar"
-    },
-    {
-      "name": "Open Starred Entries",
-      "url": "dayone://astarred"
-    },
-    {
-      "name": "Open Preferences",
-      "url": "dayone://preferences"
-    },
     {
       "name": "Create entry",
       "url": "dayone://post",
@@ -74,6 +50,30 @@
           "required": true
         }
       ]
+    }
+    {
+      "name": "Open Day One",
+      "url": "dayone://"
+    },
+    {
+      "name": "Open Actifity Feed",
+      "url": "dayone://activity"
+    },
+    {
+      "name": "Open Timeline",
+      "url": "dayone://entries"
+    },
+    {
+      "name": "Open Calendar",
+      "url": "dayone://calendar"
+    },
+    {
+      "name": "Open Starred Entries",
+      "url": "dayone://astarred"
+    },
+    {
+      "name": "Open Preferences",
+      "url": "dayone://preferences"
     }
   ]
 }
