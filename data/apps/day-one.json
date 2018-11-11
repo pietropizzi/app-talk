@@ -50,7 +50,7 @@
           "required": true
         }
       ]
-    }
+    },
     {
       "name": "Open Day One",
       "url": "dayone://"
