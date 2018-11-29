@@ -13,17 +13,15 @@
       "parameters": [
         {
           "name": "subject",
-          "description": "Enter the subject line for the new email message",
-        }
+          "description": "Enter the subject line for the new email message"
+        },
         {
           "name": "body",
-          "description": "Enter the body text for the new email message",
-        }
+          "description": "Enter the body text for the new email message"
+        },
         {
           "name": "recipient",
-          "description": "Enter the email addresses—separated by commas—for the To field of the new email message",
-        }
-          ]
+          "description": "Enter the email addresses—separated by commas—for the To field of the new email message"
         }
       ]
     }
