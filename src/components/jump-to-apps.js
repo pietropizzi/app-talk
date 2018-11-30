@@ -9,14 +9,18 @@ export default class JumpToApps extends React.Component {
   };
 
   render() {
+    const { apps } = this.props;
     return (
       <div id='jumpToApps'>
         <div styleName='innerContainer'>
           <div className='g-module'>
-            <div className='g-type-h4' styleName='jumpToAppText'>{'Jump to app'}</div>
+            <div styleName='titleContainer'>
+              <div className='g-type-h4' styleName='titleText'>{'Jump to app'}</div>
+              <div className='g-type-h4' styleName='titleText'>{`All apps (${apps.length})`}</div>
+            </div>
             <div styleName='appsContainer'>
               {
-                this.props.apps.map(({ app: { info }, iconResolutions }) =>
+                apps.map(({ app: { info }, iconResolutions }) =>
                   <a href={`#${info.identifier}`} key={info.identifier} styleName='app' onClick={this.onAppClick(info)}>
                     <AppIcon large resolutions={iconResolutions} />
                     <div styleName='appTitle'>
@@ -28,7 +32,7 @@ export default class JumpToApps extends React.Component {
             </div>
           </div>
         </div>
-        <h3 className='g-module g-headline-seperator'>{'All apps'}</h3>
+        <h3 className='g-module g-headline-seperator'>{'App details'}</h3>
       </div>
     );
   }
