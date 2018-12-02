@@ -1,0 +1,45 @@
+{
+    "info": {
+    "identifier": "airmail",
+    "name": "Airmail",
+    "appstoreUrl": "https://itunes.apple.com/us/app/airmail-your-mail-with-you/id993160329?mt=8",
+    "documentationUrl": "http://docs.airmailapp.com/airmail-for-ios/airmail-ios-url-scheme"
+  },
+  "actions": [
+    {
+      "name": "compose",
+      "description": "Open a new email draft in Airmail",
+      "url": "airmail://compose",
+      "parameters": [
+        {
+          "name": "subject",
+          "description": "Enter the subject line for the new email message."
+        },
+        {
+          "name": "from",
+          "description": "Enter the email address that you want to send the message from."
+        },
+        {
+          "name": "to",
+          "description": "Enter the email addresses--separated by commas--for the To field of the new email message."
+        },
+        {
+          "name": "cc",
+          "description": "Enter the email addresses--separated by commas--for the Cc field of the new email message."
+        },
+        {
+          "name": "bcc",
+          "description": "Enter the email addresses--separated by commas--for the Bcc field of the new email message."
+        },
+        {
+          "name": "plainBody",
+          "description": "Enter the content of your new email message in plain text."
+        },
+        {
+          "name": "htmlBody",
+          "description": "Enter the content of your new email message in HTML."
+        }
+      ]
+    }
+  ]
+}
