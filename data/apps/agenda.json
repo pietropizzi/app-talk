@@ -1,0 +1,204 @@
+{
+  "info": {
+    "identifier": "agenda",
+    "name": "Agenda",
+    "appstoreUrl": "https://itunes.apple.com/de/app/agenda/id1370289240?l=en&mt=8",
+    "documentationUrl": "https://agenda.community/t/x-callback-url-support-and-reference/27253"
+  },
+  "actions": [
+    {
+      "name": "Open ”On the Agenda”",
+      "description": "Open the On the Agenda overview.",
+      "url": "agenda://x-callback-url/on-the-agenda"
+    },
+    {
+      "name": "Open ”Today”",
+      "description": "Open the Today overview.",
+      "url": "agenda://x-callback-url/today"
+    },
+    {
+      "name": "Open project",
+      "description": "Open a project. Identified by title or identifier.",
+      "url": "agenda://x-callback-url/open-project",
+      "parameters": [
+        {
+          "name": "title",
+          "description": "The title to search for."
+        },
+        {
+          "name": "project-title",
+          "description": "The project title to seach for."
+        },
+        {
+          "name": "identifier",
+          "description": "The identifier of a project."
+        },
+        {
+          "name": "x-success",
+          "description": "Your x-success callback will be called with the following parameters",
+          "options": [
+            {
+              "description": "project - holds project identifier"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Open note",
+      "description": "Open a note. Identified by title or identifier.",
+      "url": "agenda://x-callback-url/open-note",
+      "parameters": [
+        {
+          "name": "title",
+          "description": "The title to search for."
+        },
+        {
+          "name": "project-title",
+          "description": "The project title to seach for."
+        },
+        {
+          "name": "identifier",
+          "description": "The identifier of a note."
+        },
+        {
+          "name": "x-success",
+          "description": "Your x-success callback will be called with the following parameters",
+          "options": [
+            {
+              "description": "note - holds the identifier"
+            },
+            {
+              "description": "note-title - holds the note title"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Create note",
+      "description": "Create a note. In the given project. (title or identifier)",
+      "url": "agenda://x-callback-url/create-note",
+      "parameters": [
+        {
+          "name": "title",
+          "required": true,
+          "description": "The title of the note."
+        },
+        {
+          "name": "text",
+          "required": true,
+          "description": "The text of the note."
+        },
+        {
+          "name": "project-title",
+          "description": "The project title to add the note to."
+        },
+        {
+          "name": "identifier",
+          "description": "The identifier of the project to add the note to."
+        },
+        {
+          "name": "date",
+          "description": "Natural language or absolute dates."
+        },
+        {
+          "name": "start-date",
+          "description": "Natural language or absolute dates."
+        },
+        {
+          "name": "end-date",
+          "description": "Natural language or absolute dates."
+        },
+        {
+          "name": "attachment",
+          "description": "base64 encoded data with no line breaks."
+        },
+        {
+          "name": "filename",
+          "description": "The filename of the attachment, including file extension."
+        },
+        {
+          "name": "x-success",
+          "description": "Your x-success callback will be called with the following parameters",
+          "options": [
+            {
+              "description": "note - holds the identifier"
+            },
+            {
+              "description": "note-title - holds the note title"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Append to note",
+      "description": "Append text or an attachment to a note, or change the title or date",
+      "url": "agenda://x-callback-url/append-to-note",
+      "parameters": [
+        {
+          "name": "text",
+          "required": true,
+          "description": "The text of the note."
+        },
+        {
+          "name": "on-the-agenda",
+          "required": true,
+          "options": [
+            {
+              "description": "true"
+            },
+            {
+              "description": "false"
+            }
+          ]
+        },
+        {
+          "name": "title",
+          "description": "The title of the note."
+        },
+        {
+          "name": "project-title",
+          "description": "The project title."
+        },
+        {
+          "name": "identifier",
+          "description": "The identifier of the note."
+        },
+        {
+          "name": "date",
+          "description": "Natural language or absolute dates."
+        },
+        {
+          "name": "start-date",
+          "description": "Natural language or absolute dates."
+        },
+        {
+          "name": "end-date",
+          "description": "Natural language or absolute dates."
+        },
+        {
+          "name": "attachment",
+          "description": "base64 encoded data with no line breaks."
+        },
+        {
+          "name": "filename",
+          "description": "The filename of the attachment, including file extension."
+        },
+        {
+          "name": "x-success",
+          "description": "Your x-success callback will be called with the following parameters",
+          "options": [
+            {
+              "description": "note - holds the identifier"
+            },
+            {
+              "description": "note-title - holds the note title"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
