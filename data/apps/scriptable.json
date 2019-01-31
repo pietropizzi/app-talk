@@ -2,7 +2,8 @@
   "info": {
     "identifier": "scriptable",
     "name": "Scriptable",
-    "appstoreUrl": "https://itunes.apple.com/au/app/scriptable/id1405459188?mt=8"
+    "appstoreUrl": "https://itunes.apple.com/au/app/scriptable/id1405459188?mt=8",
+    "documentationUrl": "https://docs.scriptable.app/urlscheme/"
   },
   "actions": [
     {

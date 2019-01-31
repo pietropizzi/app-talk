@@ -18,9 +18,15 @@
   text-decoration: none;
 }
 
-.jumpToAppText {
-  color: #fff;
+.titleContainer {
+  display: flex;
+  justify-content: space-between;
   margin-bottom: 24px;
+  padding-right: 20px;
+}
+
+.titleText {
+  color: #fff;
 }
 
 .appTitle {

@@ -1,0 +1,29 @@
+{
+    "info": {
+    "identifier": "spark",
+    "name": "Spark",
+    "appstoreUrl": "https://itunes.apple.com/us/app/spark-email-by-readdle/id997102246?mt=8",
+    "documentationUrl": "https://helpspot.readdle.com/spark/index.php?pg=kb.page&id=791"
+  },
+  "actions": [
+    {
+      "name": "compose",
+      "description": "Open a new email draft in Spark",
+      "url": "readdle-spark://compose",
+      "parameters": [
+        {
+          "name": "subject",
+          "description": "Enter the subject line for the new email message"
+        },
+        {
+          "name": "body",
+          "description": "Enter the body text for the new email message"
+        },
+        {
+          "name": "recipient",
+          "description": "Enter the email addresses—separated by commas—for the To field of the new email message"
+        }
+      ]
+    }
+  ]
+}

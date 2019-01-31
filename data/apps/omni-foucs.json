@@ -1,0 +1,145 @@
+{
+  "info": {
+    "identifier": "omni-focus",
+    "name": "OmniFocus 3",
+    "appstoreUrl": "https://itunes.apple.com/de/app/omnifocus-3/id1346190318?l=en&mt=8",
+    "documentationUrl": "https://inside.omnifocus.com/url-schemes"
+  },
+  "actions": [
+    {
+      "name": "Add",
+      "description": "Add a task to OmniFocus",
+      "url": "omnifoucs://x-callback-url/add",
+      "parameters": [
+        {
+          "name": "name",
+          "required": true,
+          "description": "The name of the action"
+        },
+        {
+          "name": "note",
+          "description": "An optional note"
+        },
+        {
+          "name": "attachment",
+          "description": "A base 64 encoded attachment file"
+        },
+        {
+          "name": "attachment-name",
+          "description": "The name of the attachment"
+        },
+        {
+          "name": "parallel",
+          "options": [
+            {
+              "description": "true"
+            },
+            {
+              "description": "false"
+            }
+          ]
+        },
+        {
+          "name": "flag",
+          "options": [
+            {
+              "description": "true"
+            },
+            {
+              "description": "false"
+            }
+          ]
+        },
+        {
+          "name": "defer",
+          "description": "date and time, like 'jun 25 8am'"
+        },
+        {
+          "name": "due",
+          "description": "date and time, like 'jun 25 8am'"
+        },
+        {
+          "name": "project",
+          "description": "case-insensitive match"
+        },
+        {
+          "name": "context",
+          "description": "case-insensitive match"
+        },
+        {
+          "name": "autocomplete",
+          "description": "Do children mark project complete?",
+          "options": [
+            {
+              "description": "true"
+            },
+            {
+              "description": "false"
+            }
+          ]
+        },
+        {
+          "name": "estimate",
+          "description": "30m for 30 minutes"
+        },
+        {
+          "name": "reveal-new-items",
+          "options": [
+            {
+              "description": "true"
+            },
+            {
+              "description": "false"
+            }
+          ]
+        },
+        {
+          "name": "repeat-method",
+          "options": [
+            {
+              "description": "fixed"
+            },
+            {
+              "description": "start-after-completion"
+            },
+            {
+              "description": "due-after-completion"
+            }
+          ]
+        },
+        {
+          "name": "completed",
+          "description": "date and time, like 'jun 25 8am'"
+        }
+      ]
+    },
+    {
+      "name": "Inbox perspective",
+      "url": "omnifocus:///inbox"
+    },
+    {
+      "name": "Flagged perspective",
+      "url": "omnifocus:///flagged"
+    },
+    {
+      "name": "Project perspective",
+      "url": "omnifocus:///projects"
+    },
+    {
+      "name": "Contexts perspective",
+      "url": "omnifocus:///contexts"
+    },
+    {
+      "name": "Past forecast",
+      "url": "omnifocus:///past"
+    },
+    {
+      "name": "Today forecast",
+      "url": "omnifocus:///today"
+    },
+    {
+      "name": "Soon forecast",
+      "url": "omnifocus:///soon"
+    }
+  ]
+}

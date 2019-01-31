@@ -1,0 +1,79 @@
+{
+  "info": {
+    "identifier": "day-one",
+    "name": "Day One",
+    "appstoreUrl": "https://itunes.apple.com/ca/app/day-one-journal/id1044867788",
+    "documentationUrl": "http://help.dayoneapp.com/tips-and-tutorials/day-one-url-scheme"
+  },
+  "actions": [
+    {
+      "name": "Create entry",
+      "url": "dayone://post",
+      "parameters": [
+        {
+          "name": "entry",
+          "description": "Entry content (Markdown)",
+          "required": true
+        },
+        {
+          "name": "tags",
+          "description": "Comma separated list of tags",
+          "required": false
+        },
+        {
+          "name": "journal",
+          "description": "Journal name",
+          "required": false
+        },
+        {
+          "name": "imageClipboard",
+          "description": "Attach image from the clipboard",
+          "required": false,
+          "options": [
+            {
+              "description": "1 - attach picture from the clipboard"
+            },
+            {
+              "description": "0 - do not attach picture from the clipboard"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Edit entry",
+      "url": "dayone://edit",
+      "parameters": [
+        {
+          "name": "entryId",
+          "description": "Entry ID to edit (UUID)",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "Open Day One",
+      "url": "dayone://"
+    },
+    {
+      "name": "Open Actifity Feed",
+      "url": "dayone://activity"
+    },
+    {
+      "name": "Open Timeline",
+      "url": "dayone://entries"
+    },
+    {
+      "name": "Open Calendar",
+      "url": "dayone://calendar"
+    },
+    {
+      "name": "Open Starred Entries",
+      "url": "dayone://astarred"
+    },
+    {
+      "name": "Open Preferences",
+      "url": "dayone://preferences"
+    }
+  ]
+}
