@@ -1,11 +1,7 @@
-import React from 'react';
-import './index.css';
+import React from "react";
+import "./index.css";
 
-export default ({ children, ...props }) =>
-  <div>
-    { children(props) }
-  </div>
-;
+export default ({ children, ...props }) => <div>{children(props)}</div>;
 
 export const query = graphql`
   query IndexQuery {
@@ -18,7 +14,7 @@ export const query = graphql`
       }
     }
 
-    appIcons: allImageSharp(filter: { id: { regex: "/app-icons/" }}) {
+    appIcons: allImageSharp(filter: { id: { regex: "data/icons/" } }) {
       edges {
         node {
           id
@@ -54,4 +50,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;
