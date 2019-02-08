@@ -4,10 +4,6 @@ import './jump-to-apps.module.css'
 
 export default class JumpToApps extends React.Component {
 
-  onAppClick = ({ identifier, name }) => () => {
-    clicky.log(`#${identifier}`, name);
-  };
-
   render() {
     const { apps } = this.props;
     return (
@@ -21,7 +17,7 @@ export default class JumpToApps extends React.Component {
             <div styleName='appsContainer'>
               {
                 apps.map(({ app: { info }, iconResolutions }) =>
-                  <a href={`#${info.identifier}`} key={info.identifier} styleName='app' onClick={this.onAppClick(info)}>
+                  <a href={`#${info.identifier}`} key={info.identifier} styleName='app'>
                     <AppIcon large resolutions={iconResolutions} />
                     <div styleName='appTitle'>
                       { info.name }

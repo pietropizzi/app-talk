@@ -5,8 +5,7 @@ module.exports = {
         "node": true
     },
     "globals": {
-      "graphql": true,
-      "clicky": true
+      "graphql": true
     },
     "extends": [
       "plugin:react/recommended",
