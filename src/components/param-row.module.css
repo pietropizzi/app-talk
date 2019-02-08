@@ -16,6 +16,11 @@
   margin-top: 12px;
 }
 
+.nameRequired {
+  font-size: 68%;
+  vertical-align: super;
+}
+
 .nameDot {
   width: 32px;
   height: 32px;

@@ -13,11 +13,15 @@ const colors = [
 const getColor = (index) => colors[index % colors.length];
 
 const ParamRow = ({ param, index }) => {
+  const nameTitleAttr = param.required ? 'This parameter is required' : '';
   return (
     <div styleName='container'>
       <div styleName='name' className='g-monospace'>
         { index === 0 ? '?' : '&' }
-        <span style={{ color: getColor(index) }}>{param.name}</span>=
+        <span title={nameTitleAttr} style={{ color: getColor(index) }}>
+          { param.name }
+          { param.required && <span styleName='nameRequired'>{'* '}</span> }
+        </span>=
         <div styleName='nameDot' style={{ backgroundColor: getColor(index) }}></div>
         <div styleName='nameLine' style={{ backgroundColor: getColor(index) }}></div>
       </div>

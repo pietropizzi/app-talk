@@ -40,6 +40,7 @@ export const query = graphql`
             url
             parameters {
               name
+              required
               description
               options {
                 description
