@@ -64,3 +64,22 @@
     background-image: url(../images/logo@2x.png);
   }
 }
+
+@media (max-width: 400px) {
+  .logoRow {
+    align-items: flex-start;
+  }
+
+  .navList {
+    flex-direction: column;
+  }
+
+  .navLink {
+    margin-left: 0;
+    padding: 2px 0;
+  }
+
+  .content {
+    margin-top: 50px;
+  }
+}

@@ -14,6 +14,7 @@ export default ({ metaData, isSmall }) => {
             <ul styleName='navList'>
               <li><Link styleName='navLink' to='/about' activeStyle={{ color: '#3f8273' }}>About</Link></li>
               <li><a styleName='navLink' href='https://github.com/pietropizzi/app-talk'>GitHub</a></li>
+              <li><a styleName='navLink' href='https://twitter.com/pietropizzi'>Twitter</a></li>
             </ul>
           </nav>
         </div>
