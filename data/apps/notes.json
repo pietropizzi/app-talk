@@ -1,0 +1,22 @@
+{
+  "info": {
+    "identifier": "notes",
+    "name": "Notes",
+    "appstoreUrl": "https://itunes.apple.com/de/app/notes/id1110145109?l=en&mt=8",
+    "documentationUrl": "https://www.reddit.com/r/shortcuts/comments/aot272/get_url_of_note_copy_note_url_to_clipboard/"
+  },
+  "actions": [
+    {
+      "name": "Show note",
+      "description": "A direct link to a note. To get the identifier see the documentation url above.",
+      "url": "mobilenotes://showNote",
+      "parameters": [
+        {
+          "name": "identifier",
+          "description": "The identifier of the note",
+          "required": true
+        }
+      ]
+    }
+  ]
+}
