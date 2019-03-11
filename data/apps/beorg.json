@@ -1,0 +1,69 @@
+{
+  "info": {
+    "identifier": "beorg",
+      "name": "beorg",
+      "appstoreUrl": "https://itunes.apple.com/us/app/beorg-to-do-list-agenda/id1238649962",
+      "documentationUrl": "https://beorgapp.com/manual/"
+  },
+    "actions": [
+    {
+      "name": "Capture",
+      "description": "Add a new item to a file",
+      "url": "beorg://x-callback-url/capture",
+      "parameters": [
+      {
+        "name": "title",
+        "description": "The item headline",
+        "required": false
+      },
+      {
+        "name": "notes",
+        "description": "Notes to add to the item",
+        "required": false
+      },
+      {
+        "name": "scheduled",
+        "description": "Schedule the item using a date in the format yyyy-MM-dd",
+        "required": false
+      },
+      {
+        "name": "deadline",
+        "description": "Set the item deadline using a date in the format yyyy-MM-dd",
+        "required": false
+      },
+      {
+        "name": "file",
+        "description": "The name of the file, without an extension, to add the item to",
+        "required": false
+      },
+      {
+        "name": "template",
+        "description": "Name of a template to apply",
+        "required": false
+      },
+      {
+        "name": "edit",
+        "description": "Whether or not the user can edit the item before it is created",
+        "required": false
+      }
+      ]
+    },
+    {
+      "name": "View Agenda",
+      "description": "Open the app to the agenda view",
+      "url": "beorg://x-callback-url/agenda"
+    },
+    {
+      "name": "View A File",
+      "description": "Open the provided file for viewing",
+      "url": "beorg://x-callback-url/file",
+      "parameters": [
+        {
+          "name": "file",
+          "description": "The name of the file to be opened",
+          "required": true
+        }
+      ]
+    }
+  ]
+}
