@@ -76,7 +76,7 @@
       "parameters": [
         {
           "name": "destination",
-          "description": "The UUID of a group or database where the item shall be created. If the 'destination' parameter is not specified the item is created in the global inbox.",
+          "description": "The UUID of a group or database where the bookmark shall be created. If the 'destination' parameter is not specified the bookmark is created in the global inbox.",
           "required": false
         },
         {
@@ -91,7 +91,7 @@
         },
         {
           "name": "location",
-          "description": "The URL linking to the content, e.g., the URL of the website for the bookmark or the image.",
+          "description": "The URL linking to the content, e.g., the URL of the website for the bookmark or image.",
           "required": false
         },
         {
@@ -139,7 +139,7 @@
       "parameters": [
         {
           "name": "destination",
-          "description": "The UUID of a group or database where the item shall be created. If the 'destination' parameter is not specified the item is created in the global inbox.",
+          "description": "The UUID of a group or database where the group shall be created. If the 'destination' parameter is not specified the group is created in the global inbox.",
           "required": false
         },
         {
@@ -202,7 +202,7 @@
       "parameters": [
         {
           "name": "destination",
-          "description": "The UUID of a group or database where the item shall be created. If the 'destination' parameter is not specified the item is created in the global inbox.",
+          "description": "The UUID of a group or database where the text shall be created. If the 'destination' parameter is not specified the text is created in the global inbox.",
           "required": false
         },
         {
@@ -265,17 +265,17 @@
       "parameters": [
         {
           "name": "destination",
-          "description": "The UUID of a group or database where the item shall be created. If the 'destination' parameter is not specified the item is created in the global inbox.",
+          "description": "The UUID of a group or database where the Markdown document shall be created. If the 'destination' parameter is not specified the Markdown document is created in the global inbox.",
           "required": false
         },
         {
           "name": "title",
-          "description": "The title of the markdown document to be created.",
+          "description": "The title of the Markdown document to be created.",
           "required": false
         },
         {
           "name": "comment",
-          "description": "A comment to be added to the markdown document.",
+          "description": "A comment to be added to the Markdown document.",
           "required": false
         },
         {
@@ -285,12 +285,12 @@
         },
         {
           "name": "tags",
-          "description": "Comma-separated list of tags to be attached to the created markdown document.",
+          "description": "Comma-separated list of tags to be attached to the created Markdown document.",
           "required": false
         },
         {
           "name": "flagged",
-          "description": "marks or unmarks the markdown document as flagged",
+          "description": "marks or unmarks the Markdown document as flagged",
           "required": false,
           "options": [
             {
@@ -303,7 +303,7 @@
         },
         {
           "name": "unread",
-          "description": "marks or unmarks markdown document as unread",
+          "description": "marks or unmarks Markdown document as unread",
           "required": false,
           "options": [
             {
@@ -316,7 +316,7 @@
         },
         {
           "name": "label",
-          "description": "Sets the markdown document's label (0-based index or name of the label).",
+          "description": "Sets the Markdown document's label (0-based index or name of the label).",
           "required": false
         }
       ]
@@ -406,7 +406,7 @@
 	},
         {
           "name": "destination",
-          "description": "The UUID of a group or database where the item shall be created. If the 'destination' parameter is not specified the item is created in the global inbox.",
+          "description": "The UUID of a group or database where the document shall be created. If the 'destination' parameter is not specified the document is created in the global inbox.",
           "required": false
         },
         {
@@ -465,7 +465,7 @@
     {
       "name": "Search",
       "description": "Search DEVONthink To Go and show or retrieve the results.",
-      "url": "x-devonthink://search",
+      "url": "x-devonthink://x-callback-url/search",
       "parameters": [
         {
           "name": "query",
@@ -482,7 +482,7 @@
     {
       "name": "Create Html",
       "description": "Creates a new HTML document.",
-      "url": "x-devonthink://createhtml",
+      "url": "x-devonthink://x-callback-url/createhtml",
       "parameters": [
 	{
 	  "name": "source",
@@ -491,7 +491,7 @@
 	},
         {
           "name": "destination",
-          "description": "The UUID of a group or database where the item shall be created. If the 'destination' parameter is not specified the item is created in the global inbox.",
+          "description": "The UUID of a group or database where the html document shall be created. If the 'destination' parameter is not specified the html document is created in the global inbox.",
           "required": false
         },
         {
@@ -549,8 +549,8 @@
     },
     {
       "name": "Create Image",
-      "description": "Creates a new Markdown document.",
-      "url": "x-devonthink://createimage",
+      "description": "Creates a new image.",
+      "url": "x-devonthink://x-callback-url/createimage",
       "parameters": [
 	{
 	  "name": "source",
@@ -618,7 +618,7 @@
     {
       "name": "Update Item",
       "description": "Updates an existing item.",
-      "url": "x-devonthink://update",
+      "url": "x-devonthink://x-callback-url/update",
       "parameters": [
 	{
 	  "name": "uuid",
@@ -696,7 +696,7 @@
     {
       "name": "Retrieve Document Metadata",
       "description": "Returns selected metadata of a document as JSON object.",
-      "url": "x-devonthink://item",
+      "url": "x-devonthink://x-callback-url/item",
       "parameters": [
 	{
 	  "name": "uuid",
@@ -708,7 +708,7 @@
     {
       "name": "Retrieve Document Data",
       "description": "Returns selected metadata of a document as JSON object.",
-      "url": "x-devonthink://content",
+      "url": "x-devonthink://x-callback-url/content",
       "parameters": [
 	{
 	  "name": "uuid",
@@ -720,7 +720,7 @@
     {
       "name": "Retrieve Group Contents",
       "description": "Returns a JSON array describing the contents of a group.",
-      "url": "x-devonthink://list",
+      "url": "x-devonthink://x-callback-url/list",
       "parameters": [
 	{
 	  "name": "uuid",
@@ -732,7 +732,7 @@
     {
       "name": "Get Selected Item's Link",
       "description": "Returns the item link for the currently selected document.",
-      "url": "x-devonthink://get-itemlink"
+      "url": "x-devonthink://x-callback-url/get-itemlink"
     }
   ]
 }
