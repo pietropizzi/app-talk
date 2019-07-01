@@ -1,0 +1,738 @@
+{
+  "info": {
+    "identifier": "devonthink-to-go",
+    "name": "DEVONthink To Go",
+    "appstoreUrl": "https://itunes.apple.com/us/app/devonthink-to-go/id395722470?mt=8",
+    "documentationUrl": "https://s3.amazonaws.com/DTWebsiteSupport/download/devonthink%20to%20go/2.7.1/DEVONthink%20To%20Go%20Manual.pdf#page44"
+  },
+  "actions": [
+    {
+      "name": "Clip",
+      "description": "Opens the New Document Assistant, pre- filled with the provided data.",
+      "url": "x-devonthink://x-callback-url/clip",
+      "parameters": [
+        {
+          "name": "destination",
+          "description": "The UUID of a group or database where the item shall be created. If the 'destination' parameter is not specified the item is created in the global inbox.",
+          "required": false
+        },
+        {
+          "name": "title",
+          "description": "The title of the item to be created.",
+          "required": false
+        },
+        {
+          "name": "comment",
+          "description": "A comment to be added to the item.",
+          "required": false
+        },
+        {
+          "name": "location",
+          "description": "The URL linking to the content, e.g., the URL of the website for the bookmark or the image.",
+          "required": false
+        },
+        {
+          "name": "tags",
+          "description": "Comma-separated list of tags to be attached to the created item.",
+          "required": false
+        },
+        {
+          "name": "flagged",
+          "description": "marks or unmarks the item as flagged",
+          "required": false,
+          "options": [
+            {
+              "description": "1 - marks as flagged"
+            },
+            {
+              "description": "0 - marks as unflagged"
+            }
+          ]
+        },
+        {
+          "name": "unread",
+          "description": "marks or unmarks item as unread",
+          "required": false,
+          "options": [
+            {
+              "description": "1 - marks as unread"
+            },
+            {
+              "description": "0 - marks as unread"
+            }
+          ]
+        },
+        {
+          "name": "label",
+          "description": "Sets the item's label (0-based index or name of the label).",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "Create Bookmark",
+      "description": "Creates a new bookmark.",
+      "url": "x-devonthink://x-callback-url/createbookmark",
+      "parameters": [
+        {
+          "name": "destination",
+          "description": "The UUID of a group or database where the bookmark shall be created. If the 'destination' parameter is not specified the bookmark is created in the global inbox.",
+          "required": false
+        },
+        {
+          "name": "title",
+          "description": "The title of the bookmark to be created.",
+          "required": false
+        },
+        {
+          "name": "comment",
+          "description": "A comment to be added to the bookmark.",
+          "required": false
+        },
+        {
+          "name": "location",
+          "description": "The URL linking to the content, e.g., the URL of the website for the bookmark or image.",
+          "required": false
+        },
+        {
+          "name": "tags",
+          "description": "Comma-separated list of tags to be attached to the created bookmark.",
+          "required": false
+        },
+        {
+          "name": "flagged",
+          "description": "marks or unmarks the bookmark as flagged",
+          "required": false,
+          "options": [
+            {
+              "description": "1 - marks as flagged"
+            },
+            {
+              "description": "0 - marks as unflagged"
+            }
+          ]
+        },
+        {
+          "name": "unread",
+          "description": "marks or unmarks bookmark as unread",
+          "required": false,
+          "options": [
+            {
+              "description": "1 - marks as unread"
+            },
+            {
+              "description": "0 - marks as unread"
+            }
+          ]
+        },
+        {
+          "name": "label",
+          "description": "Sets the bookmark's label (0-based index or name of the label).",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "Create Group",
+      "description": "Creates a new group.",
+      "url": "x-devonthink://x-callback-url/creategroup",
+      "parameters": [
+        {
+          "name": "destination",
+          "description": "The UUID of a group or database where the group shall be created. If the 'destination' parameter is not specified the group is created in the global inbox.",
+          "required": false
+        },
+        {
+          "name": "title",
+          "description": "The title of the group to be created.",
+          "required": false
+        },
+        {
+          "name": "comment",
+          "description": "A comment to be added to the group.",
+          "required": false
+        },
+        {
+          "name": "location",
+          "description": "The URL linking to the content, e.g., the URL of the website for the bookmark or the image.",
+          "required": false
+        },
+        {
+          "name": "tags",
+          "description": "Comma-separated list of tags to be attached to the created group.",
+          "required": false
+        },
+        {
+          "name": "flagged",
+          "description": "marks or unmarks the group as flagged",
+          "required": false,
+          "options": [
+            {
+              "description": "1 - marks as flagged"
+            },
+            {
+              "description": "0 - marks as unflagged"
+            }
+          ]
+        },
+        {
+          "name": "unread",
+          "description": "marks or unmarks group as unread",
+          "required": false,
+          "options": [
+            {
+              "description": "1 - marks as unread"
+            },
+            {
+              "description": "0 - marks as unread"
+            }
+          ]
+        },
+        {
+          "name": "label",
+          "description": "Sets the group's label (0-based index or name of the label).",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "Create Text",
+      "description": "Creates a new plain text document.",
+      "url": "x-devonthink://x-callback-url/createtext",
+      "parameters": [
+        {
+          "name": "destination",
+          "description": "The UUID of a group or database where the text shall be created. If the 'destination' parameter is not specified the text is created in the global inbox.",
+          "required": false
+        },
+        {
+          "name": "title",
+          "description": "The title of the text to be created.",
+          "required": false
+        },
+        {
+          "name": "comment",
+          "description": "A comment to be added to the text.",
+          "required": false
+        },
+        {
+          "name": "location",
+          "description": "The URL linking to the content, e.g., the URL of the website for the bookmark or the image.",
+          "required": false
+        },
+        {
+          "name": "tags",
+          "description": "Comma-separated list of tags to be attached to the created text.",
+          "required": false
+        },
+        {
+          "name": "flagged",
+          "description": "marks or unmarks the text as flagged",
+          "required": false,
+          "options": [
+            {
+              "description": "1 - marks as flagged"
+            },
+            {
+              "description": "0 - marks as unflagged"
+            }
+          ]
+        },
+        {
+          "name": "unread",
+          "description": "marks or unmarks text as unread",
+          "required": false,
+          "options": [
+            {
+              "description": "1 - marks as unread"
+            },
+            {
+              "description": "0 - marks as unread"
+            }
+          ]
+        },
+        {
+          "name": "label",
+          "description": "Sets the text's label (0-based index or name of the label).",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "Create Markdown",
+      "description": "Creates a new Markdown document.",
+      "url": "x-devonthink://x-callback-url/createmarkdown",
+      "parameters": [
+        {
+          "name": "destination",
+          "description": "The UUID of a group or database where the Markdown document shall be created. If the 'destination' parameter is not specified the Markdown document is created in the global inbox.",
+          "required": false
+        },
+        {
+          "name": "title",
+          "description": "The title of the Markdown document to be created.",
+          "required": false
+        },
+        {
+          "name": "comment",
+          "description": "A comment to be added to the Markdown document.",
+          "required": false
+        },
+        {
+          "name": "location",
+          "description": "The URL linking to the content, e.g., the URL of the website for the bookmark or the image.",
+          "required": false
+        },
+        {
+          "name": "tags",
+          "description": "Comma-separated list of tags to be attached to the created Markdown document.",
+          "required": false
+        },
+        {
+          "name": "flagged",
+          "description": "marks or unmarks the Markdown document as flagged",
+          "required": false,
+          "options": [
+            {
+              "description": "1 - marks as flagged"
+            },
+            {
+              "description": "0 - marks as unflagged"
+            }
+          ]
+        },
+        {
+          "name": "unread",
+          "description": "marks or unmarks Markdown document as unread",
+          "required": false,
+          "options": [
+            {
+              "description": "1 - marks as unread"
+            },
+            {
+              "description": "0 - marks as unread"
+            }
+          ]
+        },
+        {
+          "name": "label",
+          "description": "Sets the Markdown document's label (0-based index or name of the label).",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "Create Webarchive",
+      "description": "Creates a new webarchive.",
+      "url": "x-devonthink://x-callback-url/createwebarchive",
+      "parameters": [
+        {
+          "name": "destination",
+          "description": "The UUID of a group or database where the item shall be created. If the 'destination' parameter is not specified the item is created in the global inbox.",
+          "required": false
+        },
+        {
+          "name": "title",
+          "description": "The title of the web archive to be created.",
+          "required": false
+        },
+        {
+          "name": "comment",
+          "description": "A comment to be added to the web archive.",
+          "required": false
+        },
+        {
+          "name": "location",
+          "description": "The URL linking to the content, e.g., the URL of the website for the bookmark or the image.",
+          "required": false
+        },
+        {
+          "name": "tags",
+          "description": "Comma-separated list of tags to be attached to the created web archive.",
+          "required": false
+        },
+        {
+          "name": "flagged",
+          "description": "marks or unmarks the web archive as flagged",
+          "required": false,
+          "options": [
+            {
+              "description": "1 - marks as flagged"
+            },
+            {
+              "description": "0 - marks as unflagged"
+            }
+          ]
+        },
+        {
+          "name": "unread",
+          "description": "marks or unmarks web archive as unread",
+          "required": false,
+          "options": [
+            {
+              "description": "1 - marks as unread"
+            },
+            {
+              "description": "0 - marks as unread"
+            }
+          ]
+        },
+        {
+          "name": "label",
+          "description": "Sets the web archive's label (0-based index or name of the label).",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "Import Clipboard",
+      "description": "Imports data from the pasteboard to the global inbox.",
+      "url": "x-devonthink://x-callback-url/import-clipboard"
+    },
+    {
+      "name": "Create Document",
+      "description": "Creates a new document from UTI and file data.",
+      "url": "x-devonthink://x-callback-url/document",
+      "parameters": [
+	{
+	  "name": "uti",
+	  "description": "the uti for the document.",
+	  "required": true
+	},
+	{
+	  "name": "source",
+	  "description": "Base64-encoded file data.",
+	  "required": true
+	},
+        {
+          "name": "destination",
+          "description": "The UUID of a group or database where the document shall be created. If the 'destination' parameter is not specified the document is created in the global inbox.",
+          "required": false
+        },
+        {
+          "name": "title",
+          "description": "The title of the document be created.",
+          "required": false
+        },
+        {
+          "name": "comment",
+          "description": "A comment to be added to the document.",
+          "required": false
+        },
+        {
+          "name": "location",
+          "description": "The URL linking to the content, e.g., the URL of the website for the bookmark or the image.",
+          "required": false
+        },
+        {
+          "name": "tags",
+          "description": "Comma-separated list of tags to be attached to the created document",
+          "required": false
+        },
+        {
+          "name": "flagged",
+          "description": "marks or unmarks the document flagged",
+          "required": false,
+          "options": [
+            {
+              "description": "1 - marks as flagged"
+            },
+            {
+              "description": "0 - marks as unflagged"
+            }
+          ]
+        },
+        {
+          "name": "unread",
+          "description": "marks or unmarks document as unread",
+          "required": false,
+          "options": [
+            {
+              "description": "1 - marks as unread"
+            },
+            {
+              "description": "0 - marks as unread"
+            }
+          ]
+        },
+        {
+          "name": "label",
+          "description": "Sets the document's label (0-based index or name of the label).",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "Search",
+      "description": "Search DEVONthink To Go and show or retrieve the results.",
+      "url": "x-devonthink://x-callback-url/search",
+      "parameters": [
+        {
+          "name": "query",
+          "description": "The query to use for the search.",
+          "required": true
+        },
+        {
+          "name": "scope",
+          "description": "The UUID of the database or group to search. Optional; if not set DEVONthink To Go searches all databases.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "Create Html",
+      "description": "Creates a new HTML document.",
+      "url": "x-devonthink://x-callback-url/createhtml",
+      "parameters": [
+	{
+	  "name": "source",
+	  "description": "Raw HTML data.",
+	  "required": true
+	},
+        {
+          "name": "destination",
+          "description": "The UUID of a group or database where the html document shall be created. If the 'destination' parameter is not specified the html document is created in the global inbox.",
+          "required": false
+        },
+        {
+          "name": "title",
+          "description": "The title of the html document be created.",
+          "required": false
+        },
+        {
+          "name": "comment",
+          "description": "A comment to be added to the html document.",
+          "required": false
+        },
+        {
+          "name": "location",
+          "description": "The URL linking to the content, e.g., the URL of the website for the bookmark or the image.",
+          "required": false
+        },
+        {
+          "name": "tags",
+          "description": "Comma-separated list of tags to be attached to the created html document",
+          "required": false
+        },
+        {
+          "name": "flagged",
+          "description": "marks or unmarks the html document flagged",
+          "required": false,
+          "options": [
+            {
+              "description": "1 - marks as flagged"
+            },
+            {
+              "description": "0 - marks as unflagged"
+            }
+          ]
+        },
+        {
+          "name": "unread",
+          "description": "marks or unmarks html document as unread",
+          "required": false,
+          "options": [
+            {
+              "description": "1 - marks as unread"
+            },
+            {
+              "description": "0 - marks as unread"
+            }
+          ]
+        },
+        {
+          "name": "label",
+          "description": "Sets the html document's label (0-based index or name of the label).",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "Create Image",
+      "description": "Creates a new image.",
+      "url": "x-devonthink://x-callback-url/createimage",
+      "parameters": [
+	{
+	  "name": "source",
+	  "description": "Base64-encoded image file data.",
+	  "required": true
+	},
+        {
+          "name": "destination",
+          "description": "The UUID of a group or database where the image shall be created. If the 'destination' parameter is not specified the image is created in the global inbox.",
+          "required": false
+        },
+        {
+          "name": "title",
+          "description": "The title of the image created.",
+          "required": false
+        },
+        {
+          "name": "comment",
+          "description": "A comment to be added to the image",
+          "required": false
+        },
+        {
+          "name": "location",
+          "description": "The URL linking to the content, e.g., the URL of the website for the bookmark or the image.",
+          "required": false
+        },
+        {
+          "name": "tags",
+          "description": "Comma-separated list of tags to be attached to the created image",
+          "required": false
+        },
+        {
+          "name": "flagged",
+          "description": "marks or unmarks the image flagged",
+          "required": false,
+          "options": [
+            {
+              "description": "1 - marks as flagged"
+            },
+            {
+              "description": "0 - marks as unflagged"
+            }
+          ]
+        },
+        {
+          "name": "unread",
+          "description": "marks or unmarks image as unread",
+          "required": false,
+          "options": [
+            {
+              "description": "1 - marks as unread"
+            },
+            {
+              "description": "0 - marks as unread"
+            }
+          ]
+        },
+        {
+          "name": "label",
+          "description": "Sets the image's label (0-based index or name of the label).",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "Update Item",
+      "description": "Updates an existing item.",
+      "url": "x-devonthink://x-callback-url/update",
+      "parameters": [
+	{
+	  "name": "uuid",
+	  "description": "The UUID of the item, e.g., derived from an item link",
+	  "required": true
+	},
+	{
+	  "name": "source",
+	  "description": "Base64-encoded file data to be set as the item's new content. The source and text parameters are mutually exclusive with source taking precedence if both are present.",
+	  "required": false
+	},
+        {
+          "name": "destination",
+          "description": "The UUID of a group or database where the item shall be moved to. You can only provide one destination; if the item was previously replicated to more than one group it will be unlinked from all of them and placed into the new group.",
+          "required": false
+        },
+        {
+          "name": "text",
+          "description": "Text content to be set for the document. The source and text parameters are mutually exclusive with source taking precedence if both are present.",
+          "required": false
+        },
+        {
+          "name": "title",
+          "description": "A new title for the item.",
+          "required": false
+        },
+        {
+          "name": "comment",
+          "description": "A comment to be set in the item's metadata.",
+          "required": false
+        },
+        {
+          "name": "location",
+          "description": "A URL to be set in the item's metadata.",
+          "required": false
+        },
+        {
+          "name": "tags",
+          "description": "Comma-separated list of tags to be added to the item. If the item was already tagged the previous tags are removed and the new set of tags is added.",
+          "required": false
+        },
+        {
+          "name": "flagged",
+          "description": "marks or unmarks the item flagged",
+          "required": false,
+          "options": [
+            {
+              "description": "1 - marks as flagged"
+            },
+            {
+              "description": "0 - marks as unflagged"
+            }
+          ]
+        },
+        {
+          "name": "unread",
+          "description": "marks or unmarks item as unread",
+          "required": false,
+          "options": [
+            {
+              "description": "1 - marks as unread"
+            },
+            {
+              "description": "0 - marks as unread"
+            }
+          ]
+        },
+        {
+          "name": "label",
+          "description": "Sets the item's label (0-based index or name of the label).",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "Retrieve Document Metadata",
+      "description": "Returns selected metadata of a document as JSON object.",
+      "url": "x-devonthink://x-callback-url/item",
+      "parameters": [
+	{
+	  "name": "uuid",
+	  "description": "The UUID of the document, e.g., derived from an item link",
+	  "required": true
+	}
+      ]
+    },
+    {
+      "name": "Retrieve Document Data",
+      "description": "Returns selected metadata of a document as JSON object.",
+      "url": "x-devonthink://x-callback-url/content",
+      "parameters": [
+	{
+	  "name": "uuid",
+	  "description": "The UUID of the document, e.g., derived from an item link",
+	  "required": true
+	}
+      ]
+    },
+    {
+      "name": "Retrieve Group Contents",
+      "description": "Returns a JSON array describing the contents of a group.",
+      "url": "x-devonthink://x-callback-url/list",
+      "parameters": [
+	{
+	  "name": "uuid",
+	  "description": "The UUID of the group, smart group, or database, e.g., derived from an item link",
+	  "required": true
+	}
+      ]
+    },
+    {
+      "name": "Get Selected Item's Link",
+      "description": "Returns the item link for the currently selected document.",
+      "url": "x-devonthink://x-callback-url/get-itemlink"
+    }
+  ]
+}
