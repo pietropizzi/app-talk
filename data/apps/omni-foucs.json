@@ -9,7 +9,7 @@
     {
       "name": "Add",
       "description": "Add a task to OmniFocus",
-      "url": "omnifoucs://x-callback-url/add",
+      "url": "omnifocus://x-callback-url/add",
       "parameters": [
         {
           "name": "name",
