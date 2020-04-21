@@ -28,4 +28,4 @@ There are multiple ways for you to see how to add a new app or change something 
 - If you want to add an app icon (for example to a newly created app):
   - Add it inside of [/data/icons/](https://github.com/pietropizzi/app-talk/tree/master/data/icons/) and give it the same name as the `identifier`.
   - It should be 512x512 pixels.
-  - You can use [this workflow](https://app-talk.com/getAppIcon.wflow)(on iOS) to get the app icon from an app.
+  - You can use [this shortuct](https://www.icloud.com/shortcuts/e0ec4c870d10481d82e953db7ee8e6be)(on iOS) to get the app icon from an app.
