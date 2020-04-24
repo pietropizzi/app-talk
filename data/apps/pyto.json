@@ -1,0 +1,18 @@
+{
+  "info": {
+    "identifier": "pyto",
+    "name": "Pyto",
+    "appstoreUrl": "https://apps.apple.com/us/app/pyto-python-3/id1436650069",
+    "documentationUrl": "https://pyto.readthedocs.io/en/latest/automation.html#id1"
+  },
+  "actions": [{
+    "name": "Running code",
+    "description": "Run the passed Python code.",
+    "url": "pyto://x-callback",
+    "parameters": [{
+      "name": "code",
+      "description": "Python code to execute.",
+      "required": true
+    }]
+  }]
+}
