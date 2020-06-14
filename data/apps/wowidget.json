@@ -1,0 +1,53 @@
+{
+  "info": {
+    "identifier": "wowidget",
+    "name": "WOWidget",
+    "appstoreUrl": "https://apps.apple.com/app/id1515009616",
+    "documentationUrl": "https://www.wowidget.com/blog/2020-06-08-share-url-scheme.html"
+  },
+  "actions": [
+    {
+      "name": "Open",
+      "description": "Open WOWidget app.",
+      "url": "wowidget://"
+    },
+    {
+      "name": "Share",
+      "description": "Share widget.",
+      "url": "wowidget://share",
+      "parameters": [
+        {
+          "name": "u",
+          "description": "Valid url. URL encoded string.",
+          "required": true
+        },
+        {
+          "name": "n",
+          "description": "Name, title. URL encoded string.",
+          "required": true
+        },
+        {
+          "name": "t",
+          "description": "Type of content. Number.",
+          "required": true,
+          "options": [
+            {"description": "1 - HTML"},
+            {"description": "2 - JSON"},
+            {"description": "3 - XML"},
+            {"description": "4 - IMAGE"}
+          ]
+        },
+        {
+          "name": "s",
+          "description": "Slot. Number between 1 and 5 included.",
+          "required": true
+        },
+        {
+          "name": "c",
+          "description": "Optional config. URL encoded json string. See documentation.",
+          "required": false
+        }
+      ]
+    }
+  ]
+}
