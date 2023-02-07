@@ -1,6 +1,6 @@
 import React from 'react';
 import ParamRow from './param-row';
-import './app-action.module.css';
+import * as styles from './app-action.module.css';
 
 const AppUrl = ({ url, parameters }) => {
   const [ urlStart ] = url.split('?');
@@ -11,13 +11,13 @@ const AppUrl = ({ url, parameters }) => {
     : url;
 
   return (
-    <div styleName='urlContainer'>
-      <button styleName='copyButton' className='copyToClipboard' data-clipboard-text={fullUrl}>{'Copy to Clipboard'}</button>
+    <div className={styles.urlContainer}>
+      <button className={`copyToClipboard ${styles.copyButton}`} data-clipboard-text={fullUrl}>{'Copy to Clipboard'}</button>
       <div className='g-monospace'>
         { `${schemeStart}://` }
         <span className='g-text-dark'>{path}</span>
       </div>
-      <div styleName='urlParamWrapper'>
+      <div className={styles.urlParamWrapper}>
         { parameters && parameters.map((param, index) => <ParamRow key={param.name} param={param} index={index} /> ) }
       </div>
     </div>
@@ -29,8 +29,8 @@ export default ({ urlOnly, action: { name, description, url, parameters } }) => 
     <div>
       { !urlOnly &&
         <div>
-          <h3 styleName='title'>{name}</h3>
-          <div styleName='description' className='g-text-light'>{description}</div>
+          <h3 className={styles.title}>{name}</h3>
+          <div className={`g-text-light ${styles.description}`}>{description}</div>
         </div>
       }
       <AppUrl url={url} parameters={parameters} />

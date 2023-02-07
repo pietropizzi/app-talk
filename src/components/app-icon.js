@@ -1,11 +1,15 @@
 import React from 'react';
 import Img from 'gatsby-image';
-import './app-icon.module.css';
+import * as styles from './app-icon.module.css';
 
-export default ({ large, resolutions }) => {
+export default (props) => {
+  const { large, fixed } = props;
+  if (fixed === undefined) {
+    console.log(fixed);
+  }
   return (
-    <div styleName={'container' + (large ? ' containerLarge' : '')}>
-      <Img resolutions={resolutions} style={{ width: '100%', height: '100%' }} />
+    <div className={`${styles.container} ${large ? styles.containerLarge : ''}`}>
+      <Img fixed={fixed} style={{ width: '100%', height: '100%' }} />
     </div>
   );
 }

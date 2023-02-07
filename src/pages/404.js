@@ -5,10 +5,10 @@ import Layout from '../components/layout';
 import { Helmet } from 'react-helmet';
 import { StaticQuery, graphql } from "gatsby"
 
-export default function About() {
+export default function Four0Four() {
   return (
     <StaticQuery
-        query={aboutQuery}
+        query={four0fourQuery}
         render={data => {
           const { site } = data;
           const { siteMetadata: { title, tagLine }} = site;
@@ -20,7 +20,7 @@ export default function About() {
                   <title>{fullTitle}</title>
                 </Helmet>
                 <Header isSmall metaData={site.siteMetadata} />
-                <h1 className='g-module g-headline-seperator'>About</h1>
+                <h1 className='g-module g-headline-seperator'>404</h1>
                 <Intro />
               </Layout>
             </div>
@@ -28,10 +28,10 @@ export default function About() {
         }}
       />
   );
-};
+}
 
-const aboutQuery = graphql`
-  query AboutQuery {
+const four0fourQuery = graphql`
+  query {
     site {
       siteMetadata {
         title
@@ -42,4 +42,3 @@ const aboutQuery = graphql`
     }
   }
 `;
-

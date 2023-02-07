@@ -1,5 +1,5 @@
 import React from 'react';
-import './param-row.module.css';
+import * as styles from './param-row.module.css';
 
 const colors = [
   '#2A5280',
@@ -15,20 +15,20 @@ const getColor = (index) => colors[index % colors.length];
 const ParamRow = ({ param, index }) => {
   const nameTitleAttr = param.required ? 'This parameter is required' : '';
   return (
-    <div styleName='container'>
-      <div styleName='name' className='g-monospace'>
+    <div className={styles.container}>
+      <div className={`g-monospace ${styles.name}`}>
         { index === 0 ? '?' : '&' }
         <span title={nameTitleAttr} style={{ color: getColor(index) }}>
           { param.name }
-          { param.required && <span styleName='nameRequired'>{'* '}</span> }
+          { param.required && <span className={styles.nameRequired}>{'* '}</span> }
         </span>=
-        <div styleName='nameDot' style={{ backgroundColor: getColor(index) }}></div>
-        <div styleName='nameLine' style={{ backgroundColor: getColor(index) }}></div>
+        <div className={styles.nameDot} style={{ backgroundColor: getColor(index) }}></div>
+        <div className={styles.nameLine} style={{ backgroundColor: getColor(index) }}></div>
       </div>
-      <div styleName='description'>
+      <div className={styles.description}>
         { param.description && <div>{param.description}</div> }
         { param.options &&
-          <ul styleName='options'>
+          <ul className={styles.options}>
             { param.options.map((option) =>
               <li key={option.description}>{option.description}</li>
             )}

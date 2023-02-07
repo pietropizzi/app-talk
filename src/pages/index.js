@@ -26,18 +26,16 @@ export default class IndexPage extends React.Component {
   }
 
   innerRender(data) {
-    const { site, apps: { edges: appEdges }, appIcons: { edges: iconEdges }} = data;
+    const { site, apps: { edges: appEdges }, appIcons: { nodes: iconNodes }} = data;
     const apps = appEdges.map(({ node: app }) => {
       const { identifier } = app.info;
-      const iconEdge = iconEdges.find(({ node }) => {
-        return node.id.indexOf(identifier) > 0;
-      });
+      const iconNode = iconNodes.find(({ name }) => name === identifier );
 
-      const iconResolutions = iconEdge ? iconEdge.node.resolutions : '';
+      const iconFixed = iconNode ? iconNode.childImageSharp.fixed : '';
 
       return {
         app,
-        iconResolutions
+        iconFixed
       }
     });
 
@@ -66,8 +64,8 @@ export default class IndexPage extends React.Component {
           <Header metaData={site.siteMetadata} />
           <JumpToApps apps={apps} />
           {
-            apps.map(({ app, iconResolutions }) =>
-              <AppListing key={app.info.identifier} app={app} iconResolutions={iconResolutions} />
+            apps.map(({ app, iconFixed }) =>
+              <AppListing key={app.info.identifier} app={app} iconFixed={iconFixed} />
             )
           }
         </Layout>
@@ -87,14 +85,12 @@ const indexQuery = graphql`
       }
     }
 
-    appIcons: allFile(filter: { sourceInstanceName: {eq: "icons"} }) {
-      edges {
-        node {
-          childImageSharp {
-            id
-            fixed(width: 64) {
-              ...GatsbyImageSharpFixed
-            }
+    appIcons: allFile(filter: {relativeDirectory: {eq: "icons"}}) {
+      nodes {
+        name
+        childImageSharp {
+          fixed(width: 64) {
+            ...GatsbyImageSharpFixed
           }
         }
       }

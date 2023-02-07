@@ -37,13 +37,6 @@ module.exports = {
     `gatsby-transformer-json`,
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-plugin-react-css-modules`,
-      options: {
-        // Exclude global styles from the plugin using a RegExp:
-        // exclude: `\/global\/`
-      }
-    }
+    `gatsby-plugin-sharp`
   ]
 };
