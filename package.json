@@ -11,25 +11,28 @@
     "lintjson": "./node_modules/.bin/jsonlint-cli data/apps/*.json"
   },
   "dependencies": {
-    "clipboard": "2.0.1",
-    "gatsby": "1.9.241",
-    "gatsby-image": "1.0.51",
-    "gatsby-link": "1.6.39",
-    "gatsby-plugin-react-css-modules": "^1.0.15",
-    "gatsby-plugin-react-helmet": "2.0.11",
-    "gatsby-plugin-sharp": "1.6.44",
-    "gatsby-plugin-typography": "1.7.18",
-    "gatsby-source-filesystem": "1.5.29",
-    "gatsby-transformer-json": "1.0.16",
-    "gatsby-transformer-sharp": "1.6.24",
-    "react-helmet": "5.2.0"
+    "clipboard": "^2.0.1",
+    "gatsby": "^3.0.0",
+    "gatsby-image": "^3.0.0",
+    "gatsby-plugin-react-css-modules": "^3.0.0",
+    "gatsby-plugin-react-helmet": "^4.0.0",
+    "gatsby-plugin-sharp": "^3.0.0",
+    "gatsby-plugin-typography": "^3.0.0",
+    "gatsby-source-filesystem": "^3.0.0",
+    "gatsby-transformer-json": "^3.0.0",
+    "gatsby-transformer-sharp": "^3.0.0",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
+    "react-helmet": "^6.1.0",
+    "react-typography": "^0.16.23",
+    "typography": "^0.16.21"
   },
   "devDependencies": {
-    "babel-eslint": "8.2.3",
-    "eslint": "4.19.1",
+    "babel-eslint": "^8.2.3",
+    "eslint": "^5.0.0",
     "eslint-plugin-react": "^7.7.0",
-    "gh-pages": "1.1.0",
-    "jsonlint": "1.6.3",
-    "jsonlint-cli": "1.0.1"
+    "gh-pages": "^1.1.0",
+    "jsonlint": "^1.6.3",
+    "jsonlint-cli": "^1.0.1"
   }
 }
