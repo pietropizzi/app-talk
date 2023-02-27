@@ -1,0 +1,15 @@
+{
+  "info": {
+    "identifier": "ifttt",
+    "name": "IFTTT",
+    "appstoreUrl": "https://apps.apple.com/app/id660944635",
+    "documentationUrl": ""
+  },
+  "actions": [
+    {
+      "name": "Open IFTTT",
+      "description": "To launch IFTTT.",
+      "url": "ifttt://"
+    }
+  ]
+}

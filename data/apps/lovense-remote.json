@@ -1,0 +1,15 @@
+{
+  "info": {
+    "identifier": "lovense-remote",
+    "name": "Lovense Remote",
+    "appstoreUrl": "https://apps.apple.com/app/id1027312824",
+    "documentationUrl": ""
+  },
+  "actions": [
+    {
+      "name": "Open Lovense Remote",
+      "description": "To launch Lovense Remote.",
+      "url": "wear://"
+    }
+  ]
+}
