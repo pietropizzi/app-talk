@@ -1,0 +1,15 @@
+{
+  "info": {
+    "identifier": "myQ",
+    "name": "myQ Garage & Access Control",
+    "appstoreUrl": "https://apps.apple.com/app/id1027312824",
+    "documentationUrl": ""
+  },
+  "actions": [
+    {
+      "name": "Open myQ",
+      "description": "To launch myQ.",
+      "url": "myliftmaster://"
+    }
+  ]
+}

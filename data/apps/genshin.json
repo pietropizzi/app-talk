@@ -1,0 +1,15 @@
+{
+  "info": {
+    "identifier": "genshin",
+    "name": "Genshin Impact",
+    "appstoreUrl": "https://apps.apple.com/app/id1517783697",
+    "documentationUrl": ""
+  },
+  "actions": [
+    {
+      "name": "Open Genshin",
+      "description": "To launch Genshin.",
+      "url": "yuanshengame://"
+    }
+  ]
+}
