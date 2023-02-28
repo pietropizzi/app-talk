@@ -96,7 +96,7 @@ const indexQuery = graphql`
       }
     }
 
-    apps: allAppsJson(sort: { fields: [id], order: ASC }) {
+    apps: allAppsJson(sort: { fields: [info___identifier], order: ASC }) {
       edges {
         node {
           info {
