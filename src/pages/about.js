@@ -28,7 +28,7 @@ export default function About() {
         }}
       />
   );
-};
+}
 
 const aboutQuery = graphql`
   query AboutQuery {

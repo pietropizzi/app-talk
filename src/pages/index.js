@@ -5,7 +5,7 @@ import Header from '../components/header';
 import Layout from '../components/layout';
 import { Helmet } from 'react-helmet';
 import Clipboard from 'clipboard';
-import { StaticQuery, graphql } from "gatsby"
+import { StaticQuery, graphql } from "gatsby";
 
 export default class IndexPage extends React.Component {
   componentDidMount() {
