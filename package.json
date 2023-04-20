@@ -15,7 +15,7 @@
     "gatsby": "^3.0.0",
     "gatsby-image": "^3.0.0",
     "gatsby-plugin-react-helmet": "^4.0.0",
-    "gatsby-plugin-sharp": "^3.0.0",
+    "gatsby-plugin-sharp": "^4.25.1",
     "gatsby-plugin-typography": "^3.0.0",
     "gatsby-source-filesystem": "^3.0.0",
     "gatsby-transformer-json": "^3.0.0",
