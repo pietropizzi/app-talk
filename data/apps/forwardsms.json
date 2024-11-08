@@ -1,0 +1,40 @@
+{
+  "info": {
+    "identifier": "forwardsms",
+    "name": "Forward SMS",
+    "appstoreUrl": "https://apps.apple.com/us/app/forward-sms/id6693285061",
+    "documentationUrl": "https://forward-sms.app/guides"
+  },
+  "actions": [
+    {
+      "name": "Open Forward SMS",
+      "description": "To launch Forward SMS.",
+      "url": "forwardsms://"
+    },
+    {
+      "name": "View Integrations",
+      "description": "To view available integrations.",
+      "url": "forwardsms://integrations"
+    },
+    {
+      "name": "Open Forward SMS Settings",
+      "description": "To open Forward SMS settings.",
+      "url": "forwardsms://settings"
+    },
+    {
+      "name": "View Undelivered Messages",
+      "description": "To view messages that failed to deliver.",
+      "url": "forwardsms://undeliveredMessages"
+    },
+    {
+      "name": "View Setup Instructions",
+      "description": "To view the setup instructions.",
+      "url": "forwardsms://setupInstructions"
+    },
+    {
+      "name": "View Empty Message Resolution",
+      "description": "To view help for empty message issues.",
+      "url": "forwardsms://emptyMessageResolution"
+    }
+  ]
+}
