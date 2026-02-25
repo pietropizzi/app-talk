@@ -1,0 +1,32 @@
+{
+  "info": {
+    "identifier": "textport",
+    "name": "TextPort",
+    "appstoreUrl": "https://apps.apple.com/us/app/text-message-export-textport/id6745645676",
+    "documentationUrl": "https://textport.com/"
+  },
+  "actions": [
+    {
+      "name": "Open TextPort",
+      "description": "To launch TextPort.",
+      "url": "textport://"
+    },
+    {
+      "name": "Show Chat",
+      "description": "To open a specific chat by its ID.",
+      "url": "textport://chats/{id}",
+      "parameters": [
+        {
+          "name": "id",
+          "description": "The ID of the chat to open.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "Import Chat",
+      "description": "To import a chat.",
+      "url": "textport://importChat"
+    }
+  ]
+}
