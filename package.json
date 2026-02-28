@@ -27,7 +27,7 @@
     "typography": "^0.16.21"
   },
   "devDependencies": {
-    "babel-eslint": "^8.2.3",
+    "babel-eslint": "^10.1.0",
     "eslint": "^5.0.0",
     "eslint-plugin-react": "^7.7.0",
     "gh-pages": "^1.1.0",
